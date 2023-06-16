@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import AppBar from './components/AppBar';
+import Chart from './components/Chart';
+import { makeStyles } from '@material-ui/core/styles';
 
-function App() {
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    height: '100vh',
+  },
+  appBar: {
+    height: '9vh',
+  },
+  chart: {
+    height: '91vh',
+  },
+}));
+
+export default function APP() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className={classes.root}>
+      <div className={classes.appBar}>
+        <AppBar />
+      </div>
+      <div className={classes.chart}>
+        <Chart />
+      </div>
     </div>
   );
 }
-
-export default App;
