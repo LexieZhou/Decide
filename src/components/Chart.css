@@ -1,11 +1,14 @@
 div.tooltip {
     position: absolute;
     text-align: left;
-    padding: .2rem;
-    background: #313639;
-    color: #f9f9f9;
+    padding: .8rem;
+    background: #5c6bc0;
+    color: white;
     border: 0px;
     border-radius: 8px;
     pointer-events: none;
     font-size: .7rem;
+    top: 80px;
+    right: 10px;
+    opacity: 0.2;
 }

@@ -7,27 +7,23 @@ import './Chart.css';
 const Chart = () => {
   const svgRef = useRef(null);
   const [data, setData] = useState(null);
-
+  const GRAPH_WIDTH = 1200;
+  const GRAPH_HEIGHT = 1200;
+  
   useEffect(() => {
     setData(jsonData);
   }, []);
 
   useEffect(() => {
     if (data) {
+      
       const svg = d3.select(svgRef.current);
-      const svg_WIDTH = svg.node().clientWidth;
-      const svg_HEIGHT = svg.node().clientHeight;
+      // const svg_WIDTH = svg.node().clientWidth;
+      // const svg_HEIGHT = svg.node().clientHeight;
 
-      const GRAPH_WIDTH = 600;
-      const GRAPH_HEIGHT = 600;
-      console.log(svg_WIDTH, svg_HEIGHT);
+      const g = svg.append('g');
 
-      const centerX = svg_WIDTH / 2;
-      const centerY = svg_HEIGHT / 2;
-      const g = svg.append('g')
-        .attr('transform', `translate(${centerX}, ${centerY})`);;
-
-      var simulation = d3
+      const simulation = d3
         .forceSimulation(data.nodes)
         .force("link", 
           d3.forceLink(data.links)                // This force provides links between nodes
@@ -40,7 +36,7 @@ const Chart = () => {
         .force("x", d3.forceX())
         .force("y", d3.forceY())
         .force('collide', d3.forceCollide(configData.DRAG_FORCE_COLLIDE));
-      
+
       // marker with arrowhead
       svg
         .append("defs")
@@ -124,8 +120,24 @@ const Chart = () => {
           }
         })
           .attr('font-size', configData.LABEL_FONT_SIZE)
-          .attr('dx', configData.NODE_RADIUS+4)
-          .attr('dy', configData.NODE_RADIUS/2);
+          .attr('dx', function(d){
+            if (d.links_num > 10) {
+              return configData.LARGE_NODE_RADIUS + 4;
+            } else if (d.links_num > 4) {
+              return configData.MEDIUM_NODE_RADIUS + 4;
+            } else {
+              return configData.SMALL_NODE_RADIUS + 4;
+            }
+          })
+          .attr('dy', function(d){
+            if (d.links_num > 10) {
+              return configData.LARGE_NODE_RADIUS / 2;
+            } else if (d.links_num > 4) {
+              return configData.MEDIUM_NODE_RADIUS / 2;
+            } else {
+              return configData.SMALL_NODE_RADIUS / 2;
+            }
+          });
       
       var infoPanel = d3.select("#mydata_viz")
           .append("div")
@@ -153,9 +165,7 @@ const Chart = () => {
             .style("opacity", 1);
           
           infoPanel
-            .html("Id: " + d.id + "<br>" + "Name: " + d.name + "<br>" + "Version: " + d.version + "<br>" + "Label: " + d.label[0])
-            .style("left", (d.x + 1) + "px")
-            .style("top", (d.y - 1) + "px");
+            .html("Id: " + d.id + "<br>" + "Name: " + d.name + "<br>" + "Version: " + d.version + "<br>" + "Label: " + d.label[0]);
       })
         .on("mouseout", function(event, d) {
           d3.select(this)
@@ -171,6 +181,7 @@ const Chart = () => {
                 return configData.SMALL_NODE_RADIUS;
               }
             });
+          
           infoPanel.transition()
             .duration('200')
             .style("opacity", 0);
@@ -181,8 +192,8 @@ const Chart = () => {
 
       //d3 zoom
       const initialScale = configData.INITIAL_SCALE;
-      const initialTranslateX = GRAPH_WIDTH / 2 + GRAPH_WIDTH / 6;
-      const initialTranslateY = GRAPH_HEIGHT / 2 - GRAPH_HEIGHT / 6;
+      // const initialTranslateX = GRAPH_WIDTH / 2;
+      // const initialTranslateY = GRAPH_HEIGHT / 2;
       const zoom = d3.zoom()
         .extent([[0, 0], [GRAPH_WIDTH, GRAPH_HEIGHT]])
         .scaleExtent([-50, 100])
@@ -198,7 +209,7 @@ const Chart = () => {
       g.call(
         zoom.transform,
         d3.zoomIdentity
-          .translate(initialTranslateX, initialTranslateY)
+          //.translate(initialTranslateX / 2, initialTranslateX / 2)
           .scale(initialScale)
       );
 
