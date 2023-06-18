@@ -1,14 +1,19 @@
 {
-    "GRAPH_WIDTH": 600,
-    "GRAPH_HEIGHT": 600,
-    "NODE_RADIUS": 5,
+    "LARGE_NODE_RADIUS": 10,
+    "MEDIUM_NODE_RADIUS": 8,
+    "SMALL_NODE_RADIUS": 5,
     "LINK_WIDTH": 1,
     "LINK_DISTANCE": 1,
+
     "MARKER_WIDTH": 5,
     "MARKER_HEIGHT": 5,
     "LABEL_FONT_SIZE": 6,
+
     "DRAG_FORCE_STRENGTH":-100,
     "DRAG_FORCE_COLLIDE": 2,
+
+    "INITIAL_SCALE": 0.25,
+
     "COLOR": {
         "LINK": "#aaa"
     }

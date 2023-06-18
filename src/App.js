@@ -10,10 +10,10 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
   },
   appBar: {
-    height: '9vh',
+    height: '8.2vh',
   },
   chart: {
-    height: '91vh',
+    height: '91.8vh',
   },
 }));
 

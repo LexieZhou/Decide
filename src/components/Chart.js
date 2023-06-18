@@ -15,7 +15,17 @@ const Chart = () => {
   useEffect(() => {
     if (data) {
       const svg = d3.select(svgRef.current);
-      const g = svg.append('g');
+      const svg_WIDTH = svg.node().clientWidth;
+      const svg_HEIGHT = svg.node().clientHeight;
+
+      const GRAPH_WIDTH = 600;
+      const GRAPH_HEIGHT = 600;
+      console.log(svg_WIDTH, svg_HEIGHT);
+
+      const centerX = svg_WIDTH / 2;
+      const centerY = svg_HEIGHT / 2;
+      const g = svg.append('g')
+        .attr('transform', `translate(${centerX}, ${centerY})`);;
 
       var simulation = d3
         .forceSimulation(data.nodes)
@@ -26,7 +36,7 @@ const Chart = () => {
             .distance(configData.LINK_DISTANCE)    // the list of links
         )
         .force("charge", d3.forceManyBody().strength(configData.DRAG_FORCE_STRENGTH))
-        .force("center", d3.forceCenter(configData.GRAPH_WIDTH / 2, configData.GRAPH_HEIGHT / 2))
+        .force("center", d3.forceCenter(GRAPH_WIDTH / 2, GRAPH_HEIGHT / 2))
         .force("x", d3.forceX())
         .force("y", d3.forceY())
         .force('collide', d3.forceCollide(configData.DRAG_FORCE_COLLIDE));
@@ -86,7 +96,15 @@ const Chart = () => {
         .enter()
         .append("circle")
         .attr("class", "node")
-        .attr("r", configData.NODE_RADIUS)
+        .attr("r", function(d){
+          if (d.links_num > 10) {
+            return configData.LARGE_NODE_RADIUS;
+          } else if (d.links_num > 4) {
+            return configData.MEDIUM_NODE_RADIUS;
+          } else {
+            return configData.SMALL_NODE_RADIUS;
+          }
+        })
         .style("fill", d => colorScale(d.label[0]))
         .call(d3.drag()
           .on("start", dragstarted)
@@ -120,7 +138,15 @@ const Chart = () => {
             .transition()
             .duration('100')
             .attr("stroke", "#aaa")
-            .attr("r", configData.NODE_RADIUS + 3);
+            .attr("r", function(d){
+              if (d.links_num > 10) {
+                return configData.LARGE_NODE_RADIUS + 3;
+              } else if (d.links_num > 4) {
+                return configData.MEDIUM_NODE_RADIUS + 3;
+              } else {
+                return configData.SMALL_NODE_RADIUS + 3;
+              }
+            });
           
           infoPanel.transition()
             .duration(100)
@@ -136,7 +162,15 @@ const Chart = () => {
             .transition()
             .duration('200')
             .attr("stroke", "none")
-            .attr("r", configData.NODE_RADIUS);
+            .attr("r", function(d){
+              if (d.links_num > 10) {
+                return configData.LARGE_NODE_RADIUS;
+              } else if (d.links_num > 4) {
+                return configData.MEDIUM_NODE_RADIUS;
+              } else {
+                return configData.SMALL_NODE_RADIUS;
+              }
+            });
           infoPanel.transition()
             .duration('200')
             .style("opacity", 0);
@@ -145,14 +179,28 @@ const Chart = () => {
           console.log(d);
       });
 
-      g.call(d3.zoom()
-      .extent([[0, 0], [configData.GRAPH_WIDTH, configData.GRAPH_HEIGHT]])
-      .scaleExtent([-100, 1])
-      .on("zoom", zoomed));
+      //d3 zoom
+      const initialScale = configData.INITIAL_SCALE;
+      const initialTranslateX = GRAPH_WIDTH / 2 + GRAPH_WIDTH / 6;
+      const initialTranslateY = GRAPH_HEIGHT / 2 - GRAPH_HEIGHT / 6;
+      const zoom = d3.zoom()
+        .extent([[0, 0], [GRAPH_WIDTH, GRAPH_HEIGHT]])
+        .scaleExtent([-50, 100])
+        .on("zoom", zoomed);
+      
+      g.call(zoom);
 
       function zoomed({transform}) {
-        g.attr("transform", transform);
+        g.attr("transform", transform)
+        //g.attr("transform", `translate(${transform.x + centerX}, ${transform.y + centerY}) scale(${transform.k})`);
       }
+
+      g.call(
+        zoom.transform,
+        d3.zoomIdentity
+          .translate(initialTranslateX, initialTranslateY)
+          .scale(initialScale)
+      );
 
       simulation.on("tick", () => {
           links
