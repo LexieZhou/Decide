@@ -28,13 +28,18 @@ const Chart = () => {
         .force("link", 
           d3.forceLink(data.links)                // This force provides links between nodes
             .id(function(d) { return d.id; })    // provide the id of a node
-            .links(data.links)
-            .distance(configData.LINK_DISTANCE)    // the list of links
-        )
+            .strength(function(d) {   
+              if (d.source.label[0] == d.target.label[0]) {
+                return 1; // stronger link for links within a group
+              }
+              else {
+                return 0.1; // weaker links for links across groups
+              }   
+              }) )
         .force("charge", d3.forceManyBody().strength(configData.DRAG_FORCE_STRENGTH))
         .force("center", d3.forceCenter(GRAPH_WIDTH / 2, GRAPH_HEIGHT / 2))
-        .force("x", d3.forceX())
-        .force("y", d3.forceY())
+        // .force("x", d3.forceX())
+        // .force("y", d3.forceY())
         .force('collide', d3.forceCollide(configData.DRAG_FORCE_COLLIDE));
 
       // marker with arrowhead
@@ -214,21 +219,82 @@ const Chart = () => {
       );
 
       simulation.on("tick", () => {
-          links
-            .attr("x1", (d) => d.source.x)
-            .attr("y1", (d) => d.source.y)
-            .attr("x2", (d) => d.target.x)
-            .attr("y2", (d) => d.target.y);
-  
-          nodes
-            .attr("cx", (d) => d.x+5)
-            .attr("cy", (d) => d.y-3);
+          var coords ={};
+          var groups = [];
+          nodes.each(function(d) {
+            if (groups.indexOf(d.label[0]) == -1 ) {
+                groups.push(d.label[0]);
+                coords[d.label[0]] = [];
+            }
+            coords[d.label[0]].push({x:d.x,y:d.y});    
+          })
+          // console.log(coords);
+          // console.log(groups);
+    
+          var centroids = {};
+          for (var group in coords) {
+            var groupNodes = coords[group];
+            var n = groupNodes.length;
+            var cx = 0;
+            var tx = 0;
+            var cy = 0;
+            var ty = 0;
+        
+            groupNodes.forEach(function(d) {
+                tx += d.x;
+                ty += d.y;
+            })
+        
+            cx = tx/n;
+            cy = ty/n;
+        
+            centroids[group] = {x: cx, y: cy}   
+        }
+        //console.log(centroids);
 
-          label
-            .attr("x", function(d) { return d.x; })
-            .attr("y", function (d) { return d.y; });
+        nodes
+          .attr("cx", function(d){
+            var minDistance = 10;
+            var cx = centroids[d.label[0]].x;
+            var cy = centroids[d.label[0]].y;
+            var x = d.x;
+            var y = d.y;
+            var dx = cx - x;
+            var dy = cy - y;
+            var r = Math.sqrt(dx*dx+dy*dy)
 
+            if (r > minDistance) {
+              d.x = x * 0.9 + cx * 0.1;
+            } 
+            return d.x
+          })
+          .attr("cy", function(d){
+            var minDistance = 10;
+            var cx = centroids[d.label[0]].x;
+            var cy = centroids[d.label[0]].y;
+            var x = d.x;
+            var y = d.y;
+            var dx = cx - x;
+            var dy = cy - y;
+            var r = Math.sqrt(dx*dx+dy*dy)
+
+            if (r > minDistance) {
+              d.y = y * 0.9 + cy * 0.1;
+            } 
+            return d.y
           });
+        
+        links
+          .attr("x1", (d) => d.source.x)
+          .attr("y1", (d) => d.source.y)
+          .attr("x2", (d) => d.target.x)
+          .attr("y2", (d) => d.target.y);
+
+        label
+          .attr("x", function(d) { return d.x; })
+          .attr("y", function (d) { return d.y; });
+          
+        });
 
       }
     }, [data]);
