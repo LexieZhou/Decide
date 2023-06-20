@@ -1,4 +1,6 @@
 {
+    "GRAPH_WIDTH": 800,
+    "GRAPH_HEIGHT": 800,
     "LARGE_NODE_RADIUS": 10,
     "MEDIUM_NODE_RADIUS": 8,
     "SMALL_NODE_RADIUS": 5,
@@ -13,6 +15,7 @@
     "DRAG_FORCE_COLLIDE": 10,
 
     "INITIAL_SCALE": 0.4,
+    "MIN_DISTANCE": 20,
 
     "COLOR": {
         "LINK": "#aaa"

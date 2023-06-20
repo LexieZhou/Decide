@@ -7,8 +7,8 @@ import './Chart.css';
 const Chart = () => {
   const svgRef = useRef(null);
   const [data, setData] = useState(null);
-  const GRAPH_WIDTH = 1200;
-  const GRAPH_HEIGHT = 1200;
+  const GRAPH_WIDTH = configData.GRAPH_WIDTH;
+  const GRAPH_HEIGHT = configData.GRAPH_HEIGHT;
   
   useEffect(() => {
     setData(jsonData);
@@ -17,11 +17,22 @@ const Chart = () => {
   useEffect(() => {
     if (data) {
       
-      const svg = d3.select(svgRef.current);
-      // const svg_WIDTH = svg.node().clientWidth;
-      // const svg_HEIGHT = svg.node().clientHeight;
+      // const svg = d3.select(svgRef.current);
+      const svg = d3.select("#chart")
+        .append("svg")
+        .attr("id", "graph-svg")
+        .attr("width", GRAPH_WIDTH)
+        .attr("height", GRAPH_WIDTH)
+        .attr("viewbox", [0, 0, GRAPH_WIDTH, GRAPH_HEIGHT])
+        .style("border", "1px solid black")
+        // .attr("x", 200)
+        // .attr("y", 50)
 
-      const g = svg.append('g');
+      const g = svg.append('g')
+        .attr("id", "graph-g");
+      
+      g
+        .attr('transform', 'translate(100, 100) scale(1)')
 
       const simulation = d3
         .forceSimulation(data.nodes)
@@ -210,13 +221,11 @@ const Chart = () => {
         g.attr("transform", transform)
         //g.attr("transform", `translate(${transform.x + centerX}, ${transform.y + centerY}) scale(${transform.k})`);
       }
+      var initialTransform = d3.zoomIdentity
+        .translate(configData.GRAPH_WIDTH / 4, configData.GRAPH_HEIGHT / 4)
+        .scale(initialScale);
 
-      g.call(
-        zoom.transform,
-        d3.zoomIdentity
-          //.translate(initialTranslateX / 2, initialTranslateX / 2)
-          .scale(initialScale)
-      );
+      svg.call(zoom.transform,initialTransform);
 
       simulation.on("tick", () => {
           var coords ={};
@@ -254,7 +263,7 @@ const Chart = () => {
 
         nodes
           .attr("cx", function(d){
-            var minDistance = 10;
+            var minDistance = configData.MIN_DISTANCE;
             var cx = centroids[d.label[0]].x;
             var cy = centroids[d.label[0]].y;
             var x = d.x;
@@ -269,7 +278,7 @@ const Chart = () => {
             return d.x
           })
           .attr("cy", function(d){
-            var minDistance = 10;
+            var minDistance = configData.MIN_DISTANCE;
             var cx = centroids[d.label[0]].x;
             var cy = centroids[d.label[0]].y;
             var x = d.x;
@@ -300,7 +309,9 @@ const Chart = () => {
     }, [data]);
   
   return (
-    <svg width="100%" height="100%" ref={svgRef} />
+    <div id="chart">
+    </div>
+    // <svg width="100%" height="100%" ref={svgRef} />
   );
 };
 
