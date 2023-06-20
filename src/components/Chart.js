@@ -215,11 +215,11 @@ const Chart = () => {
         .scaleExtent([-50, 100])
         .on("zoom", zoomed);
       
-      g.call(zoom);
+      svg.call(zoom);
 
       function zoomed({transform}) {
         g.attr("transform", transform)
-        //g.attr("transform", `translate(${transform.x + centerX}, ${transform.y + centerY}) scale(${transform.k})`);
+        // g.attr("transform", `translate(${transform.x + centerX}, ${transform.y + centerY}) scale(${transform.k})`);
       }
       var initialTransform = d3.zoomIdentity
         .translate(configData.GRAPH_WIDTH / 4, configData.GRAPH_HEIGHT / 4)
