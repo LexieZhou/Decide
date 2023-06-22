@@ -12,3 +12,8 @@ div.tooltip {
     right: 10px;
     opacity: 0.2;
 }
+#graph-svg {
+    margin-left:auto; 
+    margin-right:auto; 
+    display:block;
+}
