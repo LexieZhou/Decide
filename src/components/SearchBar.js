@@ -69,20 +69,21 @@ export default function SearchBar() {
     const [input, setInput] = useState("");
     const [results, setResult] = useState([]);
     const fetchData = (value) => {
-        fetch("https://jsonplaceholder.typicode.com/users")
-            .then((response) => response.json())
-            .then((json) => {
-                const results = json.filter((user) => {
-                    return (
-                    value &&
-                    user && 
-                    user.name && 
-                    user.name.toLowerCase().includes(value.toLowerCase())
-                    );
-                });
-                // console.log(results);
-                setResult(results);
-            });
+      // fake api call
+      fetch("https://mocki.io/v1/29a36823-e079-4127-833e-50825ec64e34")
+        .then((response) => response.json())
+        .then((json) => {
+            const results = json.filter((node) => {
+                return (
+                value &&
+                node && 
+                node.name && 
+                node.name.toLowerCase().includes(value.toLowerCase())
+                );
+        });
+        console.log(results);
+        setResult(results);
+      });
     }
     const handleChange = (value) => {
         setInput(value);
@@ -112,11 +113,13 @@ export default function SearchBar() {
                   onChange={(e) => handleChange(e.target.value)}
                 />
               </div>
-              {/* <div className={classes.searchResult}>
+              { (results.length !== 0) && (
+                <div className={classes.searchResult}>
                   {results.map((result, id) => {
                     return <div className={classes.SingleSearchResult} key={id} onClick={(e) => alert(`You clicked on ${result.name}`)}>{result.name}</div>;
                   })}
-              </div> */}
+              </div>)
+              }
             </div>
     </ThemeProvider>
   );
