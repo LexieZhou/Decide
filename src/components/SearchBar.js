@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import { alpha, makeStyles } from '@material-ui/core/styles';
-
 import { createTheme, ThemeProvider} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -14,10 +13,10 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor: alpha(theme.palette.common.white, 0.25),
         },
         marginLeft: 0,
-        width: '100%',
+        width: '200px',
         [theme.breakpoints.up('sm')]: {
             marginLeft: theme.spacing(1),
-            width: 'auto',
+            width: '200px',
         },
     },
     searchIcon: {
@@ -45,44 +44,26 @@ const useStyles = makeStyles((theme) => ({
           },
         },
     },
-    searchResult: {
-        width: '100%',
-        backgroundColor: 'white',
-        display: 'flex',
-        flexDirection: 'column',
-        marginTop: '1rem',
-        maxHeight: '200px',
-        overflowY: 'scroll',
-        color: 'black',
-
-    },
-    SingleSearchResult: {
-        padding: '10px 20px',
-        fontFamily: 'Open Sans',
-        '&:hover': {
-            backgroundColor: "#efefef",
-        }
-    },
 }));
 
-export default function SearchBar() {
+export default function SearchBar({setResults}) {
     const [input, setInput] = useState("");
-    const [results, setResult] = useState([]);
+    
     const fetchData = (value) => {
       // fake api call
-      fetch("https://mocki.io/v1/29a36823-e079-4127-833e-50825ec64e34")
+      fetch("http://localhost:8000/nodes")
         .then((response) => response.json())
         .then((json) => {
             const results = json.filter((node) => {
                 return (
                 value &&
-                node && 
+                node &&
                 node.name && 
                 node.name.toLowerCase().includes(value.toLowerCase())
                 );
         });
         console.log(results);
-        setResult(results);
+        setResults(results);
       });
     }
     const handleChange = (value) => {
@@ -98,29 +79,22 @@ export default function SearchBar() {
   return (
     <ThemeProvider theme={theme}>
         <div className={classes.searchContainer}>
-              <div className={classes.searchBar}>
-                <div className={classes.searchIcon}>
-                  <SearchIcon />
-                </div>
-                <InputBase
-                  placeholder="Search…"
-                  value={input}
-                  classes={{
-                    root: classes.inputRoot,
-                    input: classes.inputInput,
-                  }}
-                  inputProps={{ 'aria-label': 'search' }}
-                  onChange={(e) => handleChange(e.target.value)}
-                />
-              </div>
-              { (results.length !== 0) && (
-                <div className={classes.searchResult}>
-                  {results.map((result, id) => {
-                    return <div className={classes.SingleSearchResult} key={id} onClick={(e) => alert(`You clicked on ${result.name}`)}>{result.name}</div>;
-                  })}
-              </div>)
-              }
+          <div className={classes.searchBar}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
             </div>
+            <InputBase
+              placeholder="Search…"
+              value={input}
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{ 'aria-label': 'search' }}
+              onChange={(e) => handleChange(e.target.value)}
+            />
+          </div>
+        </div>
     </ThemeProvider>
   );
   }
