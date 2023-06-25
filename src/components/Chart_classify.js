@@ -1,20 +1,22 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as d3 from "d3";
 import jsonData from '../data/new_records.json';
 import configData from '../data/config.json';
 import './Chart.css';
 
-const Chart = () => {
-  const svgRef = useRef(null);
+const ChartClassify = () => {
+  // const svgRef = useRef(null);
   const [data, setData] = useState(null);
-  const GRAPH_WIDTH = configData.GRAPH_WIDTH;
-  const GRAPH_HEIGHT = configData.GRAPH_HEIGHT;
+  // const GRAPH_WIDTH = configData.GRAPH_WIDTH;
+  // const GRAPH_HEIGHT = configData.GRAPH_HEIGHT;
   
   useEffect(() => {
     setData(jsonData);
   }, []);
 
   useEffect(() => {
+    const GRAPH_WIDTH = configData.GRAPH_WIDTH;
+    const GRAPH_HEIGHT = configData.GRAPH_HEIGHT;
     if (data) {
       
       // const svg = d3.select(svgRef.current);
@@ -40,18 +42,18 @@ const Chart = () => {
           d3.forceLink(data.links)                // This force provides links between nodes
             .id(function(d) { return d.id; })    // provide the id of a node
             .strength(function(d) {   
-              if (d.source.label[0] == d.target.label[0]) {
+              if (d.source.label[0] === d.target.label[0]) {
                 return 1; // stronger link for links within a group
               }
               else {
                 return 0.1; // weaker links for links across groups
               }   
               }) )
-        .force("charge", d3.forceManyBody().strength(configData.DRAG_FORCE_STRENGTH))
+        .force("charge", d3.forceManyBody().strength(configData.DRAG_STRENGTH))
         .force("center", d3.forceCenter(GRAPH_WIDTH / 2, GRAPH_HEIGHT / 2))
-        // .force("x", d3.forceX())
+        //.force("x", d3.forceX())
         // .force("y", d3.forceY())
-        .force('collide', d3.forceCollide(configData.DRAG_FORCE_COLLIDE));
+        .force('collide', d3.forceCollide(configData.DRAG_COLLIDE));
 
       // marker with arrowhead
       svg
@@ -231,7 +233,7 @@ const Chart = () => {
           var coords ={};
           var groups = [];
           nodes.each(function(d) {
-            if (groups.indexOf(d.label[0]) == -1 ) {
+            if (groups.indexOf(d.label[0]) === -1 ) {
                 groups.push(d.label[0]);
                 coords[d.label[0]] = [];
             }
@@ -315,4 +317,4 @@ const Chart = () => {
   );
 };
 
-export default Chart;
+export default ChartClassify;

@@ -1,14 +1,15 @@
 import React from 'react';
 import './App.css';
 import AppBar from './components/AppBar';
-import Chart from './components/Chart';
+import SideBar from './components/SideBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles,ThemeProvider, createTheme } from '@material-ui/core/styles';
+import TabPanel from './components/TabPanel';
 
 const themeLight = createTheme({
   palette: {
     background: {
-      default: "#e8eaf6"
+      default: "white"
     }
   },
   typography: {
@@ -19,12 +20,29 @@ const themeLight = createTheme({
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
   },
   appBar: {
     height: '8.2vh',
+    zIndex: theme.zIndex.drawer + 1,
+  },
+  mainContainer: {
+    height: '91.8vh',
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  sideBar: {
+    width: '30vw',
+  },
+  chartContainer: {
+    height: '91.8vh',
+    width: '70vw',
+    display: 'flex',
+    flexDirection: 'column',
   },
   chart: {
-    height: '91.8vh',
+    width: '70vw',
   },
 }));
 
@@ -38,8 +56,15 @@ export default function APP() {
         <div className={classes.appBar}>
           <AppBar />
         </div>
-        <div className={classes.chart} id = "mydata_viz">
-          <Chart />
+        <div className={classes.mainContainer}>
+          <div className={classes.sideBar}>
+            <SideBar />
+          </div>
+          <div className={classes.chartContainer}>
+            <div className={classes.tabs}>
+              <TabPanel />
+            </div>
+          </div>
         </div>
       </div>
     </ThemeProvider>
