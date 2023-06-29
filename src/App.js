@@ -4,7 +4,7 @@ import AppBar from './components/AppBar';
 import SideBar from './components/SideBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { makeStyles,ThemeProvider, createTheme } from '@material-ui/core/styles';
-import TabPanel from './components/TabPanel';
+import RadioPanel from './components/RadioPanel';
 
 const themeLight = createTheme({
   palette: {
@@ -33,16 +33,17 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
   },
   sideBar: {
-    width: '30vw',
+    width: '20vw',
   },
   chartContainer: {
     height: '91.8vh',
-    width: '70vw',
+    width: '80vw',
     display: 'flex',
     flexDirection: 'column',
+    marginLeft: '1vw',
   },
   chart: {
-    width: '70vw',
+    width: '80vw',
   },
 }));
 
@@ -62,7 +63,7 @@ export default function APP() {
           </div>
           <div className={classes.chartContainer}>
             <div className={classes.tabs}>
-              <TabPanel />
+              <RadioPanel />
             </div>
           </div>
         </div>
