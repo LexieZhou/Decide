@@ -1,32 +1,36 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import Drawer from '@material-ui/core/Drawer';
 import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import Barchart from './Barchart';
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    // display: 'flex',
+    width: '100vw',
   },
   drawer: {
     flexShrink: 0,
     width: '30vw',
   },
+  title: {
+    fontSize: '16px',
+    fontWeight: 'bold',
+    marginTop: '2vh',
+    marginLeft: '1vw',
+  },
   drawerContainer: {
     overflow: 'auto',
+    marginTop: '2vh',
+    marginLeft: '1vw',
     width: '30vw',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
+
 }));
 
 export default function SideBar() {
@@ -41,24 +45,15 @@ export default function SideBar() {
         }}
       >
         <Toolbar />
+        <Typography className={classes.title}>Top 5 link-number nodes</Typography>
         <div className={classes.drawerContainer}>
-          <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
+          <Barchart label="database"/>
+          <Barchart label="hardware"/>
+          <Barchart label="library"/>
+          <Barchart label="operating_system"/>
+          <Barchart label="programming_language"/>
+          <Barchart label="Software"/>
+          <Barchart label="tool"/>
         </div>
       </Drawer>
   );

@@ -40,9 +40,10 @@ const useStyles = makeStyles((theme) => ({
     width: '80vw',
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: '1vw',
+    marginLeft: '12vw',
   },
-  chart: {
+  radioPanel: {
+    marginTop: '1vh',
     width: '80vw',
   },
 }));
@@ -62,7 +63,7 @@ export default function APP() {
             <SideBar />
           </div>
           <div className={classes.chartContainer}>
-            <div className={classes.tabs}>
+            <div className={classes.radioPanel}>
               <RadioPanel />
             </div>
           </div>

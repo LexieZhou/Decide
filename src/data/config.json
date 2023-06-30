@@ -12,16 +12,35 @@
     "MARKER_HEIGHT": 5,
     "LABEL_FONT_SIZE": 6,
 
-    "DRAG_STRENGTH":-100,
+    "DRAG_STRENGTH": -10,
     "DRAG__STRENGTH_FORCE": -200,
     "DRAG_COLLIDE": 20,
     "DRAG_COLLIDE_FORCE": 20,
 
-    "INITIAL_SCALE": 0.3,
+    "INITIAL_SCALE": 0.4,
     "INITIAL_SCALE_FORCE": 0.2,
-    "MIN_DISTANCE": 200,
+    "MIN_DISTANCE": 150,
+
+    "labels": {
+        "0": "api",
+        "1": "database",
+        "2": "hardware",
+        "3": "library",
+        "4": "operating_system",
+        "5": "programming_language",
+        "6": "software",
+        "7": "tool"
+    },
 
     "COLOR": {
-        "LINK": "#aaa"
+        "LINK": "#aaa",
+        "api": "#00bcd4",
+        "database": "#7e57c2",
+        "hardware": "#ff9800",
+        "library": "#ef5350",
+        "operating_system": "#42a5f5",
+        "programming_language": "#66bb6a",
+        "software": "#ffa726",
+        "tool": "#f48fb1"
     }
 }

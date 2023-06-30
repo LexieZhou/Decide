@@ -26,7 +26,7 @@ const ChartForce = () => {
         .attr("width", GRAPH_WIDTH)
         .attr("height", GRAPH_WIDTH)
         .attr("viewbox", [0, 0, GRAPH_WIDTH, GRAPH_HEIGHT])
-        .style("border", "1px solid black")
+        // .style("border", "1px solid black")
         // .attr("x", 200)
         // .attr("y", 50)
 
@@ -114,7 +114,8 @@ const ChartForce = () => {
             return configData.SMALL_NODE_RADIUS;
           }
         })
-        .style("fill", d => colorScale(d.label[0]))
+        //.style("fill", d => colorScale(d.label[0]))
+        .style("fill", d => configData.COLOR[d.label[0]])
         .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
@@ -152,7 +153,7 @@ const ChartForce = () => {
             }
           });
       
-      var infoPanel = d3.select("#mydata_viz")
+      var infoPanel = d3.select("#chart")
           .append("div")
           .attr("class", "tooltip")
           .style("opacity", 0);

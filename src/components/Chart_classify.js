@@ -26,7 +26,7 @@ const ChartClassify = () => {
         .attr("width", GRAPH_WIDTH)
         .attr("height", GRAPH_WIDTH)
         .attr("viewbox", [0, 0, GRAPH_WIDTH, GRAPH_HEIGHT])
-        .style("border", "1px solid black")
+        // .style("border", "1px solid black")
         // .attr("x", 200)
         // .attr("y", 50)
 
@@ -43,7 +43,7 @@ const ChartClassify = () => {
             .id(function(d) { return d.id; })    // provide the id of a node
             .strength(function(d) {   
               if (d.source.label[0] === d.target.label[0]) {
-                return 1; // stronger link for links within a group
+                return 2; // stronger link for links within a group
               }
               else {
                 return 0.1; // weaker links for links across groups
@@ -51,8 +51,8 @@ const ChartClassify = () => {
               }) )
         .force("charge", d3.forceManyBody().strength(configData.DRAG_STRENGTH))
         .force("center", d3.forceCenter(GRAPH_WIDTH / 2, GRAPH_HEIGHT / 2))
-        //.force("x", d3.forceX())
-        // .force("y", d3.forceY())
+        .force("x", d3.forceX())
+        .force("y", d3.forceY())
         .force('collide', d3.forceCollide(configData.DRAG_COLLIDE));
 
       // marker with arrowhead
@@ -119,7 +119,8 @@ const ChartClassify = () => {
             return configData.SMALL_NODE_RADIUS;
           }
         })
-        .style("fill", d => colorScale(d.label[0]))
+        //.style("fill", d => colorScale(d.label[0]))
+        .style("fill", d => configData.COLOR[d.label[0]])
         .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
@@ -157,7 +158,7 @@ const ChartClassify = () => {
             }
           });
       
-      var infoPanel = d3.select("#mydata_viz")
+      var infoPanel = d3.select("#chart")
           .append("div")
           .attr("class", "tooltip")
           .style("opacity", 0);
@@ -224,7 +225,7 @@ const ChartClassify = () => {
         // g.attr("transform", `translate(${transform.x + centerX}, ${transform.y + centerY}) scale(${transform.k})`);
       }
       var initialTransform = d3.zoomIdentity
-        .translate(configData.GRAPH_WIDTH / 4, configData.GRAPH_HEIGHT / 4)
+        .translate(configData.GRAPH_WIDTH / 5, configData.GRAPH_HEIGHT / 4)
         .scale(initialScale);
 
       svg.call(zoom.transform,initialTransform);
