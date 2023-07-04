@@ -83,7 +83,6 @@ const ChartForce = () => {
         d.fy = null;
       }
 
-      var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 
       var links = g.append("g")
         .attr("class", "links")

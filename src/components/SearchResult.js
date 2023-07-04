@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
+import configData from "../data/config.json";
+
 const useStyles = makeStyles((theme) => ({
     searchResult: {
         width: '200px',
@@ -34,13 +36,26 @@ export default function SearchResult({results}) {
       fontFamily: ["Open Sans", "sans-seri"].join(","),
     },
     });
+
+    function handleResultClick(resultName, resultId) {
+        console.log(`You clicked on ${resultName}, id: ${resultId}`);
+        configData.RECEIVE_SEARCH_RESULT = String(resultId);
+    }
+
     return (
         <ThemeProvider theme={theme}>
             { (results.length !== 0) && 
                 (
                 <div className={classes.searchResult}>
                   {results.map((result, id) => {
-                    return <div className={classes.SingleSearchResult} key={id} onClick={(e) => alert(`You clicked on ${result.name}`)}>{result.name}</div>;
+                    return (
+                        <div className={classes.SingleSearchResult} 
+                            key={id} 
+                            onClick={(e) => handleResultClick(result.name, result.id)}
+                            >
+                            {result.name}
+                        </div>
+                    );
                   })}
                 </div>
                 )

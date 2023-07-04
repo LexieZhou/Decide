@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import { alpha, makeStyles } from '@material-ui/core/styles';
@@ -50,22 +50,39 @@ export default function SearchBar({setResults}) {
     const [input, setInput] = useState("");
     
     const fetchData = (value) => {
-      // fake api call
-      fetch("http://localhost:8000/nodes")
+      fetch("data.json",
+        {
+          headers : { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        })
         .then((response) => response.json())
         .then((json) => {
-            const results = json.filter((node) => {
-                return (
+          let results = [];
+          if (Array.isArray(json["nodes"])) {
+            results = json["nodes"].filter((node) => {
+              return (
                 value &&
                 node &&
-                node.name && 
+                node.name &&
                 node.name.toLowerCase().includes(value.toLowerCase())
-                );
+              );
+            });
+          } else {
+            console.error('API returned non-array data:', json);
+          }
+          console.log(results);
+          setResults(results);
+        })
+        .catch((error) => {
+          console.error('API request failed:', error);
         });
-        console.log(results);
-        setResults(results);
-      });
-    }
+      }
+      useEffect(()=>{
+        fetchData()
+      },[])
+    
     const handleChange = (value) => {
         setInput(value);
         fetchData(value);
