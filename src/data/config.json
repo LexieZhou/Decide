@@ -21,8 +21,6 @@
     "INITIAL_SCALE_FORCE": 0.2,
     "MIN_DISTANCE": 150,
 
-    "RECEIVE_SEARCH_RESULT": "",
-
     "labels": {
         "0": "api",
         "1": "database",

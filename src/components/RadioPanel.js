@@ -9,22 +9,23 @@ import ChartForce from './Chart_force';
 
 const useStyles = makeStyles((theme) => ({
     
-  }));
+}));
 
 export default function RadioButtonsGroup() {
-    const classes = useStyles();
-    const [value, setValue] = React.useState('forceView');
+  const classes = useStyles();
+  const [value, setValue] = React.useState('forceView');
 
-    const handleChange = (event) => {
-        setValue(event.target.value);
-    };
+  const handleChange = (event) => {
+      setValue(event.target.value);
+  };
 
-    let chartComponent;
-    if (value === 'forceView') {
-        chartComponent = <ChartForce />;
-    } else if (value === 'classifyView') {
-        chartComponent = <ChartClassify />;
-    }
+  let chartComponent;
+  if (value === 'forceView') {
+      chartComponent = <ChartForce />;
+  } else if (value === 'classifyView') {
+      chartComponent = <ChartClassify />;
+  }
+
 
   return (
     <div>
@@ -38,3 +39,7 @@ export default function RadioButtonsGroup() {
     </div>
   );
 }
+
+export const selectedView = () => {
+  return RadioButtonsGroup.value;
+};
