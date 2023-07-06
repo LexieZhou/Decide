@@ -1,6 +1,11 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
+import jsonData from "../data/new_records.json";
+import { createGraph } from './Chart_force';
+import { createClassifyGraph } from './Chart_classify';
+import { selectedView } from './RadioPanel';
+
 const useStyles = makeStyles((theme) => ({
     searchResult: {
         width: '200px',
@@ -27,6 +32,41 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+const handleResultClick = (resultName, resultId) => {
+    // console.log(`You clicked on ${resultName}, id: ${resultId}`);
+    const [filteredNodes, filteredLinks] = filterData(resultId);
+    // console.log("filteredNodes: ", filteredNodes);
+    // console.log("filteredLinks: ", filteredLinks);
+    const newData = {
+        "nodes": filteredNodes,
+        "links": filteredLinks
+    };
+    const selectView = selectedView();
+    if (selectView === "forceView") {
+        createGraph(newData);
+    } else {
+        createClassifyGraph(newData);
+    }
+}
+
+const filterData = (resultId) => {
+    if (resultId === "") {
+        // console.log("no received data");
+        return [jsonData.nodes, jsonData.links];
+    } else {
+        console.log("resultId: ", resultId);
+        const targetId = parseInt(resultId);
+        const filteredNodes = jsonData.nodes.filter(node => {
+            return node.id === targetId || node.childrens.includes(targetId);
+        });
+        const filteredLinks = jsonData.links.filter(link => {
+            // console.log("link: ", link);
+            return link.source.id === targetId || link.target.id === targetId;
+        });
+        return [filteredNodes, filteredLinks];
+    }
+}
+
 export default function SearchResult({results}) {
     const classes = useStyles();
     const theme = createTheme({
@@ -34,13 +74,22 @@ export default function SearchResult({results}) {
       fontFamily: ["Open Sans", "sans-seri"].join(","),
     },
     });
+
+
     return (
         <ThemeProvider theme={theme}>
             { (results.length !== 0) && 
                 (
                 <div className={classes.searchResult}>
                   {results.map((result, id) => {
-                    return <div className={classes.SingleSearchResult} key={id} onClick={(e) => alert(`You clicked on ${result.name}`)}>{result.name}</div>;
+                    return (
+                        <div className={classes.SingleSearchResult} 
+                            key={id} 
+                            onClick={(e) => handleResultClick(result.name, result.id)}
+                            >
+                            {result.name}
+                        </div>
+                    );
                   })}
                 </div>
                 )

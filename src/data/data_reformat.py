@@ -1,6 +1,6 @@
 import json
 
-with open('/Users/zhouzihan/Desktop/knowledge_graph_web/kg_web/src/data/records.json', encoding='utf-8-sig') as f:
+with open('/Users/zhouzihan/Desktop/visual_kg/src/data/records.json', encoding='utf-8-sig') as f:
     data = json.load(f)
 
 
@@ -25,10 +25,11 @@ def getVersion(property_arr):
         return None
 
 
-def add_links_num(node_id):
+def add_links(node_id, children_id):
     for node in nodes:
         if node['id'] == node_id:
             node['links_num'] += 1
+            node["childrens"].append(children_id)
             return
 
 
@@ -41,7 +42,8 @@ for i in range(len(data)):
                       "name": data[i]['p']['start']['properties']['name'],
                       "version": getVersion(data[i]['p']['start']['properties']),
                       "label": data[i]['p']['start']['labels'],
-                      "links_num": 0
+                      "links_num": 0,
+                      "childrens": []
                       })
 
     if node_exist(data[i]['p']['end']['identity']) == False:
@@ -49,7 +51,8 @@ for i in range(len(data)):
                       "name": data[i]['p']['end']['properties']['name'],
                       "version": getVersion(data[i]['p']['end']['properties']),
                       "label": data[i]['p']['end']['labels'],
-                      "links_num": 0
+                      "links_num": 0,
+                      "childrens": []
                       })
 
     if link_exist(data[i]['p']['segments'][0]['relationship']['identity']) == False:
@@ -59,8 +62,8 @@ for i in range(len(data)):
                       "type": data[i]['p']['segments'][0]['relationship']['type'],
                       "properties": data[i]['p']['segments'][0]['relationship']['properties']
                       })
-        add_links_num(data[i]['p']['start']['identity'])
-        add_links_num(data[i]['p']['end']['identity'])
+        add_links(data[i]['p']['start']['identity'], data[i]['p']['end']['identity'])
+        add_links(data[i]['p']['end']['identity'], data[i]['p']['start']['identity'])
 
 new_data = {
     'nodes': nodes,
@@ -74,5 +77,5 @@ new_data = {
 #     links_num_sum += nodes[i]['links_num']
 # print("links_num_sum: ", links_num_sum)
 
-with open('/Users/zhouzihan/Desktop/knowledge_graph_web/kg_web/src/data/new_records.json', 'w') as f:
+with open('/Users/zhouzihan/Desktop/visual_kg/src/data/new_records.json', 'w') as f:
     json.dump(new_data, f, indent=4)

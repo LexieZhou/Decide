@@ -17,7 +17,7 @@ tool_link_num = []
 # add node name and version information
 for i in range(len(data['nodes'])):
     name_info = data['nodes'][i]['name'] + ' ' + data['nodes'][i]['version']
-    nodes_data.append({"name": name_info})
+    nodes_data.append({"name": name_info, "id": data['nodes'][i]['id']})
     if data['nodes'][i]['label'][0] == 'api':
         api_link_num.append({"name": name_info, "link_num": data['nodes'][i]['links_num']})
     elif data['nodes'][i]['label'][0] == 'database':
@@ -60,7 +60,7 @@ linkNum_data = {'api': sorted_api_link_num,
                 'software': sorted_sw_link_num, 
                 'tool': sorted_tool_link_num}
 
-with open('/Users/zhouzihan/Desktop/visual_kg/data.json', 'w') as f:
+with open('/Users/zhouzihan/Desktop/visual_kg/public/data.json', 'w') as f:
     json.dump(search_data, f, indent=4)
 with open('/Users/zhouzihan/Desktop/visual_kg/src/data/linkNum_data.json', 'w') as f:
     json.dump(linkNum_data, f, indent=4)
