@@ -13,9 +13,11 @@ export const createGraph = (data) => {
   const existingSvg = d3.select("#graph-svg");
   const existingTooltip = d3.select("#tooltip");
   if (existingSvg) {
+    console.log("exist svg");
     existingSvg.remove();
   }
   if (existingTooltip) {
+    console.log("exist tooltip");
     existingTooltip.remove();
   }
 

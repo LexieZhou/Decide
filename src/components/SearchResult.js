@@ -4,7 +4,7 @@ import { createTheme, ThemeProvider} from "@material-ui/core";
 import jsonData from "../data/new_records.json";
 import { createGraph } from './Chart_force';
 import { createClassifyGraph } from './Chart_classify';
-import { selectedView } from './RadioPanel';
+import { getselectedView } from './RadioPanel';
 
 const useStyles = makeStyles((theme) => ({
     searchResult: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const handleResultClick = (resultName, resultId) => {
+export const handleResultClick = (resultId) => {
     // console.log(`You clicked on ${resultName}, id: ${resultId}`);
     const [filteredNodes, filteredLinks] = filterData(resultId);
     // console.log("filteredNodes: ", filteredNodes);
@@ -41,7 +41,8 @@ const handleResultClick = (resultName, resultId) => {
         "nodes": filteredNodes,
         "links": filteredLinks
     };
-    const selectView = selectedView();
+    const selectView = getselectedView();
+    console.log("selectView: ", selectView);
     if (selectView === "forceView") {
         createGraph(newData);
     } else {
@@ -49,7 +50,7 @@ const handleResultClick = (resultName, resultId) => {
     }
 }
 
-const filterData = (resultId) => {
+export const filterData = (resultId) => {
     if (resultId === "") {
         // console.log("no received data");
         return [jsonData.nodes, jsonData.links];
