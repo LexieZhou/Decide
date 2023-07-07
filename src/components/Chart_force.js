@@ -4,7 +4,37 @@ import jsonData from '../data/new_records.json';
 import configData from '../data/config.json';
 import './Chart.css';
 
-export const createGraph = (data) => {
+export const handleResultClick = (resultId) => {
+  // console.log(`You clicked on ${resultName}, id: ${resultId}`);
+  var wholeView = true;
+  if (resultId === "") {
+    wholeView = true;
+    createGraph(jsonData, wholeView);
+  } else {
+    wholeView = false;
+    const [filteredNodes, filteredLinks] = filterData(resultId);
+    const newData = {
+      "nodes": filteredNodes,
+      "links": filteredLinks
+    };
+    createGraph(newData, wholeView);
+  }
+}
+
+export const filterData = (resultId) => {
+  console.log("resultId: ", resultId);
+  const targetId = parseInt(resultId);
+  const filteredNodes = jsonData.nodes.filter(node => {
+      return node.id === targetId || node.childrens.includes(targetId);
+  });
+  const filteredLinks = jsonData.links.filter(link => {
+      // console.log("link: ", link);
+      return link.source.id === targetId || link.target.id === targetId;
+  });
+  return [filteredNodes, filteredLinks];
+}
+
+export const createGraph = (data, wholeView) => {
   const GRAPH_WIDTH = configData.GRAPH_WIDTH;
   const GRAPH_HEIGHT = configData.GRAPH_HEIGHT;
 
@@ -200,9 +230,12 @@ export const createGraph = (data) => {
     });
 
   //d3 zoom
-  const initialScale = configData.INITIAL_SCALE_FORCE;
-  // const initialTranslateX = GRAPH_WIDTH / 2;
-  // const initialTranslateY = GRAPH_HEIGHT / 2;
+  var initialScale = configData.INITIAL_SCALE_FORCE;
+  if (wholeView === false) {
+    initialScale = configData.RESULT_SCALE;
+  }
+  console.log("initilaScale: " + initialScale);
+  // const initialScale = configData.INITIAL_SCALE;
   const zoom = d3.zoom()
     .extent([[0, 0], [GRAPH_WIDTH, GRAPH_HEIGHT]])
     .scaleExtent([-50, 100])
@@ -215,7 +248,7 @@ export const createGraph = (data) => {
     // g.attr("transform", `translate(${transform.x + centerX}, ${transform.y + centerY}) scale(${transform.k})`);
   }
   var initialTransform = d3.zoomIdentity
-    .translate(configData.GRAPH_WIDTH / 4, configData.GRAPH_HEIGHT / 4)
+    .translate(configData.GRAPH_WIDTH / 18 / initialScale, configData.GRAPH_HEIGHT / 18 / initialScale)
     .scale(initialScale);
 
   svg.call(zoom.transform,initialTransform);

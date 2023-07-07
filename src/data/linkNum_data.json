@@ -3,54 +3,54 @@
     "database": [
         {
             "id": 182,
-            "name": "mysql 5.7",
+            "name": "MySQL 5.7",
             "link_num": 12
         },
         {
             "id": 4422,
-            "name": "postgres 9.4",
+            "name": "PostgreSQL 9.4",
             "link_num": 10
         },
         {
             "id": 160,
-            "name": "postgres 9.3",
+            "name": "PostgreSQL 9.3",
             "link_num": 6
         },
         {
             "id": 439,
-            "name": "mysql 3.23",
+            "name": "MySQL 3.23",
             "link_num": 6
         },
         {
             "id": 833,
-            "name": "mysql 5.6.24",
+            "name": "MySQL 5.6.24",
             "link_num": 6
         }
     ],
     "hardware": [
         {
             "id": 4449,
-            "name": "cuda 9",
+            "name": "CUDA 9",
             "link_num": 62
         },
         {
             "id": 4443,
-            "name": "cuda 8",
+            "name": "CUDA 8",
             "link_num": 54
         },
         {
             "id": 4474,
-            "name": "cuda 10.1",
+            "name": "CUDA 10.1",
             "link_num": 40
         },
         {
             "id": 4434,
-            "name": "cuda 10",
+            "name": "CUDA 10",
             "link_num": 38
         },
         {
             "id": 4473,
-            "name": "cuda 11",
+            "name": "CUDA 11",
             "link_num": 34
         }
     ],
@@ -62,115 +62,115 @@
         },
         {
             "id": 4408,
-            "name": "tensorflow 2",
+            "name": "TensorFlow 2",
             "link_num": 32
         },
         {
             "id": 4418,
-            "name": "flask 0.10.1",
+            "name": "Flask 0.10.1",
             "link_num": 22
         },
         {
             "id": 4456,
-            "name": "tensorflow 1.12",
+            "name": "TensorFlow 1.12",
             "link_num": 20
         },
         {
             "id": 4453,
-            "name": "tensorflow 1.3",
+            "name": "TensorFlow 1.3",
             "link_num": 20
         }
     ],
     "operating_system": [
         {
             "id": 4410,
-            "name": "windows 7",
+            "name": "Windows 7",
             "link_num": 106
         },
         {
             "id": 4495,
-            "name": "windows 10",
+            "name": "Windows 10",
             "link_num": 106
         },
         {
             "id": 4404,
-            "name": "ubuntu 16.04",
+            "name": "Ubuntu 16.04",
             "link_num": 58
         },
         {
             "id": 4426,
-            "name": "ubuntu 14.04",
+            "name": "Ubuntu 14.04",
             "link_num": 48
         },
         {
             "id": 4400,
-            "name": "ubuntu 18.04",
+            "name": "Ubuntu 18.04",
             "link_num": 36
         }
     ],
     "programming_language": [
         {
             "id": 4378,
-            "name": "python 2.7",
+            "name": "Python 2.7",
             "link_num": 224
         },
         {
             "id": 4383,
-            "name": "python 3",
+            "name": "Python 3",
             "link_num": 144
         },
         {
             "id": 4480,
-            "name": "python 3.7",
+            "name": "Python 3.7",
             "link_num": 118
         },
         {
             "id": 4436,
-            "name": "python 3.6",
+            "name": "Python 3.6",
             "link_num": 100
         },
         {
             "id": 4381,
-            "name": "python 3.5",
+            "name": "Python 3.5",
             "link_num": 84
         }
     ],
     "software": [
         {
             "id": 136,
-            "name": "emr 6.3",
+            "name": "Amazon EMR 6.3",
             "link_num": 2
         },
         {
             "id": 258,
-            "name": "emr 5.30",
+            "name": "Amazon EMR 5.30",
             "link_num": 2
         },
         {
             "id": 396,
-            "name": "blender 2.49",
+            "name": "Blender 2.49",
             "link_num": 2
         },
         {
             "id": 400,
-            "name": "blender 2.5",
+            "name": "Blender 2.5",
             "link_num": 2
         },
         {
             "id": 478,
-            "name": "blender 2.6.4",
+            "name": "Blender 2.6.4",
             "link_num": 2
         }
     ],
     "tool": [
         {
             "id": 4525,
-            "name": "gcc 4.7",
+            "name": "GCC 4.7",
             "link_num": 14
         },
         {
             "id": 4550,
-            "name": "gcc 4.8",
+            "name": "GCC 4.8",
             "link_num": 12
         },
         {
@@ -180,12 +180,12 @@
         },
         {
             "id": 57,
-            "name": "gcc 4.8.5",
+            "name": "GCC 4.8.5",
             "link_num": 10
         },
         {
             "id": 4546,
-            "name": "gcc 4.6",
+            "name": "GCC 4.6",
             "link_num": 8
         }
     ]

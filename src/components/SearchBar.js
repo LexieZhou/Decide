@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
+import IconButton from '@material-ui/core/IconButton';
+import ClearIcon from '@material-ui/icons/Clear';
 import { alpha, makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
 
@@ -43,6 +45,13 @@ const useStyles = makeStyles((theme) => ({
             width: '20ch',
           },
         },
+    },
+    clearButton: {
+      position: 'absolute',
+      color: 'white',
+      height: '100%',
+      top: 0,
+      right: 0,
     },
 }));
 
@@ -87,6 +96,10 @@ export default function SearchBar({setResults}) {
         setInput(value);
         fetchData(value);
     }
+    const handleClearClick = () => {
+      setInput("");
+      fetchData("");
+    }
     const classes = useStyles();
     const theme = createTheme({
     typography: {
@@ -110,6 +123,15 @@ export default function SearchBar({setResults}) {
               inputProps={{ 'aria-label': 'search' }}
               onChange={(e) => handleChange(e.target.value)}
             />
+            {input && (
+            <IconButton
+              size='small'
+              className={classes.clearButton}
+              onClick={handleClearClick}
+            >
+              <ClearIcon size='small'/>
+            </IconButton>
+          )}
           </div>
         </div>
     </ThemeProvider>

@@ -19,6 +19,7 @@
 
     "INITIAL_SCALE": 0.4,
     "INITIAL_SCALE_FORCE": 0.2,
+    "RESULT_SCALE": 1,
     "MIN_DISTANCE": 150,
 
     "labels": {

@@ -5,7 +5,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { makeStyles } from '@material-ui/core/styles';
-import { handleResultClick } from "./SearchResult";
+import { handleResultClick } from "./Chart_force";
 import ChartClassify from './Chart_classify';
 import ChartForce from './Chart_force';
 

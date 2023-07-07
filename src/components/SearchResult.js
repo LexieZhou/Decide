@@ -1,8 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
-import jsonData from "../data/new_records.json";
-import { createGraph } from './Chart_force';
+import { handleResultClick } from './Chart_force';
 
 const useStyles = makeStyles((theme) => ({
     searchResult: {
@@ -30,35 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export const handleResultClick = (resultId) => {
-    // console.log(`You clicked on ${resultName}, id: ${resultId}`);
-    const [filteredNodes, filteredLinks] = filterData(resultId);
-    // console.log("filteredNodes: ", filteredNodes);
-    // console.log("filteredLinks: ", filteredLinks);
-    const newData = {
-        "nodes": filteredNodes,
-        "links": filteredLinks
-    };
-    createGraph(newData);
-}
 
-export const filterData = (resultId) => {
-    if (resultId === "") {
-        // console.log("no received data");
-        return [jsonData.nodes, jsonData.links];
-    } else {
-        console.log("resultId: ", resultId);
-        const targetId = parseInt(resultId);
-        const filteredNodes = jsonData.nodes.filter(node => {
-            return node.id === targetId || node.childrens.includes(targetId);
-        });
-        const filteredLinks = jsonData.links.filter(link => {
-            // console.log("link: ", link);
-            return link.source.id === targetId || link.target.id === targetId;
-        });
-        return [filteredNodes, filteredLinks];
-    }
-}
 
 export default function SearchResult({results}) {
     const classes = useStyles();

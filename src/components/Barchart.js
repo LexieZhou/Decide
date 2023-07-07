@@ -3,7 +3,7 @@ import linkData from '../data/linkNum_data.json';
 import configData from '../data/config.json';
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { handleResultClick } from "./SearchResult";
+import { handleResultClick } from "./Chart_force";
 
 export default function Barchart({label}) {
     const margin = {top: 40, right: 10, bottom: 30, left: 80};
@@ -36,14 +36,15 @@ export default function Barchart({label}) {
                 .attr("class", "barchart-tooltip")
                 .style("opacity", 0)
                 .style("position", "absolute")
-                .style("background-color", "rgba(0, 0, 0, 0.8)")
-                .style("color", "#fff")
+                //.style("background-color", "rgba(0, 0, 0, 0.8)")
+                .style("color", "black")
                 .style("padding", "10px")
                 .style("font-size", "9px")
+                .style("font-weight", "bold")
                 .style("width", "60px")
                 .style("height", "30px")
-                .style("box-sizing", "border-box")
-                .style("border-radius", "5px");
+                //.style("box-sizing", "border-box")
+                //.style("border-radius", "5px");
 
             
             svg.append("g")
@@ -92,7 +93,7 @@ export default function Barchart({label}) {
                     tooltip.transition()
                         .duration(100)
                         .style("opacity", 1)
-                        .style('top', event.pageY - 10 + 'px')
+                        .style('top', event.pageY - 20 + 'px')
                         .style('left', event.pageX + 10 + 'px');
                       
                     tooltip

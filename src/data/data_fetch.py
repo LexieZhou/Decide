@@ -13,10 +13,56 @@ pl_link_num = []
 sw_link_num = []
 tool_link_num = []
 
+official_name = {
+    "wxpython": "wxPython",
+    "tensorflow": "TensorFlow",
+    "tfds": "TensorFlow Datasets",
+    "tensorboard": "TensorBoard",
+    "pytorch": "PyTorch",
+    "numpy": "NumPy",
+    "scipy": "SciPy",
+    "scikit-learn": "scikit-learn", 
+    "pandas": "pandas",
+    "keras": "Keras",
+    "flask": "Flask",
+    "tensorflow-transform": "TensorFlow Transform",
+    "zappa": "Zappa",
+    "subprocess": "subprocess",
+    "sqlalchemy": "SQLAlchemy",
+    "psycopg": "psycopg",
+    "flask-sqlalchemy": "Flask SQLAlchemy",
+    "airflow": "Airflow",
+    "fftw": "FFTW",
+    "tensorflow-core-platform": "TensorFlow Core Platform",
+    "cuda": "CUDA",
+    "cudnn": "cuDNN",
+    "python": "Python",
+    "ubuntu": "Ubuntu",
+    "windows": "Windows",
+    "macos": "macOS",
+    "centos": "CentOS",
+    "android": "Android",
+    "ios": "iOS",
+    "debian": "Debian",
+    "bazel": "Bazel",
+    "glibc": "glibc",
+    "jetpack": "JetPack",
+    "gcc": "GCC",
+    "gzip": "gzip",
+    "coremltools": "Core ML Tools",
+    "postgres": "PostgreSQL",
+    "mysql": "MySQL",
+    "blender": "Blender",
+    "emr": "Amazon EMR"
+}
+
 
 # add node id, name and version information
 for i in range(len(data['nodes'])):
-    name_info = data['nodes'][i]['name'] + ' ' + data['nodes'][i]['version']
+    name = data['nodes'][i]['name']
+    if name in official_name:
+        name = official_name[name]
+    name_info = name + ' ' + data['nodes'][i]['version']
     nodes_data.append({"name": name_info, "id": data['nodes'][i]['id']})
     if data['nodes'][i]['label'][0] == 'api':
         api_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})

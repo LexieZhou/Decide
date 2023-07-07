@@ -1,23 +1,23 @@
 {
     "nodes": [
         {
-            "name": "bazel 1",
+            "name": "Bazel 1",
             "id": 0
         },
         {
-            "name": "ubuntu 18.04",
+            "name": "Ubuntu 18.04",
             "id": 4400
         },
         {
-            "name": "centos 5",
+            "name": "CentOS 5",
             "id": 1
         },
         {
-            "name": "gcc 4.8",
+            "name": "GCC 4.8",
             "id": 4550
         },
         {
-            "name": "centos 5.10",
+            "name": "CentOS 5.10",
             "id": 2
         },
         {
@@ -25,11 +25,11 @@
             "id": 3
         },
         {
-            "name": "numpy 2.7",
+            "name": "NumPy 2.7",
             "id": 4
         },
         {
-            "name": "python 3.3",
+            "name": "Python 3.3",
             "id": 4503
         },
         {
@@ -37,7 +37,7 @@
             "id": 5
         },
         {
-            "name": "pytorch 0.4",
+            "name": "PyTorch 0.4",
             "id": 6
         },
         {
@@ -45,83 +45,83 @@
             "id": 8
         },
         {
-            "name": "centos 6.3",
+            "name": "CentOS 6.3",
             "id": 7
         },
         {
-            "name": "python 7.2",
+            "name": "Python 7.2",
             "id": 654
         },
         {
-            "name": "bazel 0.4.1",
+            "name": "Bazel 0.4.1",
             "id": 826
         },
         {
-            "name": "pytorch 1.1",
+            "name": "PyTorch 1.1",
             "id": 9
         },
         {
-            "name": "python 3.6",
+            "name": "Python 3.6",
             "id": 4436
         },
         {
-            "name": "windows 11.1",
+            "name": "Windows 11.1",
             "id": 10
         },
         {
-            "name": "pytorch 1.8.1",
+            "name": "PyTorch 1.8.1",
             "id": 4576
         },
         {
-            "name": "cuda 3.2",
+            "name": "CUDA 3.2",
             "id": 11
         },
         {
-            "name": "windows 6.1",
+            "name": "Windows 6.1",
             "id": 12
         },
         {
-            "name": "cuda 2.2",
+            "name": "CUDA 2.2",
             "id": 13
         },
         {
-            "name": "windows 7",
+            "name": "Windows 7",
             "id": 4410
         },
         {
-            "name": "ubuntu 11.10",
+            "name": "Ubuntu 11.10",
             "id": 14
         },
         {
-            "name": "cuda 2.1",
+            "name": "CUDA 2.1",
             "id": 18
         },
         {
-            "name": "cuda 4.2",
+            "name": "CUDA 4.2",
             "id": 17
         },
         {
-            "name": "gcc 4.5.2",
+            "name": "GCC 4.5.2",
             "id": 16
         },
         {
-            "name": "gcc 4.4",
+            "name": "GCC 4.4",
             "id": 15
         },
         {
-            "name": "gcc 4.6",
+            "name": "GCC 4.6",
             "id": 4546
         },
         {
-            "name": "python 2.5",
+            "name": "Python 2.5",
             "id": 4416
         },
         {
-            "name": "pytorch 3",
+            "name": "PyTorch 3",
             "id": 333
         },
         {
-            "name": "ubuntu 12.04",
+            "name": "Ubuntu 12.04",
             "id": 19
         },
         {
@@ -129,47 +129,47 @@
             "id": 804
         },
         {
-            "name": "python 1.2.1",
+            "name": "Python 1.2.1",
             "id": 744
         },
         {
-            "name": "python 0.8",
+            "name": "Python 0.8",
             "id": 578
         },
         {
-            "name": "python 1.46",
+            "name": "Python 1.46",
             "id": 487
         },
         {
-            "name": "python 2.7.1",
+            "name": "Python 2.7.1",
             "id": 155
         },
         {
-            "name": "python 2.7.11",
+            "name": "Python 2.7.11",
             "id": 115
         },
         {
-            "name": "cuda 11.04",
+            "name": "CUDA 11.04",
             "id": 34
         },
         {
-            "name": "cuda 5.5",
+            "name": "CUDA 5.5",
             "id": 4591
         },
         {
-            "name": "windows 11",
+            "name": "Windows 11",
             "id": 20
         },
         {
-            "name": "centos 6.2",
+            "name": "CentOS 6.2",
             "id": 21
         },
         {
-            "name": "gcc 4.4.6",
+            "name": "GCC 4.4.6",
             "id": 22
         },
         {
-            "name": "cuda 5",
+            "name": "CUDA 5",
             "id": 4521
         },
         {
@@ -177,251 +177,251 @@
             "id": 23
         },
         {
-            "name": "centos 5.5",
+            "name": "CentOS 5.5",
             "id": 24
         },
         {
-            "name": "python 2.6.4",
+            "name": "Python 2.6.4",
             "id": 467
         },
         {
-            "name": "gcc 4.8.1",
+            "name": "GCC 4.8.1",
             "id": 25
         },
         {
-            "name": "cuda 6",
+            "name": "CUDA 6",
             "id": 4548
         },
         {
-            "name": "ubuntu 13.10",
+            "name": "Ubuntu 13.10",
             "id": 28
         },
         {
-            "name": "debian 8",
+            "name": "Debian 8",
             "id": 26
         },
         {
-            "name": "gcc 4.7.3",
+            "name": "GCC 4.7.3",
             "id": 27
         },
         {
-            "name": "gcc 4.7",
+            "name": "GCC 4.7",
             "id": 4525
         },
         {
-            "name": "ubuntu 13.04",
+            "name": "Ubuntu 13.04",
             "id": 29
         },
         {
-            "name": "python 2.7.4",
+            "name": "Python 2.7.4",
             "id": 484
         },
         {
-            "name": "python 3.3.1",
+            "name": "Python 3.3.1",
             "id": 201
         },
         {
-            "name": "python 3.2",
+            "name": "Python 3.2",
             "id": 196
         },
         {
-            "name": "python 2.7",
+            "name": "Python 2.7",
             "id": 4378
         },
         {
-            "name": "python 2.7.5",
+            "name": "Python 2.7.5",
             "id": 156
         },
         {
-            "name": "fftw 3.3",
+            "name": "FFTW 3.3",
             "id": 30
         },
         {
-            "name": "gcc 4.8.2",
+            "name": "GCC 4.8.2",
             "id": 31
         },
         {
-            "name": "python 3.4.3",
+            "name": "Python 3.4.3",
             "id": 169
         },
         {
-            "name": "ubuntu 14.04",
+            "name": "Ubuntu 14.04",
             "id": 4426
         },
         {
-            "name": "cuda 6.5",
+            "name": "CUDA 6.5",
             "id": 32
         },
         {
-            "name": "gcc 7.5",
+            "name": "GCC 7.5",
             "id": 79
         },
         {
-            "name": "gcc 4.8.5",
+            "name": "GCC 4.8.5",
             "id": 57
         },
         {
-            "name": "windows 8",
+            "name": "Windows 8",
             "id": 37
         },
         {
-            "name": "cuda 6.0.37",
+            "name": "CUDA 6.0.37",
             "id": 33
         },
         {
-            "name": "cuda 14.2",
+            "name": "CUDA 14.2",
             "id": 35
         },
         {
-            "name": "windows 14.2",
+            "name": "Windows 14.2",
             "id": 36
         },
         {
-            "name": "wxpython 3.0.1",
+            "name": "wxPython 3.0.1",
             "id": 670
         },
         {
-            "name": "python 3.3.2",
+            "name": "Python 3.3.2",
             "id": 199
         },
         {
-            "name": "python 3.5.3",
+            "name": "Python 3.5.3",
             "id": 173
         },
         {
-            "name": "python 2.7.9",
+            "name": "Python 2.7.9",
             "id": 158
         },
         {
-            "name": "windows 8.1",
+            "name": "Windows 8.1",
             "id": 38
         },
         {
-            "name": "python 3",
+            "name": "Python 3",
             "id": 4383
         },
         {
-            "name": "python 6.5",
+            "name": "Python 6.5",
             "id": 752
         },
         {
-            "name": "python 1.9.6",
+            "name": "Python 1.9.6",
             "id": 689
         },
         {
-            "name": "tensorflow r0.7",
+            "name": "TensorFlow r0.7",
             "id": 315
         },
         {
-            "name": "python 3.2.5",
+            "name": "Python 3.2.5",
             "id": 200
         },
         {
-            "name": "cuda 7",
+            "name": "CUDA 7",
             "id": 4549
         },
         {
-            "name": "gcc 5",
+            "name": "GCC 5",
             "id": 39
         },
         {
-            "name": "cuda 8",
+            "name": "CUDA 8",
             "id": 4443
         },
         {
-            "name": "cuda 9",
+            "name": "CUDA 9",
             "id": 4449
         },
         {
-            "name": "gcc 4.9",
+            "name": "GCC 4.9",
             "id": 40
         },
         {
-            "name": "cuda 7.5.7",
+            "name": "CUDA 7.5.7",
             "id": 41
         },
         {
-            "name": "cuda 7.5.18",
+            "name": "CUDA 7.5.18",
             "id": 42
         },
         {
-            "name": "cuda 14.04",
+            "name": "CUDA 14.04",
             "id": 43
         },
         {
-            "name": "ubuntu 15.10",
+            "name": "Ubuntu 15.10",
             "id": 44
         },
         {
-            "name": "gcc 5.2.1",
+            "name": "GCC 5.2.1",
             "id": 47
         },
         {
-            "name": "gcc 4",
+            "name": "GCC 4",
             "id": 45
         },
         {
-            "name": "python 2.7.2",
+            "name": "Python 2.7.2",
             "id": 4431
         },
         {
-            "name": "python 3.2.2",
+            "name": "Python 3.2.2",
             "id": 443
         },
         {
-            "name": "python 10.6",
+            "name": "Python 10.6",
             "id": 393
         },
         {
-            "name": "tensorflow 0.8",
+            "name": "TensorFlow 0.8",
             "id": 46
         },
         {
-            "name": "bazel 0.5.4",
+            "name": "Bazel 0.5.4",
             "id": 336
         },
         {
-            "name": "gcc 4.5.4",
+            "name": "GCC 4.5.4",
             "id": 48
         },
         {
-            "name": "cuda 7.5",
+            "name": "CUDA 7.5",
             "id": 4467
         },
         {
-            "name": "gcc 4.9.2",
+            "name": "GCC 4.9.2",
             "id": 49
         },
         {
-            "name": "cuda 3",
+            "name": "CUDA 3",
             "id": 4494
         },
         {
-            "name": "gcc 4.2",
+            "name": "GCC 4.2",
             "id": 50
         },
         {
-            "name": "ubuntu 14.04.3",
+            "name": "Ubuntu 14.04.3",
             "id": 51
         },
         {
-            "name": "ubuntu 7.5",
+            "name": "Ubuntu 7.5",
             "id": 52
         },
         {
-            "name": "gcc 5.4",
+            "name": "GCC 5.4",
             "id": 53
         },
         {
-            "name": "ubuntu 16.014",
+            "name": "Ubuntu 16.014",
             "id": 523
         },
         {
-            "name": "ubuntu 1",
+            "name": "Ubuntu 1",
             "id": 56
         },
         {
-            "name": "centos 7",
+            "name": "CentOS 7",
             "id": 54
         },
         {
@@ -429,243 +429,243 @@
             "id": 1068
         },
         {
-            "name": "python 2.6",
+            "name": "Python 2.6",
             "id": 4393
         },
         {
-            "name": "flask 12.5",
+            "name": "Flask 12.5",
             "id": 872
         },
         {
-            "name": "python 3.7.8",
+            "name": "Python 3.7.8",
             "id": 547
         },
         {
-            "name": "python 3.6.1",
+            "name": "Python 3.6.1",
             "id": 142
         },
         {
-            "name": "python 34",
+            "name": "Python 34",
             "id": 140
         },
         {
-            "name": "cuda 10.1.243",
+            "name": "CUDA 10.1.243",
             "id": 73
         },
         {
-            "name": "ubuntu 14",
+            "name": "Ubuntu 14",
             "id": 55
         },
         {
-            "name": "cuda 10.1",
+            "name": "CUDA 10.1",
             "id": 4474
         },
         {
-            "name": "tensorflow 1.13.1",
+            "name": "TensorFlow 1.13.1",
             "id": 4531
         },
         {
-            "name": "centos 7.6",
+            "name": "CentOS 7.6",
             "id": 354
         },
         {
-            "name": "cuda 8.0.44",
+            "name": "CUDA 8.0.44",
             "id": 58
         },
         {
-            "name": "ubuntu 16.04",
+            "name": "Ubuntu 16.04",
             "id": 4404
         },
         {
-            "name": "cuda 8.0.61",
+            "name": "CUDA 8.0.61",
             "id": 59
         },
         {
-            "name": "pytorch 0.3.1",
+            "name": "PyTorch 0.3.1",
             "id": 1097
         },
         {
-            "name": "windows 10",
+            "name": "Windows 10",
             "id": 4495
         },
         {
-            "name": "cuda 11.2",
+            "name": "CUDA 11.2",
             "id": 60
         },
         {
-            "name": "tensorflow 2.4.1",
+            "name": "TensorFlow 2.4.1",
             "id": 4405
         },
         {
-            "name": "cudnn 8.0.4",
+            "name": "cuDNN 8.0.4",
             "id": 4471
         },
         {
-            "name": "tensorflow 2.2.2",
+            "name": "TensorFlow 2.2.2",
             "id": 1172
         },
         {
-            "name": "cudnn 8.1",
+            "name": "cuDNN 8.1",
             "id": 374
         },
         {
-            "name": "gcc 11.2",
+            "name": "GCC 11.2",
             "id": 62
         },
         {
-            "name": "gcc 11.1",
+            "name": "GCC 11.1",
             "id": 61
         },
         {
-            "name": "cuda 3.3",
+            "name": "CUDA 3.3",
             "id": 63
         },
         {
-            "name": "tensorflow 1.4.1",
+            "name": "TensorFlow 1.4.1",
             "id": 64
         },
         {
-            "name": "cuda 9.1",
+            "name": "CUDA 9.1",
             "id": 4527
         },
         {
-            "name": "gcc 7.2",
+            "name": "GCC 7.2",
             "id": 65
         },
         {
-            "name": "ubuntu 17.10",
+            "name": "Ubuntu 17.10",
             "id": 96
         },
         {
-            "name": "centos 7.4",
+            "name": "CentOS 7.4",
             "id": 66
         },
         {
-            "name": "cuda 7.4",
+            "name": "CUDA 7.4",
             "id": 67
         },
         {
-            "name": "gcc 7",
+            "name": "GCC 7",
             "id": 4553
         },
         {
-            "name": "centos 7.5",
+            "name": "CentOS 7.5",
             "id": 68
         },
         {
-            "name": "cuda 10",
+            "name": "CUDA 10",
             "id": 4434
         },
         {
-            "name": "ubuntu 18.04.2",
+            "name": "Ubuntu 18.04.2",
             "id": 69
         },
         {
-            "name": "tensorflow 1.12",
+            "name": "TensorFlow 1.12",
             "id": 4456
         },
         {
-            "name": "cuda 8.3",
+            "name": "CUDA 8.3",
             "id": 70
         },
         {
-            "name": "gcc 9.1",
+            "name": "GCC 9.1",
             "id": 71
         },
         {
-            "name": "gcc 9.3",
+            "name": "GCC 9.3",
             "id": 72
         },
         {
-            "name": "cuda 9.2",
+            "name": "CUDA 9.2",
             "id": 4554
         },
         {
-            "name": "windows 10.2.89",
+            "name": "Windows 10.2.89",
             "id": 74
         },
         {
-            "name": "cuda 10.2",
+            "name": "CUDA 10.2",
             "id": 4556
         },
         {
-            "name": "gcc 8.3.1",
+            "name": "GCC 8.3.1",
             "id": 75
         },
         {
-            "name": "gcc 4.3.5",
+            "name": "GCC 4.3.5",
             "id": 76
         },
         {
-            "name": "ubuntu 19.10",
+            "name": "Ubuntu 19.10",
             "id": 77
         },
         {
-            "name": "gcc 9.2",
+            "name": "GCC 9.2",
             "id": 78
         },
         {
-            "name": "cuda 10.2.89",
+            "name": "CUDA 10.2.89",
             "id": 80
         },
         {
-            "name": "cudnn 4.2",
+            "name": "cuDNN 4.2",
             "id": 81
         },
         {
-            "name": "cudnn 4.3",
+            "name": "cuDNN 4.3",
             "id": 82
         },
         {
-            "name": "jetpack 4.3",
+            "name": "JetPack 4.3",
             "id": 83
         },
         {
-            "name": "jetpack 4.4",
+            "name": "JetPack 4.4",
             "id": 84
         },
         {
-            "name": "cuda 4.5.1",
+            "name": "CUDA 4.5.1",
             "id": 85
         },
         {
-            "name": "macos 10.13",
+            "name": "macOS 10.13",
             "id": 86
         },
         {
-            "name": "python 9.0.3",
+            "name": "Python 9.0.3",
             "id": 980
         },
         {
-            "name": "cuda 8.2",
+            "name": "CUDA 8.2",
             "id": 332
         },
         {
-            "name": "cuda 3.18",
+            "name": "CUDA 3.18",
             "id": 87
         },
         {
-            "name": "ubuntu 20.04",
+            "name": "Ubuntu 20.04",
             "id": 4399
         },
         {
-            "name": "cudnn 5",
+            "name": "cuDNN 5",
             "id": 88
         },
         {
-            "name": "bazel 0.3.1",
+            "name": "Bazel 0.3.1",
             "id": 320
         },
         {
-            "name": "cudnn 4.5",
+            "name": "cuDNN 4.5",
             "id": 89
         },
         {
-            "name": "gcc 8",
+            "name": "GCC 8",
             "id": 4555
         },
         {
-            "name": "flask 1.0.2",
+            "name": "Flask 1.0.2",
             "id": 90
         },
         {
@@ -673,115 +673,115 @@
             "id": 1045
         },
         {
-            "name": "sqlalchemy 1.2.12",
+            "name": "SQLAlchemy 1.2.12",
             "id": 274
         },
         {
-            "name": "python 3.6.4",
+            "name": "Python 3.6.4",
             "id": 4461
         },
         {
-            "name": "flask 0.13",
+            "name": "Flask 0.13",
             "id": 91
         },
         {
-            "name": "flask 0.12.2",
+            "name": "Flask 0.12.2",
             "id": 92
         },
         {
-            "name": "postgres 12.2",
+            "name": "PostgreSQL 12.2",
             "id": 93
         },
         {
-            "name": "sqlalchemy 1.3",
+            "name": "SQLAlchemy 1.3",
             "id": 94
         },
         {
-            "name": "fftw 3.3.5",
+            "name": "FFTW 3.3.5",
             "id": 95
         },
         {
-            "name": "python 5.1",
+            "name": "Python 5.1",
             "id": 518
         },
         {
-            "name": "python 2.4.1",
+            "name": "Python 2.4.1",
             "id": 634
         },
         {
-            "name": "python 5",
+            "name": "Python 5",
             "id": 440
         },
         {
-            "name": "mysql 10.1",
+            "name": "MySQL 10.1",
             "id": 530
         },
         {
-            "name": "pytorch 10",
+            "name": "PyTorch 10",
             "id": 97
         },
         {
-            "name": "ubuntu 16.04.2",
+            "name": "Ubuntu 16.04.2",
             "id": 98
         },
         {
-            "name": "coremltools 0.4",
+            "name": "Core ML Tools 0.4",
             "id": 4537
         },
         {
-            "name": "keras 2.0.4",
+            "name": "Keras 2.0.4",
             "id": 99
         },
         {
-            "name": "keras 2.3.1",
+            "name": "Keras 2.3.1",
             "id": 100
         },
         {
-            "name": "tensorflow 2",
+            "name": "TensorFlow 2",
             "id": 4408
         },
         {
-            "name": "keras 2.3",
+            "name": "Keras 2.3",
             "id": 101
         },
         {
-            "name": "numpy 1.6.1",
+            "name": "NumPy 1.6.1",
             "id": 102
         },
         {
-            "name": "scipy 0.12",
+            "name": "SciPy 0.12",
             "id": 312
         },
         {
-            "name": "scipy 10.2",
+            "name": "SciPy 10.2",
             "id": 604
         },
         {
-            "name": "python 1.5",
+            "name": "Python 1.5",
             "id": 472
         },
         {
-            "name": "python 1.7",
+            "name": "Python 1.7",
             "id": 462
         },
         {
-            "name": "numpy 10.7",
+            "name": "NumPy 10.7",
             "id": 103
         },
         {
-            "name": "scipy 0.14",
+            "name": "SciPy 0.14",
             "id": 104
         },
         {
-            "name": "windows 0.2.1",
+            "name": "Windows 0.2.1",
             "id": 696
         },
         {
-            "name": "windows 1.8.6",
+            "name": "Windows 1.8.6",
             "id": 694
         },
         {
-            "name": "numpy 1.8.1",
+            "name": "NumPy 1.8.1",
             "id": 4514
         },
         {
@@ -789,11 +789,11 @@
             "id": 105
         },
         {
-            "name": "numpy 2.5",
+            "name": "NumPy 2.5",
             "id": 106
         },
         {
-            "name": "numpy 1.9.2",
+            "name": "NumPy 1.9.2",
             "id": 107
         },
         {
@@ -801,23 +801,23 @@
             "id": 754
         },
         {
-            "name": "wxpython 3",
+            "name": "wxPython 3",
             "id": 108
         },
         {
-            "name": "numpy 1.9",
+            "name": "NumPy 1.9",
             "id": 112
         },
         {
-            "name": "numpy 1.8",
+            "name": "NumPy 1.8",
             "id": 111
         },
         {
-            "name": "numpy 2.9.5",
+            "name": "NumPy 2.9.5",
             "id": 110
         },
         {
-            "name": "numpy 3.0.2",
+            "name": "NumPy 3.0.2",
             "id": 109
         },
         {
@@ -837,7 +837,7 @@
             "id": 585
         },
         {
-            "name": "python 0.14",
+            "name": "Python 0.14",
             "id": 584
         },
         {
@@ -849,39 +849,39 @@
             "id": 184
         },
         {
-            "name": "numpy 1.10.1",
+            "name": "NumPy 1.10.1",
             "id": 113
         },
         {
-            "name": "python 3.5",
+            "name": "Python 3.5",
             "id": 4381
         },
         {
-            "name": "python 2.7.10",
+            "name": "Python 2.7.10",
             "id": 4465
         },
         {
-            "name": "numpy 1.9.3",
+            "name": "NumPy 1.9.3",
             "id": 114
         },
         {
-            "name": "sqlalchemy 1.0.11",
+            "name": "SQLAlchemy 1.0.11",
             "id": 4419
         },
         {
-            "name": "ubuntu 10.11.5",
+            "name": "Ubuntu 10.11.5",
             "id": 818
         },
         {
-            "name": "windows 2.1.1",
+            "name": "Windows 2.1.1",
             "id": 770
         },
         {
-            "name": "centos 9.0.1",
+            "name": "CentOS 9.0.1",
             "id": 712
         },
         {
-            "name": "numpy 1.10",
+            "name": "NumPy 1.10",
             "id": 116
         },
         {
@@ -889,15 +889,15 @@
             "id": 241
         },
         {
-            "name": "tensorflow 0.11",
+            "name": "TensorFlow 0.11",
             "id": 117
         },
         {
-            "name": "keras 2.0.5",
+            "name": "Keras 2.0.5",
             "id": 118
         },
         {
-            "name": "tensorflow 1.3",
+            "name": "TensorFlow 1.3",
             "id": 4453
         },
         {
@@ -905,63 +905,63 @@
             "id": 119
         },
         {
-            "name": "ubuntu 21.2",
+            "name": "Ubuntu 21.2",
             "id": 1042
         },
         {
-            "name": "numpy 1.14.2",
+            "name": "NumPy 1.14.2",
             "id": 120
         },
         {
-            "name": "numpy 6",
+            "name": "NumPy 6",
             "id": 121
         },
         {
-            "name": "scipy 1.1",
+            "name": "SciPy 1.1",
             "id": 122
         },
         {
-            "name": "python 3.7",
+            "name": "Python 3.7",
             "id": 4480
         },
         {
-            "name": "numpy 1.15.3",
+            "name": "NumPy 1.15.3",
             "id": 1019
         },
         {
-            "name": "python 3.5.6",
+            "name": "Python 3.5.6",
             "id": 311
         },
         {
-            "name": "numpy 1.15",
+            "name": "NumPy 1.15",
             "id": 124
         },
         {
-            "name": "numpy 1.14.3",
+            "name": "NumPy 1.14.3",
             "id": 123
         },
         {
-            "name": "scipy 1.2",
+            "name": "SciPy 1.2",
             "id": 125
         },
         {
-            "name": "python 3.6.9",
+            "name": "Python 3.6.9",
             "id": 126
         },
         {
-            "name": "tensorflow 2.1",
+            "name": "TensorFlow 2.1",
             "id": 4477
         },
         {
-            "name": "ubuntu 3.8",
+            "name": "Ubuntu 3.8",
             "id": 1130
         },
         {
-            "name": "gcc 8.4",
+            "name": "GCC 8.4",
             "id": 268
         },
         {
-            "name": "scipy 1.3.3",
+            "name": "SciPy 1.3.3",
             "id": 127
         },
         {
@@ -969,19 +969,19 @@
             "id": 128
         },
         {
-            "name": "numpy 1.19.4",
+            "name": "NumPy 1.19.4",
             "id": 129
         },
         {
-            "name": "python 3.8.5",
+            "name": "Python 3.8.5",
             "id": 130
         },
         {
-            "name": "tensorflow 2.3.2",
+            "name": "TensorFlow 2.3.2",
             "id": 1200
         },
         {
-            "name": "keras 1.1.2",
+            "name": "Keras 1.1.2",
             "id": 1199
         },
         {
@@ -993,15 +993,15 @@
             "id": 731
         },
         {
-            "name": "numpy 1.20.2",
+            "name": "NumPy 1.20.2",
             "id": 730
         },
         {
-            "name": "macos 10.15.6",
+            "name": "macOS 10.15.6",
             "id": 273
         },
         {
-            "name": "numpy 1.19.2",
+            "name": "NumPy 1.19.2",
             "id": 131
         },
         {
@@ -1021,15 +1021,15 @@
             "id": 132
         },
         {
-            "name": "numpy 1.19.1",
+            "name": "NumPy 1.19.1",
             "id": 133
         },
         {
-            "name": "python 3.9",
+            "name": "Python 3.9",
             "id": 135
         },
         {
-            "name": "windows 5.15.2",
+            "name": "Windows 5.15.2",
             "id": 1164
         },
         {
@@ -1041,23 +1041,23 @@
             "id": 728
         },
         {
-            "name": "pytorch 1.9",
+            "name": "PyTorch 1.9",
             "id": 382
         },
         {
-            "name": "ubuntu 18",
+            "name": "Ubuntu 18",
             "id": 309
         },
         {
-            "name": "numpy 1.21",
+            "name": "NumPy 1.21",
             "id": 297
         },
         {
-            "name": "numpy 1.19.5",
+            "name": "NumPy 1.19.5",
             "id": 4498
         },
         {
-            "name": "emr 6.3",
+            "name": "Amazon EMR 6.3",
             "id": 136
         },
         {
@@ -1065,7 +1065,7 @@
             "id": 137
         },
         {
-            "name": "python 1.5.4",
+            "name": "Python 1.5.4",
             "id": 138
         },
         {
@@ -1073,11 +1073,11 @@
             "id": 139
         },
         {
-            "name": "zappa 0.53",
+            "name": "Zappa 0.53",
             "id": 1206
         },
         {
-            "name": "ubuntu 9.4",
+            "name": "Ubuntu 9.4",
             "id": 1171
         },
         {
@@ -1085,31 +1085,31 @@
             "id": 1123
         },
         {
-            "name": "postgres 2.7.5",
+            "name": "PostgreSQL 2.7.5",
             "id": 1096
         },
         {
-            "name": "python 3.6.5",
+            "name": "Python 3.6.5",
             "id": 4396
         },
         {
-            "name": "sqlalchemy 1.1.15",
+            "name": "SQLAlchemy 1.1.15",
             "id": 1062
         },
         {
-            "name": "python 2.7.7",
+            "name": "Python 2.7.7",
             "id": 499
         },
         {
-            "name": "sqlalchemy 1.2",
+            "name": "SQLAlchemy 1.2",
             "id": 857
         },
         {
-            "name": "ubuntu 2.5",
+            "name": "Ubuntu 2.5",
             "id": 739
         },
         {
-            "name": "python 1.3",
+            "name": "Python 1.3",
             "id": 708
         },
         {
@@ -1117,67 +1117,67 @@
             "id": 682
         },
         {
-            "name": "postgres 1.6",
+            "name": "PostgreSQL 1.6",
             "id": 653
         },
         {
-            "name": "postgres 9.6.1",
+            "name": "PostgreSQL 9.6.1",
             "id": 632
         },
         {
-            "name": "ubuntu 14.04.2",
+            "name": "Ubuntu 14.04.2",
             "id": 623
         },
         {
-            "name": "postgres 9",
+            "name": "PostgreSQL 9",
             "id": 563
         },
         {
-            "name": "python 26",
+            "name": "Python 26",
             "id": 411
         },
         {
-            "name": "postgres 2.7",
+            "name": "PostgreSQL 2.7",
             "id": 304
         },
         {
-            "name": "postgres 10",
+            "name": "PostgreSQL 10",
             "id": 303
         },
         {
-            "name": "python 21.1.3",
+            "name": "Python 21.1.3",
             "id": 293
         },
         {
-            "name": "python 18",
+            "name": "Python 18",
             "id": 292
         },
         {
-            "name": "postgres 9.3",
+            "name": "PostgreSQL 9.3",
             "id": 160
         },
         {
-            "name": "numpy 1.9.1",
+            "name": "NumPy 1.9.1",
             "id": 714
         },
         {
-            "name": "ubuntu 16.10",
+            "name": "Ubuntu 16.10",
             "id": 141
         },
         {
-            "name": "macos 3.3.1",
+            "name": "macOS 3.3.1",
             "id": 1008
         },
         {
-            "name": "scipy 1.2.1",
+            "name": "SciPy 1.2.1",
             "id": 1007
         },
         {
-            "name": "mysql 2.2.3",
+            "name": "MySQL 2.2.3",
             "id": 921
         },
         {
-            "name": "numpy 1.12.1",
+            "name": "NumPy 1.12.1",
             "id": 554
         },
         {
@@ -1185,7 +1185,7 @@
             "id": 260
         },
         {
-            "name": "mysql 1.9.8",
+            "name": "MySQL 1.9.8",
             "id": 143
         },
         {
@@ -1193,7 +1193,7 @@
             "id": 144
         },
         {
-            "name": "windows 3.7",
+            "name": "Windows 3.7",
             "id": 145
         },
         {
@@ -1201,43 +1201,43 @@
             "id": 146
         },
         {
-            "name": "python 2.7.18",
+            "name": "Python 2.7.18",
             "id": 1217
         },
         {
-            "name": "python 3.8",
+            "name": "Python 3.8",
             "id": 4398
         },
         {
-            "name": "python 4.63",
+            "name": "Python 4.63",
             "id": 147
         },
         {
-            "name": "debian 10",
+            "name": "Debian 10",
             "id": 4542
         },
         {
-            "name": "debian 6",
+            "name": "Debian 6",
             "id": 148
         },
         {
-            "name": "python 2.6.6",
+            "name": "Python 2.6.6",
             "id": 4427
         },
         {
-            "name": "python 2.7.3",
+            "name": "Python 2.7.3",
             "id": 4567
         },
         {
-            "name": "python 6",
+            "name": "Python 6",
             "id": 149
         },
         {
-            "name": "macos 2.7",
+            "name": "macOS 2.7",
             "id": 150
         },
         {
-            "name": "macos 0.13.3",
+            "name": "macOS 0.13.3",
             "id": 151
         },
         {
@@ -1245,75 +1245,75 @@
             "id": 152
         },
         {
-            "name": "gcc 4.2.1",
+            "name": "GCC 4.2.1",
             "id": 153
         },
         {
-            "name": "python 8.5",
+            "name": "Python 8.5",
             "id": 466
         },
         {
-            "name": "python 4.2",
+            "name": "Python 4.2",
             "id": 154
         },
         {
-            "name": "mysql 5.5.19",
+            "name": "MySQL 5.5.19",
             "id": 555
         },
         {
-            "name": "ubuntu 7",
+            "name": "Ubuntu 7",
             "id": 435
         },
         {
-            "name": "centos 7.2",
+            "name": "CentOS 7.2",
             "id": 848
         },
         {
-            "name": "centos 8.1.2",
+            "name": "CentOS 8.1.2",
             "id": 839
         },
         {
-            "name": "mysql 2.0.4",
+            "name": "MySQL 2.0.4",
             "id": 800
         },
         {
-            "name": "scipy 14.8.27",
+            "name": "SciPy 14.8.27",
             "id": 736
         },
         {
-            "name": "ubuntu 12.04.4",
+            "name": "Ubuntu 12.04.4",
             "id": 693
         },
         {
-            "name": "macos 2.6",
+            "name": "macOS 2.6",
             "id": 678
         },
         {
-            "name": "scipy 4",
+            "name": "SciPy 4",
             "id": 618
         },
         {
-            "name": "windows 1.3.1",
+            "name": "Windows 1.3.1",
             "id": 613
         },
         {
-            "name": "centos 7.1.150",
+            "name": "CentOS 7.1.150",
             "id": 509
         },
         {
-            "name": "mysql 5.6",
+            "name": "MySQL 5.6",
             "id": 508
         },
         {
-            "name": "python 1.6",
+            "name": "Python 1.6",
             "id": 157
         },
         {
-            "name": "mysql 1.16",
+            "name": "MySQL 1.16",
             "id": 672
         },
         {
-            "name": "windows 1.5.2",
+            "name": "Windows 1.5.2",
             "id": 564
         },
         {
@@ -1321,15 +1321,15 @@
             "id": 814
         },
         {
-            "name": "flask 0.10.1",
+            "name": "Flask 0.10.1",
             "id": 4418
         },
         {
-            "name": "flask 1.1",
+            "name": "Flask 1.1",
             "id": 793
         },
         {
-            "name": "ubuntu 15.04",
+            "name": "Ubuntu 15.04",
             "id": 768
         },
         {
@@ -1341,47 +1341,47 @@
             "id": 159
         },
         {
-            "name": "python 1.5.5",
+            "name": "Python 1.5.5",
             "id": 605
         },
         {
-            "name": "gcc 9.4.4",
+            "name": "GCC 9.4.4",
             "id": 161
         },
         {
-            "name": "ubuntu 4.8.2",
+            "name": "Ubuntu 4.8.2",
             "id": 163
         },
         {
-            "name": "ubuntu 19",
+            "name": "Ubuntu 19",
             "id": 162
         },
         {
-            "name": "windows 32",
+            "name": "Windows 32",
             "id": 164
         },
         {
-            "name": "windows 2.9",
+            "name": "Windows 2.9",
             "id": 165
         },
         {
-            "name": "python 10.9",
+            "name": "Python 10.9",
             "id": 166
         },
         {
-            "name": "macos 10.14",
+            "name": "macOS 10.14",
             "id": 649
         },
         {
-            "name": "macos 10.7",
+            "name": "macOS 10.7",
             "id": 1043
         },
         {
-            "name": "windows 10.9",
+            "name": "Windows 10.9",
             "id": 167
         },
         {
-            "name": "tensorflow 27",
+            "name": "TensorFlow 27",
             "id": 168
         },
         {
@@ -1389,31 +1389,31 @@
             "id": 883
         },
         {
-            "name": "flask 0.11.1",
+            "name": "Flask 0.11.1",
             "id": 709
         },
         {
-            "name": "gcc 4.8.4",
+            "name": "GCC 4.8.4",
             "id": 625
         },
         {
-            "name": "numpy 1.4.3",
+            "name": "NumPy 1.4.3",
             "id": 512
         },
         {
-            "name": "centos 6.6",
+            "name": "CentOS 6.6",
             "id": 170
         },
         {
-            "name": "centos 6",
+            "name": "CentOS 6",
             "id": 171
         },
         {
-            "name": "tensorflow 3.4",
+            "name": "TensorFlow 3.4",
             "id": 172
         },
         {
-            "name": "debian 9.11",
+            "name": "Debian 9.11",
             "id": 543
         },
         {
@@ -1421,23 +1421,23 @@
             "id": 329
         },
         {
-            "name": "tensorflow 1.2.1",
+            "name": "TensorFlow 1.2.1",
             "id": 4590
         },
         {
-            "name": "tensorflow 1.1",
+            "name": "TensorFlow 1.1",
             "id": 174
         },
         {
-            "name": "python 2",
+            "name": "Python 2",
             "id": 4402
         },
         {
-            "name": "python 2.7.12",
+            "name": "Python 2.7.12",
             "id": 175
         },
         {
-            "name": "numpy 1.11.1",
+            "name": "NumPy 1.11.1",
             "id": 4496
         },
         {
@@ -1445,27 +1445,27 @@
             "id": 4497
         },
         {
-            "name": "python 2.713",
+            "name": "Python 2.713",
             "id": 176
         },
         {
-            "name": "python 3.6.3",
+            "name": "Python 3.6.3",
             "id": 177
         },
         {
-            "name": "windows 1.4.20",
+            "name": "Windows 1.4.20",
             "id": 957
         },
         {
-            "name": "gcc 8.2",
+            "name": "GCC 8.2",
             "id": 936
         },
         {
-            "name": "macos 10.13.1",
+            "name": "macOS 10.13.1",
             "id": 633
         },
         {
-            "name": "python 2.7.14",
+            "name": "Python 2.7.14",
             "id": 178
         },
         {
@@ -1473,47 +1473,47 @@
             "id": 1026
         },
         {
-            "name": "python 35",
+            "name": "Python 35",
             "id": 179
         },
         {
-            "name": "macos 10.11.5",
+            "name": "macOS 10.11.5",
             "id": 180
         },
         {
-            "name": "ubuntu 4.1",
+            "name": "Ubuntu 4.1",
             "id": 181
         },
         {
-            "name": "python 2.5.2",
+            "name": "Python 2.5.2",
             "id": 4565
         },
         {
-            "name": "mysql 5.7",
+            "name": "MySQL 5.7",
             "id": 182
         },
         {
-            "name": "python 3.6.6",
+            "name": "Python 3.6.6",
             "id": 342
         },
         {
-            "name": "ubuntu 16.1",
+            "name": "Ubuntu 16.1",
             "id": 710
         },
         {
-            "name": "sqlalchemy 1.1",
+            "name": "SQLAlchemy 1.1",
             "id": 516
         },
         {
-            "name": "sqlalchemy 1.2.8",
+            "name": "SQLAlchemy 1.2.8",
             "id": 183
         },
         {
-            "name": "python 3.6.7",
+            "name": "Python 3.6.7",
             "id": 240
         },
         {
-            "name": "numpy 1.17",
+            "name": "NumPy 1.17",
             "id": 185
         },
         {
@@ -1521,27 +1521,27 @@
             "id": 783
         },
         {
-            "name": "macos 10.15",
+            "name": "macOS 10.15",
             "id": 186
         },
         {
-            "name": "python 3.7.6",
+            "name": "Python 3.7.6",
             "id": 651
         },
         {
-            "name": "python 3.7.5",
+            "name": "Python 3.7.5",
             "id": 187
         },
         {
-            "name": "flask-sqlalchemy 2.4.1",
+            "name": "Flask SQLAlchemy 2.4.1",
             "id": 1100
         },
         {
-            "name": "flask 1.11",
+            "name": "Flask 1.11",
             "id": 1099
         },
         {
-            "name": "flask 1.1.1",
+            "name": "Flask 1.1.1",
             "id": 938
         },
         {
@@ -1549,7 +1549,7 @@
             "id": 646
         },
         {
-            "name": "flask 6.2.1",
+            "name": "Flask 6.2.1",
             "id": 1098
         },
         {
@@ -1557,35 +1557,35 @@
             "id": 291
         },
         {
-            "name": "macos 10.15.2",
+            "name": "macOS 10.15.2",
             "id": 188
         },
         {
-            "name": "python 3.8.1",
+            "name": "Python 3.8.1",
             "id": 190
         },
         {
-            "name": "python 3.7.2",
+            "name": "Python 3.7.2",
             "id": 189
         },
         {
-            "name": "macos 8.6.8",
+            "name": "macOS 8.6.8",
             "id": 1047
         },
         {
-            "name": "macos 10.14.3",
+            "name": "macOS 10.14.3",
             "id": 1041
         },
         {
-            "name": "wxpython 4.0.4",
+            "name": "wxPython 4.0.4",
             "id": 1027
         },
         {
-            "name": "mysql 5.6.23",
+            "name": "MySQL 5.6.23",
             "id": 642
         },
         {
-            "name": "tensorflow 3.8.1",
+            "name": "TensorFlow 3.8.1",
             "id": 1084
         },
         {
@@ -1593,15 +1593,15 @@
             "id": 191
         },
         {
-            "name": "flask-sqlalchemy 2.5.1",
+            "name": "Flask SQLAlchemy 2.5.1",
             "id": 192
         },
         {
-            "name": "sqlalchemy 1.4.3",
+            "name": "SQLAlchemy 1.4.3",
             "id": 1188
         },
         {
-            "name": "python 2.7.17",
+            "name": "Python 2.7.17",
             "id": 193
         },
         {
@@ -1609,39 +1609,39 @@
             "id": 194
         },
         {
-            "name": "python 3.9.6",
+            "name": "Python 3.9.6",
             "id": 195
         },
         {
-            "name": "macos 11.5.2",
+            "name": "macOS 11.5.2",
             "id": 946
         },
         {
-            "name": "windows 10.0.213",
+            "name": "Windows 10.0.213",
             "id": 945
         },
         {
-            "name": "windows 10.0.190",
+            "name": "Windows 10.0.190",
             "id": 944
         },
         {
-            "name": "scipy 2.7",
+            "name": "SciPy 2.7",
             "id": 856
         },
         {
-            "name": "scipy 2.6",
+            "name": "SciPy 2.6",
             "id": 855
         },
         {
-            "name": "flask 3.4",
+            "name": "Flask 3.4",
             "id": 746
         },
         {
-            "name": "ubuntu 2.7",
+            "name": "Ubuntu 2.7",
             "id": 690
         },
         {
-            "name": "flask 3.3",
+            "name": "Flask 3.3",
             "id": 687
         },
         {
@@ -1653,163 +1653,163 @@
             "id": 658
         },
         {
-            "name": "numpy 3.3",
+            "name": "NumPy 3.3",
             "id": 568
         },
         {
-            "name": "numpy 1.6",
+            "name": "NumPy 1.6",
             "id": 425
         },
         {
-            "name": "sqlalchemy 0.8.1",
+            "name": "SQLAlchemy 0.8.1",
             "id": 197
         },
         {
-            "name": "scipy 0.11",
+            "name": "SciPy 0.11",
             "id": 198
         },
         {
-            "name": "python 3.2.3",
+            "name": "Python 3.2.3",
             "id": 4502
         },
         {
-            "name": "numpy 1.7.2",
+            "name": "NumPy 1.7.2",
             "id": 202
         },
         {
-            "name": "mysql 1.7",
+            "name": "MySQL 1.7",
             "id": 203
         },
         {
-            "name": "python 3.4",
+            "name": "Python 3.4",
             "id": 4489
         },
         {
-            "name": "centos 6.5",
+            "name": "CentOS 6.5",
             "id": 204
         },
         {
-            "name": "gcc 4.4.7",
+            "name": "GCC 4.4.7",
             "id": 519
         },
         {
-            "name": "flask 1",
+            "name": "Flask 1",
             "id": 205
         },
         {
-            "name": "airflow 1.10.3",
+            "name": "Airflow 1.10.3",
             "id": 1066
         },
         {
-            "name": "python 0.6",
+            "name": "Python 0.6",
             "id": 206
         },
         {
-            "name": "windows 2.7",
+            "name": "Windows 2.7",
             "id": 207
         },
         {
-            "name": "python 2.6.1",
+            "name": "Python 2.6.1",
             "id": 424
         },
         {
-            "name": "mysql 10.11.4",
+            "name": "MySQL 10.11.4",
             "id": 208
         },
         {
-            "name": "python 3.5.1",
+            "name": "Python 3.5.1",
             "id": 209
         },
         {
-            "name": "sqlalchemy 1.0.14",
+            "name": "SQLAlchemy 1.0.14",
             "id": 821
         },
         {
-            "name": "windows 20",
+            "name": "Windows 20",
             "id": 210
         },
         {
-            "name": "mysql 4.1",
+            "name": "MySQL 4.1",
             "id": 211
         },
         {
-            "name": "numpy 1.12",
+            "name": "NumPy 1.12",
             "id": 212
         },
         {
-            "name": "flask 0.12.1",
+            "name": "Flask 0.12.1",
             "id": 213
         },
         {
-            "name": "python 3.5.2",
+            "name": "Python 3.5.2",
             "id": 4394
         },
         {
-            "name": "python 17.04",
+            "name": "Python 17.04",
             "id": 214
         },
         {
-            "name": "numpy 1.11.3",
+            "name": "NumPy 1.11.3",
             "id": 215
         },
         {
-            "name": "python 3.60",
+            "name": "Python 3.60",
             "id": 997
         },
         {
-            "name": "scipy 1.11.3",
+            "name": "SciPy 1.11.3",
             "id": 216
         },
         {
-            "name": "tensorflow 6",
+            "name": "TensorFlow 6",
             "id": 217
         },
         {
-            "name": "cudnn 6",
+            "name": "cuDNN 6",
             "id": 4589
         },
         {
-            "name": "tensorflow 5.1",
+            "name": "TensorFlow 5.1",
             "id": 218
         },
         {
-            "name": "keras 1.2.2",
+            "name": "Keras 1.2.2",
             "id": 219
         },
         {
-            "name": "tensorflow 1",
+            "name": "TensorFlow 1",
             "id": 4409
         },
         {
-            "name": "cudnn 5.1.10",
+            "name": "cuDNN 5.1.10",
             "id": 220
         },
         {
-            "name": "tensorflow 1.2",
+            "name": "TensorFlow 1.2",
             "id": 4437
         },
         {
-            "name": "python 27",
+            "name": "Python 27",
             "id": 221
         },
         {
-            "name": "scipy 1",
+            "name": "SciPy 1",
             "id": 222
         },
         {
-            "name": "python 38",
+            "name": "Python 38",
             "id": 310
         },
         {
-            "name": "python 36",
+            "name": "Python 36",
             "id": 223
         },
         {
-            "name": "numpy 1.14.4",
+            "name": "NumPy 1.14.4",
             "id": 1138
         },
         {
-            "name": "flask 0.4.1",
+            "name": "Flask 0.4.1",
             "id": 1037
         },
         {
@@ -1817,7 +1817,7 @@
             "id": 224
         },
         {
-            "name": "numpy 0",
+            "name": "NumPy 0",
             "id": 225
         },
         {
@@ -1825,15 +1825,15 @@
             "id": 226
         },
         {
-            "name": "windows 15.1",
+            "name": "Windows 15.1",
             "id": 227
         },
         {
-            "name": "cudnn 7.1",
+            "name": "cuDNN 7.1",
             "id": 228
         },
         {
-            "name": "ubuntu 3",
+            "name": "Ubuntu 3",
             "id": 229
         },
         {
@@ -1841,23 +1841,23 @@
             "id": 230
         },
         {
-            "name": "windows 1",
+            "name": "Windows 1",
             "id": 231
         },
         {
-            "name": "tensorflow 35",
+            "name": "TensorFlow 35",
             "id": 232
         },
         {
-            "name": "ubuntu 1.9.1",
+            "name": "Ubuntu 1.9.1",
             "id": 233
         },
         {
-            "name": "numpy 1.15.4",
+            "name": "NumPy 1.15.4",
             "id": 234
         },
         {
-            "name": "python 3.6.2",
+            "name": "Python 3.6.2",
             "id": 4464
         },
         {
@@ -1865,83 +1865,83 @@
             "id": 723
         },
         {
-            "name": "python 3.7.1",
+            "name": "Python 3.7.1",
             "id": 235
         },
         {
-            "name": "flask 19.5",
+            "name": "Flask 19.5",
             "id": 1049
         },
         {
-            "name": "python 1.0.2",
+            "name": "Python 1.0.2",
             "id": 236
         },
         {
-            "name": "macos 10.14.2",
+            "name": "macOS 10.14.2",
             "id": 237
         },
         {
-            "name": "python 3.6.8",
+            "name": "Python 3.6.8",
             "id": 4507
         },
         {
-            "name": "macos 3.6",
+            "name": "macOS 3.6",
             "id": 238
         },
         {
-            "name": "tensorflow 1.80",
+            "name": "TensorFlow 1.80",
             "id": 239
         },
         {
-            "name": "windows 3.7.1",
+            "name": "Windows 3.7.1",
             "id": 1175
         },
         {
-            "name": "wxpython 4.0.3",
+            "name": "wxPython 4.0.3",
             "id": 1024
         },
         {
-            "name": "wxpython 4.0.1",
+            "name": "wxPython 4.0.1",
             "id": 1023
         },
         {
-            "name": "gcc 7.3",
+            "name": "GCC 7.3",
             "id": 775
         },
         {
-            "name": "tensorflow 1.11",
+            "name": "TensorFlow 1.11",
             "id": 4596
         },
         {
-            "name": "windows 3.6",
+            "name": "Windows 3.6",
             "id": 242
         },
         {
-            "name": "windows 1.6.4",
+            "name": "Windows 1.6.4",
             "id": 243
         },
         {
-            "name": "macos 0.44",
+            "name": "macOS 0.44",
             "id": 244
         },
         {
-            "name": "ubuntu 3.6",
+            "name": "Ubuntu 3.6",
             "id": 245
         },
         {
-            "name": "python 3.7.3",
+            "name": "Python 3.7.3",
             "id": 4530
         },
         {
-            "name": "ubuntu 3.7",
+            "name": "Ubuntu 3.7",
             "id": 246
         },
         {
-            "name": "windows 3.7.4",
+            "name": "Windows 3.7.4",
             "id": 247
         },
         {
-            "name": "python 3.7.4",
+            "name": "Python 3.7.4",
             "id": 248
         },
         {
@@ -1949,11 +1949,11 @@
             "id": 778
         },
         {
-            "name": "macos 10.14.6",
+            "name": "macOS 10.14.6",
             "id": 249
         },
         {
-            "name": "tensorboard 1.15",
+            "name": "TensorBoard 1.15",
             "id": 250
         },
         {
@@ -1961,43 +1961,43 @@
             "id": 251
         },
         {
-            "name": "windows 3.8",
+            "name": "Windows 3.8",
             "id": 252
         },
         {
-            "name": "ubuntu 9.0.1",
+            "name": "Ubuntu 9.0.1",
             "id": 253
         },
         {
-            "name": "tensorflow 1.14",
+            "name": "TensorFlow 1.14",
             "id": 4387
         },
         {
-            "name": "ubuntu 19.04",
+            "name": "Ubuntu 19.04",
             "id": 255
         },
         {
-            "name": "cuda 10.0.130",
+            "name": "CUDA 10.0.130",
             "id": 256
         },
         {
-            "name": "cudnn 7.6",
+            "name": "cuDNN 7.6",
             "id": 4458
         },
         {
-            "name": "macos 10.12.3",
+            "name": "macOS 10.12.3",
             "id": 257
         },
         {
-            "name": "emr 5.30",
+            "name": "Amazon EMR 5.30",
             "id": 258
         },
         {
-            "name": "windows 3.6.7",
+            "name": "Windows 3.6.7",
             "id": 259
         },
         {
-            "name": "cudnn 10.1",
+            "name": "cuDNN 10.1",
             "id": 261
         },
         {
@@ -2005,111 +2005,111 @@
             "id": 262
         },
         {
-            "name": "macos 10.15.5",
+            "name": "macOS 10.15.5",
             "id": 263
         },
         {
-            "name": "python 3.7.7",
+            "name": "Python 3.7.7",
             "id": 264
         },
         {
-            "name": "ubuntu 20.04.2",
+            "name": "Ubuntu 20.04.2",
             "id": 1212
         },
         {
-            "name": "ubuntu 20",
+            "name": "Ubuntu 20",
             "id": 265
         },
         {
-            "name": "flask 3.7.5",
+            "name": "Flask 3.7.5",
             "id": 266
         },
         {
-            "name": "flask 1.0.4",
+            "name": "Flask 1.0.4",
             "id": 267
         },
         {
-            "name": "python 2.9.11",
+            "name": "Python 2.9.11",
             "id": 269
         },
         {
-            "name": "airflow 1.10.6",
+            "name": "Airflow 1.10.6",
             "id": 270
         },
         {
-            "name": "tensorflow 11",
+            "name": "TensorFlow 11",
             "id": 271
         },
         {
-            "name": "python 2.2.10",
+            "name": "Python 2.2.10",
             "id": 272
         },
         {
-            "name": "airflow 1.10.10",
+            "name": "Airflow 1.10.10",
             "id": 4569
         },
         {
-            "name": "flask-sqlalchemy 2.3.2",
+            "name": "Flask SQLAlchemy 2.3.2",
             "id": 275
         },
         {
-            "name": "sqlalchemy 1.2.7",
+            "name": "SQLAlchemy 1.2.7",
             "id": 830
         },
         {
-            "name": "sqlalchemy 1.0.13",
+            "name": "SQLAlchemy 1.0.13",
             "id": 721
         },
         {
-            "name": "windows 3.0.3",
+            "name": "Windows 3.0.3",
             "id": 276
         },
         {
-            "name": "cudnn 2.1",
+            "name": "cuDNN 2.1",
             "id": 277
         },
         {
-            "name": "keras 2.2.2",
+            "name": "Keras 2.2.2",
             "id": 278
         },
         {
-            "name": "tensorflow 1.3.1",
+            "name": "TensorFlow 1.3.1",
             "id": 360
         },
         {
-            "name": "numpy 1.19.3",
+            "name": "NumPy 1.19.3",
             "id": 279
         },
         {
-            "name": "scipy 1.6.1",
+            "name": "SciPy 1.6.1",
             "id": 1187
         },
         {
-            "name": "python 3.9.2",
+            "name": "Python 3.9.2",
             "id": 299
         },
         {
-            "name": "windows 1.19.4",
+            "name": "Windows 1.19.4",
             "id": 280
         },
         {
-            "name": "python 1.5.2",
+            "name": "Python 1.5.2",
             "id": 281
         },
         {
-            "name": "windows 1.2.1",
+            "name": "Windows 1.2.1",
             "id": 282
         },
         {
-            "name": "ubuntu 18.04.4",
+            "name": "Ubuntu 18.04.4",
             "id": 283
         },
         {
-            "name": "tensorflow 2.4",
+            "name": "TensorFlow 2.4",
             "id": 4472
         },
         {
-            "name": "numpy 1.20",
+            "name": "NumPy 1.20",
             "id": 284
         },
         {
@@ -2117,27 +2117,27 @@
             "id": 1174
         },
         {
-            "name": "tensorflow 2.3",
+            "name": "TensorFlow 2.3",
             "id": 4476
         },
         {
-            "name": "python 3.9.1",
+            "name": "Python 3.9.1",
             "id": 285
         },
         {
-            "name": "macos 4.2",
+            "name": "macOS 4.2",
             "id": 1170
         },
         {
-            "name": "sqlalchemy 1.4.1",
+            "name": "SQLAlchemy 1.4.1",
             "id": 729
         },
         {
-            "name": "ubuntu 3.3",
+            "name": "Ubuntu 3.3",
             "id": 286
         },
         {
-            "name": "numpy 1.20.1",
+            "name": "NumPy 1.20.1",
             "id": 287
         },
         {
@@ -2145,35 +2145,35 @@
             "id": 1176
         },
         {
-            "name": "macos 2.90",
+            "name": "macOS 2.90",
             "id": 288
         },
         {
-            "name": "python 3.8.3",
+            "name": "Python 3.8.3",
             "id": 289
         },
         {
-            "name": "macos 11.1",
+            "name": "macOS 11.1",
             "id": 1057
         },
         {
-            "name": "flask 1.1.2",
+            "name": "Flask 1.1.2",
             "id": 891
         },
         {
-            "name": "centos 8",
+            "name": "CentOS 8",
             "id": 290
         },
         {
-            "name": "scipy 1.6.3",
+            "name": "SciPy 1.6.3",
             "id": 1198
         },
         {
-            "name": "python 3.9.5",
+            "name": "Python 3.9.5",
             "id": 294
         },
         {
-            "name": "ubuntu 21.04",
+            "name": "Ubuntu 21.04",
             "id": 295
         },
         {
@@ -2181,15 +2181,15 @@
             "id": 296
         },
         {
-            "name": "python 3.8.11",
+            "name": "Python 3.8.11",
             "id": 843
         },
         {
-            "name": "macos 11.5.1",
+            "name": "macOS 11.5.1",
             "id": 298
         },
         {
-            "name": "macos 10.15.7",
+            "name": "macOS 10.15.7",
             "id": 619
         },
         {
@@ -2197,11 +2197,11 @@
             "id": 300
         },
         {
-            "name": "python 33",
+            "name": "Python 33",
             "id": 301
         },
         {
-            "name": "debian 3.2",
+            "name": "Debian 3.2",
             "id": 302
         },
         {
@@ -2209,323 +2209,323 @@
             "id": 305
         },
         {
-            "name": "debian 3.4.2",
+            "name": "Debian 3.4.2",
             "id": 306
         },
         {
-            "name": "ubuntu 18.10",
+            "name": "Ubuntu 18.10",
             "id": 307
         },
         {
-            "name": "android 1.10.1",
+            "name": "Android 1.10.1",
             "id": 308
         },
         {
-            "name": "python 0.13.2",
+            "name": "Python 0.13.2",
             "id": 588
         },
         {
-            "name": "numpy 1.7.1",
+            "name": "NumPy 1.7.1",
             "id": 313
         },
         {
-            "name": "scipy 0.12.1",
+            "name": "SciPy 0.12.1",
             "id": 1152
         },
         {
-            "name": "cudnn 6.5",
+            "name": "cuDNN 6.5",
             "id": 314
         },
         {
-            "name": "tensorflow 8",
+            "name": "TensorFlow 8",
             "id": 316
         },
         {
-            "name": "cudnn 2",
+            "name": "cuDNN 2",
             "id": 317
         },
         {
-            "name": "bazel 0.3",
+            "name": "Bazel 0.3",
             "id": 318
         },
         {
-            "name": "tensorflow r0.9",
+            "name": "TensorFlow r0.9",
             "id": 319
         },
         {
-            "name": "tensorflow 0.9",
+            "name": "TensorFlow 0.9",
             "id": 321
         },
         {
-            "name": "pytorch 0.1",
+            "name": "PyTorch 0.1",
             "id": 966
         },
         {
-            "name": "centos 6.7",
+            "name": "CentOS 6.7",
             "id": 514
         },
         {
-            "name": "tensorflow 0.12.1",
+            "name": "TensorFlow 0.12.1",
             "id": 322
         },
         {
-            "name": "ubuntu 14.04.5",
+            "name": "Ubuntu 14.04.5",
             "id": 323
         },
         {
-            "name": "tensorflow 14",
+            "name": "TensorFlow 14",
             "id": 324
         },
         {
-            "name": "tensorflow r0.12",
+            "name": "TensorFlow r0.12",
             "id": 325
         },
         {
-            "name": "tensorflow r1.1",
+            "name": "TensorFlow r1.1",
             "id": 326
         },
         {
-            "name": "tensorflow 0.10",
+            "name": "TensorFlow 0.10",
             "id": 327
         },
         {
-            "name": "keras 0.7",
+            "name": "Keras 0.7",
             "id": 917
         },
         {
-            "name": "windows 7.1",
+            "name": "Windows 7.1",
             "id": 328
         },
         {
-            "name": "python 8",
+            "name": "Python 8",
             "id": 330
         },
         {
-            "name": "tensorflow r1.4",
+            "name": "TensorFlow r1.4",
             "id": 331
         },
         {
-            "name": "tensorflow 2.7",
+            "name": "TensorFlow 2.7",
             "id": 334
         },
         {
-            "name": "cuda 1.6",
+            "name": "CUDA 1.6",
             "id": 335
         },
         {
-            "name": "cudnn 7",
+            "name": "cuDNN 7",
             "id": 4452
         },
         {
-            "name": "tensorboard 1.7",
+            "name": "TensorBoard 1.7",
             "id": 337
         },
         {
-            "name": "tensorflow 1.8",
+            "name": "TensorFlow 1.8",
             "id": 4585
         },
         {
-            "name": "bazel 0.13.1",
+            "name": "Bazel 0.13.1",
             "id": 338
         },
         {
-            "name": "bazel 0.5.1",
+            "name": "Bazel 0.5.1",
             "id": 339
         },
         {
-            "name": "macos 10.12.6",
+            "name": "macOS 10.12.6",
             "id": 340
         },
         {
-            "name": "python 6.2",
+            "name": "Python 6.2",
             "id": 953
         },
         {
-            "name": "tensorflow 1.4",
+            "name": "TensorFlow 1.4",
             "id": 4488
         },
         {
-            "name": "tensorflow 1.9",
+            "name": "TensorFlow 1.9",
             "id": 341
         },
         {
-            "name": "cuda 1.9",
+            "name": "CUDA 1.9",
             "id": 885
         },
         {
-            "name": "windows 3.3.1",
+            "name": "Windows 3.3.1",
             "id": 1145
         },
         {
-            "name": "mysql 1.3.12",
+            "name": "MySQL 1.3.12",
             "id": 995
         },
         {
-            "name": "windows 18",
+            "name": "Windows 18",
             "id": 888
         },
         {
-            "name": "ubuntu 18.04.1",
+            "name": "Ubuntu 18.04.1",
             "id": 638
         },
         {
-            "name": "pytorch 0.4.1",
+            "name": "PyTorch 0.4.1",
             "id": 343
         },
         {
-            "name": "cudnn 7.2.1",
+            "name": "cuDNN 7.2.1",
             "id": 344
         },
         {
-            "name": "tensorflow 7.0.5",
+            "name": "TensorFlow 7.0.5",
             "id": 345
         },
         {
-            "name": "cudnn 7.2",
+            "name": "cuDNN 7.2",
             "id": 346
         },
         {
-            "name": "tensorboard 1.11",
+            "name": "TensorBoard 1.11",
             "id": 347
         },
         {
-            "name": "cudnn 7.3",
+            "name": "cuDNN 7.3",
             "id": 348
         },
         {
-            "name": "pytorch 9",
+            "name": "PyTorch 9",
             "id": 971
         },
         {
-            "name": "bazel 0.18.1",
+            "name": "Bazel 0.18.1",
             "id": 349
         },
         {
-            "name": "tensorflow 9",
+            "name": "TensorFlow 9",
             "id": 350
         },
         {
-            "name": "tensorflow 3.5",
+            "name": "TensorFlow 3.5",
             "id": 351
         },
         {
-            "name": "tensorflow 6.1",
+            "name": "TensorFlow 6.1",
             "id": 352
         },
         {
-            "name": "tensorflow 7.4.1",
+            "name": "TensorFlow 7.4.1",
             "id": 353
         },
         {
-            "name": "tensorflow 2.4.7",
+            "name": "TensorFlow 2.4.7",
             "id": 355
         },
         {
-            "name": "bazel 0.21",
+            "name": "Bazel 0.21",
             "id": 356
         },
         {
-            "name": "tensorflow r1.13",
+            "name": "TensorFlow r1.13",
             "id": 357
         },
         {
-            "name": "cudnn 1.14",
+            "name": "cuDNN 1.14",
             "id": 358
         },
         {
-            "name": "cuda 7.6",
+            "name": "CUDA 7.6",
             "id": 359
         },
         {
-            "name": "ubuntu 16.0.4",
+            "name": "Ubuntu 16.0.4",
             "id": 361
         },
         {
-            "name": "tensorflow 1.15",
+            "name": "TensorFlow 1.15",
             "id": 4532
         },
         {
-            "name": "cudnn 7.4.2",
+            "name": "cuDNN 7.4.2",
             "id": 362
         },
         {
-            "name": "cudnn 1",
+            "name": "cuDNN 1",
             "id": 363
         },
         {
-            "name": "cudnn 7.6.4",
+            "name": "cuDNN 7.6.4",
             "id": 364
         },
         {
-            "name": "pytorch 1.2",
+            "name": "PyTorch 1.2",
             "id": 365
         },
         {
-            "name": "ubuntu 18.4",
+            "name": "Ubuntu 18.4",
             "id": 366
         },
         {
-            "name": "cuda 1",
+            "name": "CUDA 1",
             "id": 367
         },
         {
-            "name": "keras 2",
+            "name": "Keras 2",
             "id": 4538
         },
         {
-            "name": "keras 2.4.3",
+            "name": "Keras 2.4.3",
             "id": 368
         },
         {
-            "name": "tensorflow 2.2",
+            "name": "TensorFlow 2.2",
             "id": 4483
         },
         {
-            "name": "cudnn 8.0.2",
+            "name": "cuDNN 8.0.2",
             "id": 369
         },
         {
-            "name": "cuda 11",
+            "name": "CUDA 11",
             "id": 4473
         },
         {
-            "name": "keras 2.1",
+            "name": "Keras 2.1",
             "id": 370
         },
         {
-            "name": "tensorflow 25",
+            "name": "TensorFlow 25",
             "id": 371
         },
         {
-            "name": "numpy 1.19",
+            "name": "NumPy 1.19",
             "id": 372
         },
         {
-            "name": "scipy 1.6",
+            "name": "SciPy 1.6",
             "id": 513
         },
         {
-            "name": "tensorflow 1.20",
+            "name": "TensorFlow 1.20",
             "id": 373
         },
         {
-            "name": "python 3.8.6",
+            "name": "Python 3.8.6",
             "id": 375
         },
         {
-            "name": "macos 1.4.1",
+            "name": "macOS 1.4.1",
             "id": 1194
         },
         {
-            "name": "ubuntu 20.10",
+            "name": "Ubuntu 20.10",
             "id": 767
         },
         {
-            "name": "numpy 1.13.3",
+            "name": "NumPy 1.13.3",
             "id": 376
         },
         {
-            "name": "scipy 0.19.1",
+            "name": "SciPy 0.19.1",
             "id": 956
         },
         {
@@ -2533,299 +2533,299 @@
             "id": 882
         },
         {
-            "name": "python 2.7.15",
+            "name": "Python 2.7.15",
             "id": 522
         },
         {
-            "name": "pytorch 1.3",
+            "name": "PyTorch 1.3",
             "id": 377
         },
         {
-            "name": "pytorch 1.7",
+            "name": "PyTorch 1.7",
             "id": 378
         },
         {
-            "name": "python 3.7.9",
+            "name": "Python 3.7.9",
             "id": 379
         },
         {
-            "name": "centos 7.8.200",
+            "name": "CentOS 7.8.200",
             "id": 1087
         },
         {
-            "name": "windows 2.2.7",
+            "name": "Windows 2.2.7",
             "id": 645
         },
         {
-            "name": "pytorch 1.7.1",
+            "name": "PyTorch 1.7.1",
             "id": 380
         },
         {
-            "name": "pytorch 10.1",
+            "name": "PyTorch 10.1",
             "id": 381
         },
         {
-            "name": "macos 10.5.8",
+            "name": "macOS 10.5.8",
             "id": 383
         },
         {
-            "name": "python 2.6.5",
+            "name": "Python 2.6.5",
             "id": 384
         },
         {
-            "name": "ubuntu 10.04.2",
+            "name": "Ubuntu 10.04.2",
             "id": 580
         },
         {
-            "name": "windows 4.7.3",
+            "name": "Windows 4.7.3",
             "id": 565
         },
         {
-            "name": "ubuntu 10.04",
+            "name": "Ubuntu 10.04",
             "id": 4417
         },
         {
-            "name": "ubuntu 10.4",
+            "name": "Ubuntu 10.4",
             "id": 423
         },
         {
-            "name": "gcc 4.3.4",
+            "name": "GCC 4.3.4",
             "id": 398
         },
         {
-            "name": "windows 23.2.1",
+            "name": "Windows 23.2.1",
             "id": 395
         },
         {
-            "name": "sqlalchemy 0.6.4",
+            "name": "SQLAlchemy 0.6.4",
             "id": 385
         },
         {
-            "name": "python 2.6.2",
+            "name": "Python 2.6.2",
             "id": 386
         },
         {
-            "name": "ubuntu 9.04",
+            "name": "Ubuntu 9.04",
             "id": 455
         },
         {
-            "name": "ubuntu 1.2.1",
+            "name": "Ubuntu 1.2.1",
             "id": 387
         },
         {
-            "name": "debian 5",
+            "name": "Debian 5",
             "id": 388
         },
         {
-            "name": "debian 4",
+            "name": "Debian 4",
             "id": 389
         },
         {
-            "name": "python 2.4.4",
+            "name": "Python 2.4.4",
             "id": 390
         },
         {
-            "name": "debian 3.1",
+            "name": "Debian 3.1",
             "id": 391
         },
         {
-            "name": "python 2.3.5",
+            "name": "Python 2.3.5",
             "id": 392
         },
         {
-            "name": "windows 0.9.7",
+            "name": "Windows 0.9.7",
             "id": 394
         },
         {
-            "name": "blender 2.49",
+            "name": "Blender 2.49",
             "id": 396
         },
         {
-            "name": "windows 2.5",
+            "name": "Windows 2.5",
             "id": 397
         },
         {
-            "name": "centos 2.4",
+            "name": "CentOS 2.4",
             "id": 399
         },
         {
-            "name": "blender 2.5",
+            "name": "Blender 2.5",
             "id": 400
         },
         {
-            "name": "python 3.1",
+            "name": "Python 3.1",
             "id": 4384
         },
         {
-            "name": "numpy 1.4",
+            "name": "NumPy 1.4",
             "id": 401
         },
         {
-            "name": "ubuntu 9.10",
+            "name": "Ubuntu 9.10",
             "id": 402
         },
         {
-            "name": "numpy 1.3.03",
+            "name": "NumPy 1.3.03",
             "id": 591
         },
         {
-            "name": "python 3.1.2",
+            "name": "Python 3.1.2",
             "id": 403
         },
         {
-            "name": "gcc 4.4.3",
+            "name": "GCC 4.4.3",
             "id": 404
         },
         {
-            "name": "python 2.5.5",
+            "name": "Python 2.5.5",
             "id": 405
         },
         {
-            "name": "ubuntu 10.10",
+            "name": "Ubuntu 10.10",
             "id": 4428
         },
         {
-            "name": "windows 3.2",
+            "name": "Windows 3.2",
             "id": 406
         },
         {
-            "name": "numpy 1.5.1",
+            "name": "NumPy 1.5.1",
             "id": 407
         },
         {
-            "name": "scipy 0.8",
+            "name": "SciPy 0.8",
             "id": 408
         },
         {
-            "name": "python 2.3.7",
+            "name": "Python 2.3.7",
             "id": 409
         },
         {
-            "name": "windows 1.7.3",
+            "name": "Windows 1.7.3",
             "id": 410
         },
         {
-            "name": "windows 2",
+            "name": "Windows 2",
             "id": 412
         },
         {
-            "name": "windows 1.5",
+            "name": "Windows 1.5",
             "id": 413
         },
         {
-            "name": "python 2.5.4",
+            "name": "Python 2.5.4",
             "id": 414
         },
         {
-            "name": "windows 2.6.6",
+            "name": "Windows 2.6.6",
             "id": 665
         },
         {
-            "name": "python 2.0.8",
+            "name": "Python 2.0.8",
             "id": 415
         },
         {
-            "name": "ubuntu 10.0.4",
+            "name": "Ubuntu 10.0.4",
             "id": 416
         },
         {
-            "name": "mysql 5.5",
+            "name": "MySQL 5.5",
             "id": 417
         },
         {
-            "name": "scipy 0.9",
+            "name": "SciPy 0.9",
             "id": 418
         },
         {
-            "name": "numpy 1.3",
+            "name": "NumPy 1.3",
             "id": 4392
         },
         {
-            "name": "python 2.2.4",
+            "name": "Python 2.2.4",
             "id": 419
         },
         {
-            "name": "debian 4.8.3",
+            "name": "Debian 4.8.3",
             "id": 420
         },
         {
-            "name": "windows 2.6",
+            "name": "Windows 2.6",
             "id": 421
         },
         {
-            "name": "windows 4.8.3",
+            "name": "Windows 4.8.3",
             "id": 422
         },
         {
-            "name": "tensorflow 3.3",
+            "name": "TensorFlow 3.3",
             "id": 879
         },
         {
-            "name": "fftw 3",
+            "name": "FFTW 3",
             "id": 426
         },
         {
-            "name": "wxpython 2.8",
+            "name": "wxPython 2.8",
             "id": 427
         },
         {
-            "name": "ubuntu 11.04",
+            "name": "Ubuntu 11.04",
             "id": 4572
         },
         {
-            "name": "wxpython 2.7.1",
+            "name": "wxPython 2.7.1",
             "id": 428
         },
         {
-            "name": "windows 2.3",
+            "name": "Windows 2.3",
             "id": 429
         },
         {
-            "name": "windows 12",
+            "name": "Windows 12",
             "id": 430
         },
         {
-            "name": "centos 5.6",
+            "name": "CentOS 5.6",
             "id": 431
         },
         {
-            "name": "python 2.6.7",
+            "name": "Python 2.6.7",
             "id": 432
         },
         {
-            "name": "python 10.7",
+            "name": "Python 10.7",
             "id": 433
         },
         {
-            "name": "centos 5.4",
+            "name": "CentOS 5.4",
             "id": 434
         },
         {
-            "name": "python 2.4",
+            "name": "Python 2.4",
             "id": 4450
         },
         {
-            "name": "windows 2.7.2",
+            "name": "Windows 2.7.2",
             "id": 436
         },
         {
-            "name": "gcc 4.4.5",
+            "name": "GCC 4.4.5",
             "id": 437
         },
         {
-            "name": "python 3.1.6",
+            "name": "Python 3.1.6",
             "id": 469
         },
         {
-            "name": "ubuntu 2.6",
+            "name": "Ubuntu 2.6",
             "id": 438
         },
         {
-            "name": "mysql 3.23",
+            "name": "MySQL 3.23",
             "id": 439
         },
         {
-            "name": "python 1.2.3",
+            "name": "Python 1.2.3",
             "id": 441
         },
         {
@@ -2833,75 +2833,75 @@
             "id": 674
         },
         {
-            "name": "mysql 5.5.10",
+            "name": "MySQL 5.5.10",
             "id": 442
         },
         {
-            "name": "mysql 5.6.20",
+            "name": "MySQL 5.6.20",
             "id": 1048
         },
         {
-            "name": "windows 4.5.3",
+            "name": "Windows 4.5.3",
             "id": 444
         },
         {
-            "name": "python 3.2.1",
+            "name": "Python 3.2.1",
             "id": 445
         },
         {
-            "name": "blender 2.6.4",
+            "name": "Blender 2.6.4",
             "id": 478
         },
         {
-            "name": "centos 5.7",
+            "name": "CentOS 5.7",
             "id": 446
         },
         {
-            "name": "python 10.10",
+            "name": "Python 10.10",
             "id": 447
         },
         {
-            "name": "mysql 5.1.54",
+            "name": "MySQL 5.1.54",
             "id": 448
         },
         {
-            "name": "ubuntu 4",
+            "name": "Ubuntu 4",
             "id": 450
         },
         {
-            "name": "python 1.2.2",
+            "name": "Python 1.2.2",
             "id": 449
         },
         {
-            "name": "windows 3.5",
+            "name": "Windows 3.5",
             "id": 451
         },
         {
-            "name": "python 2.14",
+            "name": "Python 2.14",
             "id": 452
         },
         {
-            "name": "blender 2",
+            "name": "Blender 2",
             "id": 453
         },
         {
-            "name": "gcc 4.6.1",
+            "name": "GCC 4.6.1",
             "id": 454
         },
         {
-            "name": "wxpython 2.8.12",
+            "name": "wxPython 2.8.12",
             "id": 456
         },
         {
-            "name": "wxpython 2.8.11",
+            "name": "wxPython 2.8.11",
             "id": 457
         },
         {
-            "name": "macos 10.7.3",
+            "name": "macOS 10.7.3",
             "id": 458
         },
         {
-            "name": "mysql 5.5.20",
+            "name": "MySQL 5.5.20",
             "id": 459
         },
         {
@@ -2909,47 +2909,47 @@
             "id": 460
         },
         {
-            "name": "sqlalchemy 0.7",
+            "name": "SQLAlchemy 0.7",
             "id": 461
         },
         {
-            "name": "numpy 10.3",
+            "name": "NumPy 10.3",
             "id": 463
         },
         {
-            "name": "numpy 2",
+            "name": "NumPy 2",
             "id": 464
         },
         {
-            "name": "gcc 4.0.1",
+            "name": "GCC 4.0.1",
             "id": 465
         },
         {
-            "name": "windows 8.5",
+            "name": "Windows 8.5",
             "id": 558
         },
         {
-            "name": "windows 1.1",
+            "name": "Windows 1.1",
             "id": 468
         },
         {
-            "name": "python 1.2",
+            "name": "Python 1.2",
             "id": 941
         },
         {
-            "name": "mysql 3",
+            "name": "MySQL 3",
             "id": 470
         },
         {
-            "name": "postgres 9.1",
+            "name": "PostgreSQL 9.1",
             "id": 471
         },
         {
-            "name": "ubuntu 2.3.2",
+            "name": "Ubuntu 2.3.2",
             "id": 473
         },
         {
-            "name": "python 1.1.7",
+            "name": "Python 1.1.7",
             "id": 474
         },
         {
@@ -2957,19 +2957,19 @@
             "id": 475
         },
         {
-            "name": "scipy 10.6.8",
+            "name": "SciPy 10.6.8",
             "id": 476
         },
         {
-            "name": "debian 6.0.6",
+            "name": "Debian 6.0.6",
             "id": 477
         },
         {
-            "name": "windows 2.7.9",
+            "name": "Windows 2.7.9",
             "id": 479
         },
         {
-            "name": "windows 1.4.3",
+            "name": "Windows 1.4.3",
             "id": 480
         },
         {
@@ -2977,131 +2977,131 @@
             "id": 481
         },
         {
-            "name": "gcc 4.5",
+            "name": "GCC 4.5",
             "id": 4547
         },
         {
-            "name": "python 2.73",
+            "name": "Python 2.73",
             "id": 482
         },
         {
-            "name": "debian 7",
+            "name": "Debian 7",
             "id": 483
         },
         {
-            "name": "windows 3.4",
+            "name": "Windows 3.4",
             "id": 485
         },
         {
-            "name": "windows 3.3",
+            "name": "Windows 3.3",
             "id": 486
         },
         {
-            "name": "python 1.8.6",
+            "name": "Python 1.8.6",
             "id": 488
         },
         {
-            "name": "centos 6.4",
+            "name": "CentOS 6.4",
             "id": 489
         },
         {
-            "name": "python 2.7.6",
+            "name": "Python 2.7.6",
             "id": 4543
         },
         {
-            "name": "windows 4.10.3",
+            "name": "Windows 4.10.3",
             "id": 490
         },
         {
-            "name": "mysql 6.1",
+            "name": "MySQL 6.1",
             "id": 491
         },
         {
-            "name": "python 1.2.5",
+            "name": "Python 1.2.5",
             "id": 492
         },
         {
-            "name": "mysql 1.2.3",
+            "name": "MySQL 1.2.3",
             "id": 669
         },
         {
-            "name": "python 2.2.22",
+            "name": "Python 2.2.22",
             "id": 493
         },
         {
-            "name": "ubuntu 12.04.3",
+            "name": "Ubuntu 12.04.3",
             "id": 494
         },
         {
-            "name": "mysql 5.6.19",
+            "name": "MySQL 5.6.19",
             "id": 495
         },
         {
-            "name": "python 1.2.4",
+            "name": "Python 1.2.4",
             "id": 496
         },
         {
-            "name": "python 3.3.5",
+            "name": "Python 3.3.5",
             "id": 497
         },
         {
-            "name": "python 3.4.1",
+            "name": "Python 3.4.1",
             "id": 498
         },
         {
-            "name": "windows 13.2",
+            "name": "Windows 13.2",
             "id": 811
         },
         {
-            "name": "python 2.65",
+            "name": "Python 2.65",
             "id": 500
         },
         {
-            "name": "python 0.99",
+            "name": "Python 0.99",
             "id": 501
         },
         {
-            "name": "python 2.75",
+            "name": "Python 2.75",
             "id": 502
         },
         {
-            "name": "android 3.9.6",
+            "name": "Android 3.9.6",
             "id": 503
         },
         {
-            "name": "android 3.4.2",
+            "name": "Android 3.4.2",
             "id": 504
         },
         {
-            "name": "sqlalchemy 0.9.8",
+            "name": "SQLAlchemy 0.9.8",
             "id": 505
         },
         {
-            "name": "mysql 0.6.2",
+            "name": "MySQL 0.6.2",
             "id": 756
         },
         {
-            "name": "mysql 5",
+            "name": "MySQL 5",
             "id": 506
         },
         {
-            "name": "macos 5.6",
+            "name": "macOS 5.6",
             "id": 988
         },
         {
-            "name": "python 3.4.2",
+            "name": "Python 3.4.2",
             "id": 507
         },
         {
-            "name": "sqlalchemy 0.9",
+            "name": "SQLAlchemy 0.9",
             "id": 664
         },
         {
-            "name": "flask 0.10",
+            "name": "Flask 0.10",
             "id": 510
         },
         {
-            "name": "ubuntu 04",
+            "name": "Ubuntu 04",
             "id": 511
         },
         {
@@ -3109,139 +3109,139 @@
             "id": 819
         },
         {
-            "name": "python 1.10",
+            "name": "Python 1.10",
             "id": 515
         },
         {
-            "name": "mysql 5.7.8",
+            "name": "MySQL 5.7.8",
             "id": 963
         },
         {
-            "name": "scipy 0.15.1",
+            "name": "SciPy 0.15.1",
             "id": 517
         },
         {
-            "name": "macos 10.12",
+            "name": "macOS 10.12",
             "id": 628
         },
         {
-            "name": "scipy 0.17",
+            "name": "SciPy 0.17",
             "id": 520
         },
         {
-            "name": "python 32",
+            "name": "Python 32",
             "id": 521
         },
         {
-            "name": "centos 6.10",
+            "name": "CentOS 6.10",
             "id": 684
         },
         {
-            "name": "macos 2",
+            "name": "macOS 2",
             "id": 524
         },
         {
-            "name": "python 2.7.13",
+            "name": "Python 2.7.13",
             "id": 525
         },
         {
-            "name": "debian 1.1",
+            "name": "Debian 1.1",
             "id": 1015
         },
         {
-            "name": "ubuntu 1.1",
+            "name": "Ubuntu 1.1",
             "id": 4516
         },
         {
-            "name": "macos 4.6",
+            "name": "macOS 4.6",
             "id": 914
         },
         {
-            "name": "macos 4",
+            "name": "macOS 4",
             "id": 895
         },
         {
-            "name": "blender 2.78",
+            "name": "Blender 2.78",
             "id": 526
         },
         {
-            "name": "windows 3",
+            "name": "Windows 3",
             "id": 527
         },
         {
-            "name": "numpy 1.13",
+            "name": "NumPy 1.13",
             "id": 528
         },
         {
-            "name": "scipy 0.19",
+            "name": "SciPy 0.19",
             "id": 774
         },
         {
-            "name": "python 6.2.1",
+            "name": "Python 6.2.1",
             "id": 529
         },
         {
-            "name": "numpy 1.14",
+            "name": "NumPy 1.14",
             "id": 531
         },
         {
-            "name": "macos 10.10.5",
+            "name": "macOS 10.10.5",
             "id": 829
         },
         {
-            "name": "macos 10.13.3",
+            "name": "macOS 10.13.3",
             "id": 532
         },
         {
-            "name": "sqlalchemy 1.2.6",
+            "name": "SQLAlchemy 1.2.6",
             "id": 533
         },
         {
-            "name": "python 7",
+            "name": "Python 7",
             "id": 534
         },
         {
-            "name": "windows 1.11",
+            "name": "Windows 1.11",
             "id": 535
         },
         {
-            "name": "macos 10.13.4",
+            "name": "macOS 10.13.4",
             "id": 536
         },
         {
-            "name": "windows 4.5",
+            "name": "Windows 4.5",
             "id": 537
         },
         {
-            "name": "mysql 2.7",
+            "name": "MySQL 2.7",
             "id": 538
         },
         {
-            "name": "scipy 0.16",
+            "name": "SciPy 0.16",
             "id": 539
         },
         {
-            "name": "windows 5.7",
+            "name": "Windows 5.7",
             "id": 540
         },
         {
-            "name": "mysql 0.7.11",
+            "name": "MySQL 0.7.11",
             "id": 541
         },
         {
-            "name": "macos 2.8.4",
+            "name": "macOS 2.8.4",
             "id": 542
         },
         {
-            "name": "gcc 7.4",
+            "name": "GCC 7.4",
             "id": 544
         },
         {
-            "name": "pytorch 1.5",
+            "name": "PyTorch 1.5",
             "id": 545
         },
         {
-            "name": "python 3.6.10",
+            "name": "Python 3.6.10",
             "id": 546
         },
         {
@@ -3249,39 +3249,39 @@
             "id": 1109
         },
         {
-            "name": "mysql 0.10.1",
+            "name": "MySQL 0.10.1",
             "id": 548
         },
         {
-            "name": "ubuntu 16.04.7",
+            "name": "Ubuntu 16.04.7",
             "id": 549
         },
         {
-            "name": "numpy 1.20.3",
+            "name": "NumPy 1.20.3",
             "id": 550
         },
         {
-            "name": "python 3.8.9",
+            "name": "Python 3.8.9",
             "id": 551
         },
         {
-            "name": "windows 1.1.7",
+            "name": "Windows 1.1.7",
             "id": 552
         },
         {
-            "name": "python 0.12.1",
+            "name": "Python 0.12.1",
             "id": 553
         },
         {
-            "name": "mysql 5.0.05",
+            "name": "MySQL 5.0.05",
             "id": 556
         },
         {
-            "name": "python 2.6.8",
+            "name": "Python 2.6.8",
             "id": 557
         },
         {
-            "name": "python 0.11",
+            "name": "Python 0.11",
             "id": 559
         },
         {
@@ -3289,31 +3289,31 @@
             "id": 560
         },
         {
-            "name": "wxpython 2.9.3",
+            "name": "wxPython 2.9.3",
             "id": 561
         },
         {
-            "name": "blender 3",
+            "name": "Blender 3",
             "id": 562
         },
         {
-            "name": "android 2.6",
+            "name": "Android 2.6",
             "id": 566
         },
         {
-            "name": "python 1.7.2",
+            "name": "Python 1.7.2",
             "id": 567
         },
         {
-            "name": "macos 3.5",
+            "name": "macOS 3.5",
             "id": 569
         },
         {
-            "name": "macos 3.4",
+            "name": "macOS 3.4",
             "id": 570
         },
         {
-            "name": "mysql 1.5",
+            "name": "MySQL 1.5",
             "id": 571
         },
         {
@@ -3321,47 +3321,47 @@
             "id": 572
         },
         {
-            "name": "windows 9",
+            "name": "Windows 9",
             "id": 573
         },
         {
-            "name": "wxpython 2.9",
+            "name": "wxPython 2.9",
             "id": 574
         },
         {
-            "name": "postgres 2",
+            "name": "PostgreSQL 2",
             "id": 575
         },
         {
-            "name": "postgres 2.5",
+            "name": "PostgreSQL 2.5",
             "id": 576
         },
         {
-            "name": "gcc 4.7.2",
+            "name": "GCC 4.7.2",
             "id": 577
         },
         {
-            "name": "numpy 10.7.5",
+            "name": "NumPy 10.7.5",
             "id": 579
         },
         {
-            "name": "centos 5.8",
+            "name": "CentOS 5.8",
             "id": 581
         },
         {
-            "name": "python 0.13.1",
+            "name": "Python 0.13.1",
             "id": 582
         },
         {
-            "name": "sqlalchemy 0.8",
+            "name": "SQLAlchemy 0.8",
             "id": 583
         },
         {
-            "name": "ubuntu 12.4",
+            "name": "Ubuntu 12.4",
             "id": 587
         },
         {
-            "name": "blender 3.2",
+            "name": "Blender 3.2",
             "id": 589
         },
         {
@@ -3369,39 +3369,39 @@
             "id": 590
         },
         {
-            "name": "numpy 0.4",
+            "name": "NumPy 0.4",
             "id": 592
         },
         {
-            "name": "flask 0.8",
+            "name": "Flask 0.8",
             "id": 593
         },
         {
-            "name": "scipy 10.6",
+            "name": "SciPy 10.6",
             "id": 594
         },
         {
-            "name": "windows 8.4",
+            "name": "Windows 8.4",
             "id": 595
         },
         {
-            "name": "scipy 0.7.1",
+            "name": "SciPy 0.7.1",
             "id": 596
         },
         {
-            "name": "scipy 10",
+            "name": "SciPy 10",
             "id": 597
         },
         {
-            "name": "ubuntu 13",
+            "name": "Ubuntu 13",
             "id": 598
         },
         {
-            "name": "windows 2.33",
+            "name": "Windows 2.33",
             "id": 599
         },
         {
-            "name": "numpy 0.7",
+            "name": "NumPy 0.7",
             "id": 600
         },
         {
@@ -3409,31 +3409,31 @@
             "id": 601
         },
         {
-            "name": "ubuntu 12.06",
+            "name": "Ubuntu 12.06",
             "id": 602
         },
         {
-            "name": "numpy 3.2",
+            "name": "NumPy 3.2",
             "id": 603
         },
         {
-            "name": "mysql 1.6",
+            "name": "MySQL 1.6",
             "id": 606
         },
         {
-            "name": "mysql 0.6.1",
+            "name": "MySQL 0.6.1",
             "id": 607
         },
         {
-            "name": "python 3.3.3",
+            "name": "Python 3.3.3",
             "id": 609
         },
         {
-            "name": "windows 5.5",
+            "name": "Windows 5.5",
             "id": 608
         },
         {
-            "name": "ubuntu 10.9.5",
+            "name": "Ubuntu 10.9.5",
             "id": 702
         },
         {
@@ -3441,51 +3441,51 @@
             "id": 611
         },
         {
-            "name": "ubuntu 12.04.2",
+            "name": "Ubuntu 12.04.2",
             "id": 612
         },
         {
-            "name": "windows 2.4.5",
+            "name": "Windows 2.4.5",
             "id": 614
         },
         {
-            "name": "python 2.7.8",
+            "name": "Python 2.7.8",
             "id": 615
         },
         {
-            "name": "numpy 2.5.3",
+            "name": "NumPy 2.5.3",
             "id": 753
         },
         {
-            "name": "mysql 5.6.21",
+            "name": "MySQL 5.6.21",
             "id": 745
         },
         {
-            "name": "mysql 2.0.1",
+            "name": "MySQL 2.0.1",
             "id": 740
         },
         {
-            "name": "numpy 1.11",
+            "name": "NumPy 1.11",
             "id": 616
         },
         {
-            "name": "ubuntu 4.04",
+            "name": "Ubuntu 4.04",
             "id": 617
         },
         {
-            "name": "mysql 5.5.41",
+            "name": "MySQL 5.5.41",
             "id": 621
         },
         {
-            "name": "macos 10.9",
+            "name": "macOS 10.9",
             "id": 622
         },
         {
-            "name": "python 3.4.4",
+            "name": "Python 3.4.4",
             "id": 624
         },
         {
-            "name": "windows 3.1.6",
+            "name": "Windows 3.1.6",
             "id": 851
         },
         {
@@ -3493,23 +3493,23 @@
             "id": 773
         },
         {
-            "name": "python 1",
+            "name": "Python 1",
             "id": 626
         },
         {
-            "name": "macos 2.7.10",
+            "name": "macOS 2.7.10",
             "id": 930
         },
         {
-            "name": "ubuntu 14.04.4",
+            "name": "Ubuntu 14.04.4",
             "id": 627
         },
         {
-            "name": "macos 20",
+            "name": "macOS 20",
             "id": 629
         },
         {
-            "name": "numpy 1.10.4",
+            "name": "NumPy 1.10.4",
             "id": 630
         },
         {
@@ -3517,11 +3517,11 @@
             "id": 631
         },
         {
-            "name": "python 8.6",
+            "name": "Python 8.6",
             "id": 635
         },
         {
-            "name": "macos 10.13.6",
+            "name": "macOS 10.13.6",
             "id": 636
         },
         {
@@ -3529,27 +3529,27 @@
             "id": 637
         },
         {
-            "name": "numpy 15.8",
+            "name": "NumPy 15.8",
             "id": 724
         },
         {
-            "name": "numpy 1.15.2",
+            "name": "NumPy 1.15.2",
             "id": 639
         },
         {
-            "name": "python 7.3",
+            "name": "Python 7.3",
             "id": 640
         },
         {
-            "name": "python 5.3",
+            "name": "Python 5.3",
             "id": 641
         },
         {
-            "name": "python 2.7.16",
+            "name": "Python 2.7.16",
             "id": 643
         },
         {
-            "name": "macos 10.15.4",
+            "name": "macOS 10.15.4",
             "id": 1056
         },
         {
@@ -3557,15 +3557,15 @@
             "id": 644
         },
         {
-            "name": "numpy 1.16.1",
+            "name": "NumPy 1.16.1",
             "id": 1073
         },
         {
-            "name": "windows 3.1.2",
+            "name": "Windows 3.1.2",
             "id": 1101
         },
         {
-            "name": "numpy 1.17.4",
+            "name": "NumPy 1.17.4",
             "id": 781
         },
         {
@@ -3573,11 +3573,11 @@
             "id": 647
         },
         {
-            "name": "numpy 1.16.5",
+            "name": "NumPy 1.16.5",
             "id": 4519
         },
         {
-            "name": "numpy 1.18",
+            "name": "NumPy 1.18",
             "id": 648
         },
         {
@@ -3585,19 +3585,19 @@
             "id": 650
         },
         {
-            "name": "numpy 1.18.1",
+            "name": "NumPy 1.18.1",
             "id": 1085
         },
         {
-            "name": "emr 2.15",
+            "name": "Amazon EMR 2.15",
             "id": 1013
         },
         {
-            "name": "macos 0.29.14",
+            "name": "macOS 0.29.14",
             "id": 890
         },
         {
-            "name": "python 3.6.13",
+            "name": "Python 3.6.13",
             "id": 652
         },
         {
@@ -3605,63 +3605,63 @@
             "id": 4499
         },
         {
-            "name": "debian 4.7.2",
+            "name": "Debian 4.7.2",
             "id": 655
         },
         {
-            "name": "python 6.0.5",
+            "name": "Python 6.0.5",
             "id": 656
         },
         {
-            "name": "wxpython 2.9.4",
+            "name": "wxPython 2.9.4",
             "id": 657
         },
         {
-            "name": "wxpython 2.6",
+            "name": "wxPython 2.6",
             "id": 659
         },
         {
-            "name": "python 6.12",
+            "name": "Python 6.12",
             "id": 660
         },
         {
-            "name": "numpy 1.7",
+            "name": "NumPy 1.7",
             "id": 4505
         },
         {
-            "name": "python 2.2",
+            "name": "Python 2.2",
             "id": 661
         },
         {
-            "name": "gcc 3.3",
+            "name": "GCC 3.3",
             "id": 662
         },
         {
-            "name": "blender 2.50",
+            "name": "Blender 2.50",
             "id": 666
         },
         {
-            "name": "windows 1.15",
+            "name": "Windows 1.15",
             "id": 667
         },
         {
-            "name": "windows 1.8.5",
+            "name": "Windows 1.8.5",
             "id": 668
         },
         {
-            "name": "windows 3.1.1",
+            "name": "Windows 3.1.1",
             "id": 671
         },
         {
-            "name": "macos 10.9.2",
+            "name": "macOS 10.9.2",
             "id": 673
         },
         {
-            "name": "centos 5.2",
+            "name": "CentOS 5.2",
             "id": 675
         },
         {
-            "name": "debian 2.15",
+            "name": "Debian 2.15",
             "id": 676
         },
         {
@@ -3669,7 +3669,7 @@
             "id": 677
         },
         {
-            "name": "windows 7.3",
+            "name": "Windows 7.3",
             "id": 679
         },
         {
@@ -3681,23 +3681,23 @@
             "id": 681
         },
         {
-            "name": "ubuntu 2.8.4",
+            "name": "Ubuntu 2.8.4",
             "id": 683
         },
         {
-            "name": "python 2.8",
+            "name": "Python 2.8",
             "id": 4413
         },
         {
-            "name": "macos 10.9.3",
+            "name": "macOS 10.9.3",
             "id": 685
         },
         {
-            "name": "windows 4.3",
+            "name": "Windows 4.3",
             "id": 686
         },
         {
-            "name": "windows 4",
+            "name": "Windows 4",
             "id": 688
         },
         {
@@ -3705,79 +3705,79 @@
             "id": 691
         },
         {
-            "name": "sqlalchemy 0.9.6",
+            "name": "SQLAlchemy 0.9.6",
             "id": 692
         },
         {
-            "name": "numpy 1.8.2",
+            "name": "NumPy 1.8.2",
             "id": 695
         },
         {
-            "name": "scipy 0.14.1",
+            "name": "SciPy 0.14.1",
             "id": 755
         },
         {
-            "name": "ubuntu 1.1.7",
+            "name": "Ubuntu 1.1.7",
             "id": 751
         },
         {
-            "name": "ubuntu 1.7.1",
+            "name": "Ubuntu 1.7.1",
             "id": 750
         },
         {
-            "name": "ubuntu 0.2.12",
+            "name": "Ubuntu 0.2.12",
             "id": 748
         },
         {
-            "name": "sqlalchemy 0.9.7",
+            "name": "SQLAlchemy 0.9.7",
             "id": 697
         },
         {
-            "name": "sqlalchemy 0.8.4",
+            "name": "SQLAlchemy 0.8.4",
             "id": 698
         },
         {
-            "name": "numpy 2.1",
+            "name": "NumPy 2.1",
             "id": 699
         },
         {
-            "name": "ubuntu 2.8",
+            "name": "Ubuntu 2.8",
             "id": 700
         },
         {
-            "name": "python 7.1",
+            "name": "Python 7.1",
             "id": 701
         },
         {
-            "name": "ubuntu 14.4",
+            "name": "Ubuntu 14.4",
             "id": 703
         },
         {
-            "name": "python 3.42",
+            "name": "Python 3.42",
             "id": 704
         },
         {
-            "name": "debian 2.0.1",
+            "name": "Debian 2.0.1",
             "id": 705
         },
         {
-            "name": "python 4",
+            "name": "Python 4",
             "id": 706
         },
         {
-            "name": "numpy 1.14.5",
+            "name": "NumPy 1.14.5",
             "id": 707
         },
         {
-            "name": "python 1.19.5",
+            "name": "Python 1.19.5",
             "id": 943
         },
         {
-            "name": "ubuntu 15",
+            "name": "Ubuntu 15",
             "id": 711
         },
         {
-            "name": "scipy 0.18.1",
+            "name": "SciPy 0.18.1",
             "id": 713
         },
         {
@@ -3785,23 +3785,23 @@
             "id": 845
         },
         {
-            "name": "ubuntu 34",
+            "name": "Ubuntu 34",
             "id": 715
         },
         {
-            "name": "python 2.3",
+            "name": "Python 2.3",
             "id": 4414
         },
         {
-            "name": "python 1.1",
+            "name": "Python 1.1",
             "id": 716
         },
         {
-            "name": "ubuntu 12.04.5",
+            "name": "Ubuntu 12.04.5",
             "id": 717
         },
         {
-            "name": "debian 0.14.1",
+            "name": "Debian 0.14.1",
             "id": 718
         },
         {
@@ -3809,19 +3809,19 @@
             "id": 719
         },
         {
-            "name": "macos 10.10.6",
+            "name": "macOS 10.10.6",
             "id": 720
         },
         {
-            "name": "windows 6",
+            "name": "Windows 6",
             "id": 722
         },
         {
-            "name": "python 7.13",
+            "name": "Python 7.13",
             "id": 1125
         },
         {
-            "name": "numpy 20.4",
+            "name": "NumPy 20.4",
             "id": 725
         },
         {
@@ -3829,11 +3829,11 @@
             "id": 726
         },
         {
-            "name": "python 1.15",
+            "name": "Python 1.15",
             "id": 732
         },
         {
-            "name": "ubuntu 14.10",
+            "name": "Ubuntu 14.10",
             "id": 733
         },
         {
@@ -3841,7 +3841,7 @@
             "id": 734
         },
         {
-            "name": "scipy 0.13.3",
+            "name": "SciPy 0.13.3",
             "id": 735
         },
         {
@@ -3849,11 +3849,11 @@
             "id": 737
         },
         {
-            "name": "wxpython 3.3",
+            "name": "wxPython 3.3",
             "id": 738
         },
         {
-            "name": "python 10.2",
+            "name": "Python 10.2",
             "id": 741
         },
         {
@@ -3861,23 +3861,23 @@
             "id": 743
         },
         {
-            "name": "mysql 1.2.5",
+            "name": "MySQL 1.2.5",
             "id": 747
         },
         {
-            "name": "scipy 0.10.1",
+            "name": "SciPy 0.10.1",
             "id": 749
         },
         {
-            "name": "ubuntu 1.5.6",
+            "name": "Ubuntu 1.5.6",
             "id": 757
         },
         {
-            "name": "debian 7.8",
+            "name": "Debian 7.8",
             "id": 758
         },
         {
-            "name": "ubuntu 6.1.1",
+            "name": "Ubuntu 6.1.1",
             "id": 759
         },
         {
@@ -3885,7 +3885,7 @@
             "id": 760
         },
         {
-            "name": "python 1.1.23",
+            "name": "Python 1.1.23",
             "id": 761
         },
         {
@@ -3893,19 +3893,19 @@
             "id": 762
         },
         {
-            "name": "scipy 12",
+            "name": "SciPy 12",
             "id": 763
         },
         {
-            "name": "scipy 0.15",
+            "name": "SciPy 0.15",
             "id": 764
         },
         {
-            "name": "postgres 8",
+            "name": "PostgreSQL 8",
             "id": 765
         },
         {
-            "name": "python 8.0.2",
+            "name": "Python 8.0.2",
             "id": 766
         },
         {
@@ -3913,51 +3913,51 @@
             "id": 769
         },
         {
-            "name": "python 2.53",
+            "name": "Python 2.53",
             "id": 771
         },
         {
-            "name": "windows 5",
+            "name": "Windows 5",
             "id": 772
         },
         {
-            "name": "python 0.15",
+            "name": "Python 0.15",
             "id": 925
         },
         {
-            "name": "sqlalchemy 1.1.5",
+            "name": "SQLAlchemy 1.1.5",
             "id": 911
         },
         {
-            "name": "ubuntu 14.04.1",
+            "name": "Ubuntu 14.04.1",
             "id": 776
         },
         {
-            "name": "sqlalchemy 1.2.13",
+            "name": "SQLAlchemy 1.2.13",
             "id": 777
         },
         {
-            "name": "postgres 10.10",
+            "name": "PostgreSQL 10.10",
             "id": 779
         },
         {
-            "name": "python 9.0.1",
+            "name": "Python 9.0.1",
             "id": 780
         },
         {
-            "name": "scipy 1.3",
+            "name": "SciPy 1.3",
             "id": 782
         },
         {
-            "name": "numpy 17",
+            "name": "NumPy 17",
             "id": 1076
         },
         {
-            "name": "numpy 16.4",
+            "name": "NumPy 16.4",
             "id": 1075
         },
         {
-            "name": "sqlalchemy 1.0.6",
+            "name": "SQLAlchemy 1.0.6",
             "id": 784
         },
         {
@@ -3965,59 +3965,59 @@
             "id": 785
         },
         {
-            "name": "windows 1.9",
+            "name": "Windows 1.9",
             "id": 786
         },
         {
-            "name": "numpy 6.29",
+            "name": "NumPy 6.29",
             "id": 787
         },
         {
-            "name": "python 29.5",
+            "name": "Python 29.5",
             "id": 788
         },
         {
-            "name": "windows 2.3.1",
+            "name": "Windows 2.3.1",
             "id": 789
         },
         {
-            "name": "flask 2.6",
+            "name": "Flask 2.6",
             "id": 790
         },
         {
-            "name": "scipy 0.13",
+            "name": "SciPy 0.13",
             "id": 791
         },
         {
-            "name": "windows 2.6.1",
+            "name": "Windows 2.6.1",
             "id": 792
         },
         {
-            "name": "flask 3",
+            "name": "Flask 3",
             "id": 794
         },
         {
-            "name": "windows 8.6",
+            "name": "Windows 8.6",
             "id": 795
         },
         {
-            "name": "sqlalchemy 1.0.9",
+            "name": "SQLAlchemy 1.0.9",
             "id": 796
         },
         {
-            "name": "windows 1.2.2",
+            "name": "Windows 1.2.2",
             "id": 797
         },
         {
-            "name": "flask 0.1.3",
+            "name": "Flask 0.1.3",
             "id": 798
         },
         {
-            "name": "gcc 5.2",
+            "name": "GCC 5.2",
             "id": 799
         },
         {
-            "name": "windows 98",
+            "name": "Windows 98",
             "id": 801
         },
         {
@@ -4025,59 +4025,59 @@
             "id": 802
         },
         {
-            "name": "debian 1.4.2",
+            "name": "Debian 1.4.2",
             "id": 803
         },
         {
-            "name": "centos 2.14",
+            "name": "CentOS 2.14",
             "id": 965
         },
         {
-            "name": "tensorflow 0.6",
+            "name": "TensorFlow 0.6",
             "id": 4468
         },
         {
-            "name": "numpy 2.6",
+            "name": "NumPy 2.6",
             "id": 805
         },
         {
-            "name": "gcc 4.9.1",
+            "name": "GCC 4.9.1",
             "id": 806
         },
         {
-            "name": "flask 1.4",
+            "name": "Flask 1.4",
             "id": 807
         },
         {
-            "name": "flask-sqlalchemy 2.1",
+            "name": "Flask SQLAlchemy 2.1",
             "id": 4421
         },
         {
-            "name": "mysql 2.1.3",
+            "name": "MySQL 2.1.3",
             "id": 808
         },
         {
-            "name": "python 2.0.4",
+            "name": "Python 2.0.4",
             "id": 809
         },
         {
-            "name": "mysql 8.0.17",
+            "name": "MySQL 8.0.17",
             "id": 838
         },
         {
-            "name": "tensorflow 0.5",
+            "name": "TensorFlow 0.5",
             "id": 810
         },
         {
-            "name": "sqlalchemy 1.0.4",
+            "name": "SQLAlchemy 1.0.4",
             "id": 812
         },
         {
-            "name": "windows 2.4",
+            "name": "Windows 2.4",
             "id": 813
         },
         {
-            "name": "windows 16",
+            "name": "Windows 16",
             "id": 815
         },
         {
@@ -4085,39 +4085,39 @@
             "id": 816
         },
         {
-            "name": "python 0.29",
+            "name": "Python 0.29",
             "id": 817
         },
         {
-            "name": "mysql 1.8.9",
+            "name": "MySQL 1.8.9",
             "id": 820
         },
         {
-            "name": "debian 8.5",
+            "name": "Debian 8.5",
             "id": 822
         },
         {
-            "name": "mysql 2.1.4",
+            "name": "MySQL 2.1.4",
             "id": 823
         },
         {
-            "name": "python 2.1.6",
+            "name": "Python 2.1.6",
             "id": 824
         },
         {
-            "name": "flask 0.17",
+            "name": "Flask 0.17",
             "id": 825
         },
         {
-            "name": "ubuntu 3.1",
+            "name": "Ubuntu 3.1",
             "id": 827
         },
         {
-            "name": "mysql 1.11",
+            "name": "MySQL 1.11",
             "id": 828
         },
         {
-            "name": "macos 10.13.5",
+            "name": "macOS 10.13.5",
             "id": 831
         },
         {
@@ -4125,59 +4125,59 @@
             "id": 832
         },
         {
-            "name": "mysql 5.6.24",
+            "name": "MySQL 5.6.24",
             "id": 833
         },
         {
-            "name": "python 8.0.5",
+            "name": "Python 8.0.5",
             "id": 835
         },
         {
-            "name": "python 8.0.13",
+            "name": "Python 8.0.13",
             "id": 834
         },
         {
-            "name": "sqlalchemy 1.2.14",
+            "name": "SQLAlchemy 1.2.14",
             "id": 1021
         },
         {
-            "name": "mysql 72.2",
+            "name": "MySQL 72.2",
             "id": 836
         },
         {
-            "name": "android 3.2",
+            "name": "Android 3.2",
             "id": 837
         },
         {
-            "name": "numpy 1.18.2",
+            "name": "NumPy 1.18.2",
             "id": 840
         },
         {
-            "name": "scipy 1.4.1",
+            "name": "SciPy 1.4.1",
             "id": 1088
         },
         {
-            "name": "mysql 8",
+            "name": "MySQL 8",
             "id": 841
         },
         {
-            "name": "macos 10.15.3",
+            "name": "macOS 10.15.3",
             "id": 893
         },
         {
-            "name": "sqlalchemy 1.3.18",
+            "name": "SQLAlchemy 1.3.18",
             "id": 842
         },
         {
-            "name": "ubuntu 20.04.1",
+            "name": "Ubuntu 20.04.1",
             "id": 844
         },
         {
-            "name": "cuda 15.04",
+            "name": "CUDA 15.04",
             "id": 846
         },
         {
-            "name": "cudnn 4",
+            "name": "cuDNN 4",
             "id": 4469
         },
         {
@@ -4185,23 +4185,23 @@
             "id": 847
         },
         {
-            "name": "blender 2.77",
+            "name": "Blender 2.77",
             "id": 849
         },
         {
-            "name": "python 8.3",
+            "name": "Python 8.3",
             "id": 850
         },
         {
-            "name": "windows 14",
+            "name": "Windows 14",
             "id": 852
         },
         {
-            "name": "numpy 0.11",
+            "name": "NumPy 0.11",
             "id": 853
         },
         {
-            "name": "scipy 0.17.1",
+            "name": "SciPy 0.17.1",
             "id": 854
         },
         {
@@ -4209,71 +4209,71 @@
             "id": 1185
         },
         {
-            "name": "blender 2.76",
+            "name": "Blender 2.76",
             "id": 858
         },
         {
-            "name": "numpy 14.04",
+            "name": "NumPy 14.04",
             "id": 859
         },
         {
-            "name": "tensorflow 7.0.4",
+            "name": "TensorFlow 7.0.4",
             "id": 860
         },
         {
-            "name": "cudnn 9.1",
+            "name": "cuDNN 9.1",
             "id": 861
         },
         {
-            "name": "tensorflow 0.90",
+            "name": "TensorFlow 0.90",
             "id": 862
         },
         {
-            "name": "blender 3.5.1",
+            "name": "Blender 3.5.1",
             "id": 863
         },
         {
-            "name": "gcc 6.1",
+            "name": "GCC 6.1",
             "id": 864
         },
         {
-            "name": "windows 1.9.2",
+            "name": "Windows 1.9.2",
             "id": 865
         },
         {
-            "name": "flask 1.7.5",
+            "name": "Flask 1.7.5",
             "id": 866
         },
         {
-            "name": "tensorflow 0.13",
+            "name": "TensorFlow 0.13",
             "id": 867
         },
         {
-            "name": "keras 3.12",
+            "name": "Keras 3.12",
             "id": 868
         },
         {
-            "name": "numpy 1.11.2",
+            "name": "NumPy 1.11.2",
             "id": 869
         },
         {
-            "name": "numpy 18.5",
+            "name": "NumPy 18.5",
             "id": 870
         },
         {
-            "name": "python 18.5",
+            "name": "Python 18.5",
             "id": 871
         },
         {
-            "name": "windows 0.12",
+            "name": "Windows 0.12",
             "id": 873
         },
         {
-            "name": "flask 0.11",
+            "name": "Flask 0.11",
             "id": 874
         },
         {
-            "name": "windows r0.12",
+            "name": "Windows r0.12",
             "id": 875
         },
         {
@@ -4281,71 +4281,71 @@
             "id": 876
         },
         {
-            "name": "tensorflow 4.2",
+            "name": "TensorFlow 4.2",
             "id": 877
         },
         {
-            "name": "tensorflow 3.7",
+            "name": "TensorFlow 3.7",
             "id": 878
         },
         {
-            "name": "tensorboard 0.1.5",
+            "name": "TensorBoard 0.1.5",
             "id": 880
         },
         {
-            "name": "macos 2.0.2",
+            "name": "macOS 2.0.2",
             "id": 881
         },
         {
-            "name": "python 3.5.4",
+            "name": "Python 3.5.4",
             "id": 4463
         },
         {
-            "name": "postgres 9.5",
+            "name": "PostgreSQL 9.5",
             "id": 884
         },
         {
-            "name": "cudnn 9.2",
+            "name": "cuDNN 9.2",
             "id": 886
         },
         {
-            "name": "postgres 9.6",
+            "name": "PostgreSQL 9.6",
             "id": 887
         },
         {
-            "name": "macos 3.7.4",
+            "name": "macOS 3.7.4",
             "id": 889
         },
         {
-            "name": "cudnn 8.0.1",
+            "name": "cuDNN 8.0.1",
             "id": 892
         },
         {
-            "name": "macos 3.8",
+            "name": "macOS 3.8",
             "id": 894
         },
         {
-            "name": "ubuntu 0",
+            "name": "Ubuntu 0",
             "id": 896
         },
         {
-            "name": "python 12.6.3",
+            "name": "Python 12.6.3",
             "id": 897
         },
         {
-            "name": "windows 12.7",
+            "name": "Windows 12.7",
             "id": 898
         },
         {
-            "name": "ubuntu 4.2",
+            "name": "Ubuntu 4.2",
             "id": 899
         },
         {
-            "name": "ubuntu 42",
+            "name": "Ubuntu 42",
             "id": 900
         },
         {
-            "name": "windows 0.18.1",
+            "name": "Windows 0.18.1",
             "id": 901
         },
         {
@@ -4357,31 +4357,31 @@
             "id": 903
         },
         {
-            "name": "python 2.0.1",
+            "name": "Python 2.0.1",
             "id": 910
         },
         {
-            "name": "keras 2.0.2",
+            "name": "Keras 2.0.2",
             "id": 904
         },
         {
-            "name": "windows 4.3.1",
+            "name": "Windows 4.3.1",
             "id": 905
         },
         {
-            "name": "tensorflow 1.0.1",
+            "name": "TensorFlow 1.0.1",
             "id": 906
         },
         {
-            "name": "windows 1.2",
+            "name": "Windows 1.2",
             "id": 907
         },
         {
-            "name": "sqlalchemy 1.1.8",
+            "name": "SQLAlchemy 1.1.8",
             "id": 908
         },
         {
-            "name": "python 1.5.1",
+            "name": "Python 1.5.1",
             "id": 909
         },
         {
@@ -4389,7 +4389,7 @@
             "id": 912
         },
         {
-            "name": "tensorflow 0",
+            "name": "TensorFlow 0",
             "id": 913
         },
         {
@@ -4397,15 +4397,15 @@
             "id": 915
         },
         {
-            "name": "python 3.1.4",
+            "name": "Python 3.1.4",
             "id": 916
         },
         {
-            "name": "python 2.0.2",
+            "name": "Python 2.0.2",
             "id": 918
         },
         {
-            "name": "numpy 1.13.1",
+            "name": "NumPy 1.13.1",
             "id": 4512
         },
         {
@@ -4413,19 +4413,19 @@
             "id": 919
         },
         {
-            "name": "gcc 6.2",
+            "name": "GCC 6.2",
             "id": 920
         },
         {
-            "name": "keras 2.0.6",
+            "name": "Keras 2.0.6",
             "id": 922
         },
         {
-            "name": "python 3.4.5",
+            "name": "Python 3.4.5",
             "id": 923
         },
         {
-            "name": "postgres 26",
+            "name": "PostgreSQL 26",
             "id": 924
         },
         {
@@ -4433,55 +4433,55 @@
             "id": 926
         },
         {
-            "name": "keras 2.1.2",
+            "name": "Keras 2.1.2",
             "id": 927
         },
         {
-            "name": "airflow 1.9",
+            "name": "Airflow 1.9",
             "id": 928
         },
         {
-            "name": "keras 2.1.3",
+            "name": "Keras 2.1.3",
             "id": 929
         },
         {
-            "name": "ubuntu 16.04.5",
+            "name": "Ubuntu 16.04.5",
             "id": 931
         },
         {
-            "name": "python 3.5.5",
+            "name": "Python 3.5.5",
             "id": 932
         },
         {
-            "name": "macos 10.14.1",
+            "name": "macOS 10.14.1",
             "id": 933
         },
         {
-            "name": "windows 3.141",
+            "name": "Windows 3.141",
             "id": 934
         },
         {
-            "name": "keras 2.1.6",
+            "name": "Keras 2.1.6",
             "id": 935
         },
         {
-            "name": "tensorflow 0.6.4",
+            "name": "TensorFlow 0.6.4",
             "id": 1060
         },
         {
-            "name": "tensorboard 1.13.1",
+            "name": "TensorBoard 1.13.1",
             "id": 937
         },
         {
-            "name": "ubuntu 16.04.6",
+            "name": "Ubuntu 16.04.6",
             "id": 939
         },
         {
-            "name": "debian 3.141",
+            "name": "Debian 3.141",
             "id": 940
         },
         {
-            "name": "windows 3.11.9",
+            "name": "Windows 3.11.9",
             "id": 942
         },
         {
@@ -4489,7 +4489,7 @@
             "id": 947
         },
         {
-            "name": "windows 4.0.17",
+            "name": "Windows 4.0.17",
             "id": 948
         },
         {
@@ -4497,99 +4497,99 @@
             "id": 4515
         },
         {
-            "name": "scipy 20",
+            "name": "SciPy 20",
             "id": 949
         },
         {
-            "name": "numpy 1.13.2",
+            "name": "NumPy 1.13.2",
             "id": 950
         },
         {
-            "name": "numpy 13",
+            "name": "NumPy 13",
             "id": 951
         },
         {
-            "name": "android 1.10",
+            "name": "Android 1.10",
             "id": 952
         },
         {
-            "name": "macos 2.5",
+            "name": "macOS 2.5",
             "id": 954
         },
         {
-            "name": "macos 10.10",
+            "name": "macOS 10.10",
             "id": 955
         },
         {
-            "name": "python 2.3.1",
+            "name": "Python 2.3.1",
             "id": 958
         },
         {
-            "name": "pytorch 0.3",
+            "name": "PyTorch 0.3",
             "id": 959
         },
         {
-            "name": "pytorch 0.2",
+            "name": "PyTorch 0.2",
             "id": 960
         },
         {
-            "name": "numpy 3.6",
+            "name": "NumPy 3.6",
             "id": 961
         },
         {
-            "name": "numpy 3.5",
+            "name": "NumPy 3.5",
             "id": 962
         },
         {
-            "name": "cudnn 7.05",
+            "name": "cuDNN 7.05",
             "id": 964
         },
         {
-            "name": "cudnn 7.1.3",
+            "name": "cuDNN 7.1.3",
             "id": 967
         },
         {
-            "name": "python 3.61",
+            "name": "Python 3.61",
             "id": 968
         },
         {
-            "name": "sqlalchemy 1.2.16",
+            "name": "SQLAlchemy 1.2.16",
             "id": 969
         },
         {
-            "name": "flask 0.9",
+            "name": "Flask 0.9",
             "id": 4573
         },
         {
-            "name": "sqlalchemy 0.15",
+            "name": "SQLAlchemy 0.15",
             "id": 970
         },
         {
-            "name": "python 20",
+            "name": "Python 20",
             "id": 972
         },
         {
-            "name": "python 0.2.7",
+            "name": "Python 0.2.7",
             "id": 974
         },
         {
-            "name": "python 3.8.8",
+            "name": "Python 3.8.8",
             "id": 975
         },
         {
-            "name": "windows 3.1",
+            "name": "Windows 3.1",
             "id": 976
         },
         {
-            "name": "ubuntu 1.6",
+            "name": "Ubuntu 1.6",
             "id": 977
         },
         {
-            "name": "tensorflow 1.7",
+            "name": "TensorFlow 1.7",
             "id": 4563
         },
         {
-            "name": "keras 2.0.9",
+            "name": "Keras 2.0.9",
             "id": 978
         },
         {
@@ -4597,15 +4597,15 @@
             "id": 979
         },
         {
-            "name": "ubuntu 8.1.1",
+            "name": "Ubuntu 8.1.1",
             "id": 981
         },
         {
-            "name": "ubuntu 10.0.1",
+            "name": "Ubuntu 10.0.1",
             "id": 982
         },
         {
-            "name": "debian 16.04",
+            "name": "Debian 16.04",
             "id": 983
         },
         {
@@ -4613,39 +4613,39 @@
             "id": 984
         },
         {
-            "name": "tensorflow 4",
+            "name": "TensorFlow 4",
             "id": 985
         },
         {
-            "name": "macos 2.3.1",
+            "name": "macOS 2.3.1",
             "id": 986
         },
         {
-            "name": "windows 4.0.24",
+            "name": "Windows 4.0.24",
             "id": 987
         },
         {
-            "name": "mysql 5.1",
+            "name": "MySQL 5.1",
             "id": 989
         },
         {
-            "name": "windows 2.1.3",
+            "name": "Windows 2.1.3",
             "id": 990
         },
         {
-            "name": "macos 10.11",
+            "name": "macOS 10.11",
             "id": 991
         },
         {
-            "name": "tensorflow 1.7.1",
+            "name": "TensorFlow 1.7.1",
             "id": 992
         },
         {
-            "name": "ubuntu 2.1",
+            "name": "Ubuntu 2.1",
             "id": 993
         },
         {
-            "name": "numpy 3.4",
+            "name": "NumPy 3.4",
             "id": 994
         },
         {
@@ -4653,47 +4653,47 @@
             "id": 996
         },
         {
-            "name": "python 37",
+            "name": "Python 37",
             "id": 998
         },
         {
-            "name": "keras 2.2.3",
+            "name": "Keras 2.2.3",
             "id": 999
         },
         {
-            "name": "tensorflow 1.10",
+            "name": "TensorFlow 1.10",
             "id": 4432
         },
         {
-            "name": "numpy 1.15.1",
+            "name": "NumPy 1.15.1",
             "id": 1000
         },
         {
-            "name": "pytorch 1.2.114",
+            "name": "PyTorch 1.2.114",
             "id": 1001
         },
         {
-            "name": "python 3.71",
+            "name": "Python 3.71",
             "id": 1002
         },
         {
-            "name": "numpy 3",
+            "name": "NumPy 3",
             "id": 1003
         },
         {
-            "name": "ubuntu 3.5",
+            "name": "Ubuntu 3.5",
             "id": 1004
         },
         {
-            "name": "centos 1.2",
+            "name": "CentOS 1.2",
             "id": 1005
         },
         {
-            "name": "keras 5",
+            "name": "Keras 5",
             "id": 1006
         },
         {
-            "name": "numpy 1.16.4",
+            "name": "NumPy 1.16.4",
             "id": 4441
         },
         {
@@ -4701,179 +4701,179 @@
             "id": 1081
         },
         {
-            "name": "pytorch 1",
+            "name": "PyTorch 1",
             "id": 1009
         },
         {
-            "name": "cudnn 7.4.1",
+            "name": "cuDNN 7.4.1",
             "id": 1010
         },
         {
-            "name": "keras 2.2.4",
+            "name": "Keras 2.2.4",
             "id": 4597
         },
         {
-            "name": "ubuntu 1.11.1",
+            "name": "Ubuntu 1.11.1",
             "id": 1011
         },
         {
-            "name": "cudnn 7.6.1",
+            "name": "cuDNN 7.6.1",
             "id": 1012
         },
         {
-            "name": "tensorflow 19",
+            "name": "TensorFlow 19",
             "id": 1014
         },
         {
-            "name": "flask 7",
+            "name": "Flask 7",
             "id": 1016
         },
         {
-            "name": "airflow 1.10",
+            "name": "Airflow 1.10",
             "id": 1017
         },
         {
-            "name": "keras 2.8",
+            "name": "Keras 2.8",
             "id": 1018
         },
         {
-            "name": "macos 3.6.7",
+            "name": "macOS 3.6.7",
             "id": 1020
         },
         {
-            "name": "mysql 8.0.13",
+            "name": "MySQL 8.0.13",
             "id": 1022
         },
         {
-            "name": "keras 2.2.6",
+            "name": "Keras 2.2.6",
             "id": 1025
         },
         {
-            "name": "macos 3.7",
+            "name": "macOS 3.7",
             "id": 1028
         },
         {
-            "name": "python 15.0.1",
+            "name": "Python 15.0.1",
             "id": 1029
         },
         {
-            "name": "python 19.0.1",
+            "name": "Python 19.0.1",
             "id": 1030
         },
         {
-            "name": "windows 18.1",
+            "name": "Windows 18.1",
             "id": 1031
         },
         {
-            "name": "keras 1",
+            "name": "Keras 1",
             "id": 1032
         },
         {
-            "name": "windows 5.2",
+            "name": "Windows 5.2",
             "id": 1033
         },
         {
-            "name": "ubuntu 8.2",
+            "name": "Ubuntu 8.2",
             "id": 1034
         },
         {
-            "name": "centos 7.6.181",
+            "name": "CentOS 7.6.181",
             "id": 1035
         },
         {
-            "name": "python 3.4.9",
+            "name": "Python 3.4.9",
             "id": 1036
         },
         {
-            "name": "tensorflow 5",
+            "name": "TensorFlow 5",
             "id": 1038
         },
         {
-            "name": "scipy 3.6",
+            "name": "SciPy 3.6",
             "id": 1039
         },
         {
-            "name": "python 1.15.4",
+            "name": "Python 1.15.4",
             "id": 1040
         },
         {
-            "name": "numpy 1.16.2",
+            "name": "NumPy 1.16.2",
             "id": 4539
         },
         {
-            "name": "blender 2.80",
+            "name": "Blender 2.80",
             "id": 1044
         },
         {
-            "name": "python 19.0.3",
+            "name": "Python 19.0.3",
             "id": 1046
         },
         {
-            "name": "python 8.5.9",
+            "name": "Python 8.5.9",
             "id": 1063
         },
         {
-            "name": "mysql 8.0.5",
+            "name": "MySQL 8.0.5",
             "id": 1050
         },
         {
-            "name": "python 8.0.16",
+            "name": "Python 8.0.16",
             "id": 1051
         },
         {
-            "name": "python 7.7",
+            "name": "Python 7.7",
             "id": 1052
         },
         {
-            "name": "tensorflow 10.15",
+            "name": "TensorFlow 10.15",
             "id": 1053
         },
         {
-            "name": "mysql 8.0.22",
+            "name": "MySQL 8.0.22",
             "id": 1054
         },
         {
-            "name": "keras 2.4",
+            "name": "Keras 2.4",
             "id": 1055
         },
         {
-            "name": "keras 2.5",
+            "name": "Keras 2.5",
             "id": 1058
         },
         {
-            "name": "tensorflow 2.5",
+            "name": "TensorFlow 2.5",
             "id": 4534
         },
         {
-            "name": "bazel 0.24.1",
+            "name": "Bazel 0.24.1",
             "id": 1059
         },
         {
-            "name": "airflow 1.10.2",
+            "name": "Airflow 1.10.2",
             "id": 1061
         },
         {
-            "name": "tensorflow 18.04",
+            "name": "TensorFlow 18.04",
             "id": 1064
         },
         {
-            "name": "macos 10.14.5",
+            "name": "macOS 10.14.5",
             "id": 1065
         },
         {
-            "name": "centos 2.17",
+            "name": "CentOS 2.17",
             "id": 1067
         },
         {
-            "name": "centos 2.12",
+            "name": "CentOS 2.12",
             "id": 1069
         },
         {
-            "name": "flask 0.12.4",
+            "name": "Flask 0.12.4",
             "id": 1070
         },
         {
-            "name": "flask 3.5",
+            "name": "Flask 3.5",
             "id": 1071
         },
         {
@@ -4881,23 +4881,23 @@
             "id": 1072
         },
         {
-            "name": "python 0.45.1",
+            "name": "Python 0.45.1",
             "id": 1074
         },
         {
-            "name": "tensorboard 1.12.2",
+            "name": "TensorBoard 1.12.2",
             "id": 1077
         },
         {
-            "name": "wxpython 4.1",
+            "name": "wxPython 4.1",
             "id": 1078
         },
         {
-            "name": "airflow 1.10.4",
+            "name": "Airflow 1.10.4",
             "id": 1079
         },
         {
-            "name": "windows 7.2",
+            "name": "Windows 7.2",
             "id": 1080
         },
         {
@@ -4905,23 +4905,23 @@
             "id": 1082
         },
         {
-            "name": "cudnn 7.6.2",
+            "name": "cuDNN 7.6.2",
             "id": 1083
         },
         {
-            "name": "python 3.1.3",
+            "name": "Python 3.1.3",
             "id": 1173
         },
         {
-            "name": "flask 0.15.5",
+            "name": "Flask 0.15.5",
             "id": 1086
         },
         {
-            "name": "python 6.2.3",
+            "name": "Python 6.2.3",
             "id": 1089
         },
         {
-            "name": "pytorch 3.5",
+            "name": "PyTorch 3.5",
             "id": 1090
         },
         {
@@ -4929,67 +4929,67 @@
             "id": 1091
         },
         {
-            "name": "pytorch 0.4.2",
+            "name": "PyTorch 0.4.2",
             "id": 1092
         },
         {
-            "name": "pytorch 1.3.1",
+            "name": "PyTorch 1.3.1",
             "id": 1093
         },
         {
-            "name": "tensorboard 2",
+            "name": "TensorBoard 2",
             "id": 1094
         },
         {
-            "name": "windows 1.4",
+            "name": "Windows 1.4",
             "id": 1110
         },
         {
-            "name": "tensorflow 3",
+            "name": "TensorFlow 3",
             "id": 4529
         },
         {
-            "name": "cuda 7.6.5",
+            "name": "CUDA 7.6.5",
             "id": 1095
         },
         {
-            "name": "numpy 3.7",
+            "name": "NumPy 3.7",
             "id": 1102
         },
         {
-            "name": "cudnn 70",
+            "name": "cuDNN 70",
             "id": 1103
         },
         {
-            "name": "keras 2.2.1",
+            "name": "Keras 2.2.1",
             "id": 1104
         },
         {
-            "name": "macos 3",
+            "name": "macOS 3",
             "id": 1105
         },
         {
-            "name": "scipy 1.4",
+            "name": "SciPy 1.4",
             "id": 1106
         },
         {
-            "name": "cuda 19",
+            "name": "CUDA 19",
             "id": 1107
         },
         {
-            "name": "windows 2.1",
+            "name": "Windows 2.1",
             "id": 1108
         },
         {
-            "name": "keras 2.0.3",
+            "name": "Keras 2.0.3",
             "id": 1111
         },
         {
-            "name": "pytorch 1.4",
+            "name": "PyTorch 1.4",
             "id": 1112
         },
         {
-            "name": "macos 1.5",
+            "name": "macOS 1.5",
             "id": 1126
         },
         {
@@ -4997,15 +4997,15 @@
             "id": 1113
         },
         {
-            "name": "tensorflow 10.2",
+            "name": "TensorFlow 10.2",
             "id": 1114
         },
         {
-            "name": "numpy 1.18.3",
+            "name": "NumPy 1.18.3",
             "id": 1115
         },
         {
-            "name": "python 3.8.2",
+            "name": "Python 3.8.2",
             "id": 4517
         },
         {
@@ -5013,67 +5013,67 @@
             "id": 1116
         },
         {
-            "name": "python 39",
+            "name": "Python 39",
             "id": 1117
         },
         {
-            "name": "numpy 1.17.3",
+            "name": "NumPy 1.17.3",
             "id": 1118
         },
         {
-            "name": "macos 11.4",
+            "name": "macOS 11.4",
             "id": 1119
         },
         {
-            "name": "mysql 3.1",
+            "name": "MySQL 3.1",
             "id": 1120
         },
         {
-            "name": "python 8.0.22",
+            "name": "Python 8.0.22",
             "id": 1121
         },
         {
-            "name": "windows 4.1.3",
+            "name": "Windows 4.1.3",
             "id": 1122
         },
         {
-            "name": "tensorflow 10.1",
+            "name": "TensorFlow 10.1",
             "id": 1124
         },
         {
-            "name": "android 1.2",
+            "name": "Android 1.2",
             "id": 1127
         },
         {
-            "name": "python 0.23",
+            "name": "Python 0.23",
             "id": 1128
         },
         {
-            "name": "sqlalchemy 0.19",
+            "name": "SQLAlchemy 0.19",
             "id": 1129
         },
         {
-            "name": "tensorflow 20",
+            "name": "TensorFlow 20",
             "id": 1131
         },
         {
-            "name": "tensorboard 2.2.2",
+            "name": "TensorBoard 2.2.2",
             "id": 1132
         },
         {
-            "name": "tensorflow 20.1",
+            "name": "TensorFlow 20.1",
             "id": 1133
         },
         {
-            "name": "python 3.1.5",
+            "name": "Python 3.1.5",
             "id": 1134
         },
         {
-            "name": "tensorflow 0.7.1",
+            "name": "TensorFlow 0.7.1",
             "id": 1135
         },
         {
-            "name": "python 0.7.1",
+            "name": "Python 0.7.1",
             "id": 1136
         },
         {
@@ -5085,31 +5085,31 @@
             "id": 1140
         },
         {
-            "name": "pytorch 1.6",
+            "name": "PyTorch 1.6",
             "id": 1141
         },
         {
-            "name": "postgres 12",
+            "name": "PostgreSQL 12",
             "id": 1142
         },
         {
-            "name": "sqlalchemy 1.3.11",
+            "name": "SQLAlchemy 1.3.11",
             "id": 1143
         },
         {
-            "name": "debian 3.8",
+            "name": "Debian 3.8",
             "id": 1144
         },
         {
-            "name": "numpy 3.5.3",
+            "name": "NumPy 3.5.3",
             "id": 1146
         },
         {
-            "name": "tensorflow 1.15.4",
+            "name": "TensorFlow 1.15.4",
             "id": 1147
         },
         {
-            "name": "tensorboard 2.1",
+            "name": "TensorBoard 2.1",
             "id": 1160
         },
         {
@@ -5117,67 +5117,67 @@
             "id": 1148
         },
         {
-            "name": "tensorflow 10.1.243",
+            "name": "TensorFlow 10.1.243",
             "id": 1149
         },
         {
-            "name": "macos 10.5.7",
+            "name": "macOS 10.5.7",
             "id": 1150
         },
         {
-            "name": "gcc 10",
+            "name": "GCC 10",
             "id": 4558
         },
         {
-            "name": "numpy 3.9",
+            "name": "NumPy 3.9",
             "id": 1151
         },
         {
-            "name": "macos 10",
+            "name": "macOS 10",
             "id": 1153
         },
         {
-            "name": "macos 11",
+            "name": "macOS 11",
             "id": 1154
         },
         {
-            "name": "python 3.8.10",
+            "name": "Python 3.8.10",
             "id": 1179
         },
         {
-            "name": "macos 3.9",
+            "name": "macOS 3.9",
             "id": 1155
         },
         {
-            "name": "airflow 1.10.9",
+            "name": "Airflow 1.10.9",
             "id": 1157
         },
         {
-            "name": "cudnn 7.65",
+            "name": "cuDNN 7.65",
             "id": 1158
         },
         {
-            "name": "tensorflow 2.31",
+            "name": "TensorFlow 2.31",
             "id": 1159
         },
         {
-            "name": "airflow 1.10.14",
+            "name": "Airflow 1.10.14",
             "id": 1161
         },
         {
-            "name": "cudnn 8.0.5",
+            "name": "cuDNN 8.0.5",
             "id": 1162
         },
         {
-            "name": "cuda 11.1",
+            "name": "CUDA 11.1",
             "id": 4482
         },
         {
-            "name": "macos 11.0.1",
+            "name": "macOS 11.0.1",
             "id": 1163
         },
         {
-            "name": "pytorch 98.5",
+            "name": "PyTorch 98.5",
             "id": 1165
         },
         {
@@ -5189,123 +5189,123 @@
             "id": 1167
         },
         {
-            "name": "flask 5",
+            "name": "Flask 5",
             "id": 1168
         },
         {
-            "name": "airflow 2",
+            "name": "Airflow 2",
             "id": 1169
         },
         {
-            "name": "python 3.8.4",
+            "name": "Python 3.8.4",
             "id": 1183
         },
         {
-            "name": "cudnn 8.1.1",
+            "name": "cuDNN 8.1.1",
             "id": 1177
         },
         {
-            "name": "cuda 11.2.2",
+            "name": "CUDA 11.2.2",
             "id": 1178
         },
         {
-            "name": "macos 12",
+            "name": "macOS 12",
             "id": 1180
         },
         {
-            "name": "windows 3.9",
+            "name": "Windows 3.9",
             "id": 1181
         },
         {
-            "name": "mysql 0.7.10",
+            "name": "MySQL 0.7.10",
             "id": 1182
         },
         {
-            "name": "numpy 1.16.6",
+            "name": "NumPy 1.16.6",
             "id": 1184
         },
         {
-            "name": "scipy 0.16.1",
+            "name": "SciPy 0.16.1",
             "id": 1186
         },
         {
-            "name": "python 3.10",
+            "name": "Python 3.10",
             "id": 1189
         },
         {
-            "name": "ubuntu 22.04",
+            "name": "Ubuntu 22.04",
             "id": 1190
         },
         {
-            "name": "pytorch 10.2",
+            "name": "PyTorch 10.2",
             "id": 1191
         },
         {
-            "name": "python 2.4.2",
+            "name": "Python 2.4.2",
             "id": 1192
         },
         {
-            "name": "python 3.9.4",
+            "name": "Python 3.9.4",
             "id": 1193
         },
         {
-            "name": "cudnn 8.05",
+            "name": "cuDNN 8.05",
             "id": 1195
         },
         {
-            "name": "cudnn 8.2",
+            "name": "cuDNN 8.2",
             "id": 1196
         },
         {
-            "name": "centos 7.9",
+            "name": "CentOS 7.9",
             "id": 1197
         },
         {
-            "name": "debian 0.4.1",
+            "name": "Debian 0.4.1",
             "id": 1201
         },
         {
-            "name": "python 0.2.1",
+            "name": "Python 0.2.1",
             "id": 1202
         },
         {
-            "name": "ubuntu 20.04.02",
+            "name": "Ubuntu 20.04.02",
             "id": 1203
         },
         {
-            "name": "cudnn 10.2",
+            "name": "cuDNN 10.2",
             "id": 1204
         },
         {
-            "name": "numpy 1",
+            "name": "NumPy 1",
             "id": 1205
         },
         {
-            "name": "flask 2.0.1",
+            "name": "Flask 2.0.1",
             "id": 1207
         },
         {
-            "name": "emr 5.26",
+            "name": "Amazon EMR 5.26",
             "id": 1208
         },
         {
-            "name": "flask 1.1.4",
+            "name": "Flask 1.1.4",
             "id": 1209
         },
         {
-            "name": "zappa 0.51",
+            "name": "Zappa 0.51",
             "id": 1210
         },
         {
-            "name": "scipy 1.5.2",
+            "name": "SciPy 1.5.2",
             "id": 1211
         },
         {
-            "name": "macos 11.5",
+            "name": "macOS 11.5",
             "id": 1213
         },
         {
-            "name": "ubuntu 3.8.5",
+            "name": "Ubuntu 3.8.5",
             "id": 1214
         },
         {
@@ -5313,203 +5313,203 @@
             "id": 1215
         },
         {
-            "name": "debian 11",
+            "name": "Debian 11",
             "id": 1216
         },
         {
-            "name": "gcc 6.3",
+            "name": "GCC 6.3",
             "id": 4447
         },
         {
-            "name": "tensorflow 10",
+            "name": "TensorFlow 10",
             "id": 4379
         },
         {
-            "name": "tensorflow 12",
+            "name": "TensorFlow 12",
             "id": 4380
         },
         {
-            "name": "ubuntu 16.04.1",
+            "name": "Ubuntu 16.04.1",
             "id": 4401
         },
         {
-            "name": "wxpython 3.0.2",
+            "name": "wxPython 3.0.2",
             "id": 4411
         },
         {
-            "name": "ubuntu 3.4",
+            "name": "Ubuntu 3.4",
             "id": 4577
         },
         {
-            "name": "debian 9",
+            "name": "Debian 9",
             "id": 4541
         },
         {
-            "name": "tensorflow 3.8",
+            "name": "TensorFlow 3.8",
             "id": 4579
         },
         {
-            "name": "numpy 1.5",
+            "name": "NumPy 1.5",
             "id": 4382
         },
         {
-            "name": "ubuntu 8.04",
+            "name": "Ubuntu 8.04",
             "id": 4412
         },
         {
-            "name": "scipy 0.10",
+            "name": "SciPy 0.10",
             "id": 4385
         },
         {
-            "name": "cudnn 10",
+            "name": "cuDNN 10",
             "id": 4386
         },
         {
-            "name": "keras 2.2.5",
+            "name": "Keras 2.2.5",
             "id": 4526
         },
         {
-            "name": "numpy 1.17.2",
+            "name": "NumPy 1.17.2",
             "id": 4440
         },
         {
-            "name": "cudnn 7.4",
+            "name": "cuDNN 7.4",
             "id": 4388
         },
         {
-            "name": "fftw 3.1.2",
+            "name": "FFTW 3.1.2",
             "id": 4389
         },
         {
-            "name": "numpy 1.2",
+            "name": "NumPy 1.2",
             "id": 4391
         },
         {
-            "name": "scipy 0.7",
+            "name": "SciPy 0.7",
             "id": 4390
         },
         {
-            "name": "numpy 1.2.1",
+            "name": "NumPy 1.2.1",
             "id": 4442
         },
         {
-            "name": "wxpython 2.8.10",
+            "name": "wxPython 2.8.10",
             "id": 4535
         },
         {
-            "name": "numpy 10.6",
+            "name": "NumPy 10.6",
             "id": 4580
         },
         {
-            "name": "numpy 10.4",
+            "name": "NumPy 10.4",
             "id": 4581
         },
         {
-            "name": "ubuntu 6",
+            "name": "Ubuntu 6",
             "id": 4586
         },
         {
-            "name": "ubuntu 2",
+            "name": "Ubuntu 2",
             "id": 4587
         },
         {
-            "name": "cudnn 5.1",
+            "name": "cuDNN 5.1",
             "id": 4500
         },
         {
-            "name": "tensorflow 0.12",
+            "name": "TensorFlow 0.12",
             "id": 4493
         },
         {
-            "name": "ubuntu 16",
+            "name": "Ubuntu 16",
             "id": 4462
         },
         {
-            "name": "ubuntu 16.04.4",
+            "name": "Ubuntu 16.04.4",
             "id": 4395
         },
         {
-            "name": "debian 3.9",
+            "name": "Debian 3.9",
             "id": 4397
         },
         {
-            "name": "tensorflow 2.3.1",
+            "name": "TensorFlow 2.3.1",
             "id": 4486
         },
         {
-            "name": "gcc 9",
+            "name": "GCC 9",
             "id": 4557
         },
         {
-            "name": "emr 5.31",
+            "name": "Amazon EMR 5.31",
             "id": 4518
         },
         {
-            "name": "numpy 5.31",
+            "name": "NumPy 5.31",
             "id": 4520
         },
         {
-            "name": "numpy 1.17.1",
+            "name": "NumPy 1.17.1",
             "id": 4592
         },
         {
-            "name": "scipy 1.0.1",
+            "name": "SciPy 1.0.1",
             "id": 4593
         },
         {
-            "name": "numpy 1.14.6",
+            "name": "NumPy 1.14.6",
             "id": 4594
         },
         {
-            "name": "flask 0.12",
+            "name": "Flask 0.12",
             "id": 4403
         },
         {
-            "name": "gcc 6",
+            "name": "GCC 6",
             "id": 4446
         },
         {
-            "name": "tensorflow 9.1",
+            "name": "TensorFlow 9.1",
             "id": 4584
         },
         {
-            "name": "jetpack 2.3",
+            "name": "JetPack 2.3",
             "id": 4588
         },
         {
-            "name": "python 3.8.7",
+            "name": "Python 3.8.7",
             "id": 4575
         },
         {
-            "name": "coremltools 4.1",
+            "name": "Core ML Tools 4.1",
             "id": 4574
         },
         {
-            "name": "python 3.7.10",
+            "name": "Python 3.7.10",
             "id": 4544
         },
         {
-            "name": "tensorflow-core-platform 0.3",
+            "name": "TensorFlow Core Platform 0.3",
             "id": 4407
         },
         {
-            "name": "tensorflow-core-platform 0.3.1",
+            "name": "TensorFlow Core Platform 0.3.1",
             "id": 4406
         },
         {
-            "name": "cudnn 7.6.3",
+            "name": "cuDNN 7.6.3",
             "id": 4478
         },
         {
-            "name": "keras 2.2",
+            "name": "Keras 2.2",
             "id": 4433
         },
         {
-            "name": "gcc 5.3",
+            "name": "GCC 5.3",
             "id": 4551
         },
         {
-            "name": "postgres 9.4",
+            "name": "PostgreSQL 9.4",
             "id": 4422
         },
         {
@@ -5517,11 +5517,11 @@
             "id": 4420
         },
         {
-            "name": "python 2.4.5",
+            "name": "Python 2.4.5",
             "id": 4451
         },
         {
-            "name": "python 8.04",
+            "name": "Python 8.04",
             "id": 4415
         },
         {
@@ -5529,155 +5529,155 @@
             "id": 4425
         },
         {
-            "name": "sqlalchemy 1.0.8",
+            "name": "SQLAlchemy 1.0.8",
             "id": 4424
         },
         {
-            "name": "flask-sqlalchemy 2",
+            "name": "Flask SQLAlchemy 2",
             "id": 4423
         },
         {
-            "name": "cuda 11.3",
+            "name": "CUDA 11.3",
             "id": 4429
         },
         {
-            "name": "tensorflow 8.2.1",
+            "name": "TensorFlow 8.2.1",
             "id": 4430
         },
         {
-            "name": "cudnn 7.5",
+            "name": "cuDNN 7.5",
             "id": 4435
         },
         {
-            "name": "windows 64",
+            "name": "Windows 64",
             "id": 4438
         },
         {
-            "name": "keras 2.1.5",
+            "name": "Keras 2.1.5",
             "id": 4536
         },
         {
-            "name": "python 64",
+            "name": "Python 64",
             "id": 4439
         },
         {
-            "name": "ubuntu 17.04",
+            "name": "Ubuntu 17.04",
             "id": 4444
         },
         {
-            "name": "cudnn 7.0.4",
+            "name": "cuDNN 7.0.4",
             "id": 4459
         },
         {
-            "name": "ubuntu 16.06",
+            "name": "Ubuntu 16.06",
             "id": 4552
         },
         {
-            "name": "gcc 5.3.1",
+            "name": "GCC 5.3.1",
             "id": 4448
         },
         {
-            "name": "cudnn 7.1.4",
+            "name": "cuDNN 7.1.4",
             "id": 4457
         },
         {
-            "name": "tensorflow 1.5",
+            "name": "TensorFlow 1.5",
             "id": 4460
         },
         {
-            "name": "cudnn 7.0.5",
+            "name": "cuDNN 7.0.5",
             "id": 4479
         },
         {
-            "name": "debian 9.3",
+            "name": "Debian 9.3",
             "id": 4491
         },
         {
-            "name": "tensorflow 1.6",
+            "name": "TensorFlow 1.6",
             "id": 4492
         },
         {
-            "name": "cudnn 7.0.3",
+            "name": "cuDNN 7.0.3",
             "id": 4559
         },
         {
-            "name": "cudnn 7.3.1",
+            "name": "cuDNN 7.3.1",
             "id": 4560
         },
         {
-            "name": "cudnn 7.1.2",
+            "name": "cuDNN 7.1.2",
             "id": 4561
         },
         {
-            "name": "keras 1.13.1",
+            "name": "Keras 1.13.1",
             "id": 4454
         },
         {
-            "name": "tensorflow 2.2.4",
+            "name": "TensorFlow 2.2.4",
             "id": 4455
         },
         {
-            "name": "cudnn 3",
+            "name": "cuDNN 3",
             "id": 4470
         },
         {
-            "name": "cudnn 8",
+            "name": "cuDNN 8",
             "id": 4509
         },
         {
-            "name": "ubuntu 20.4",
+            "name": "Ubuntu 20.4",
             "id": 4508
         },
         {
-            "name": "tensorflow 1.13",
+            "name": "TensorFlow 1.13",
             "id": 4511
         },
         {
-            "name": "tensorflow 2.1.1",
+            "name": "TensorFlow 2.1.1",
             "id": 4481
         },
         {
-            "name": "cudnn 10.1.243",
+            "name": "cuDNN 10.1.243",
             "id": 4485
         },
         {
-            "name": "cudnn 7.6.5",
+            "name": "cuDNN 7.6.5",
             "id": 4475
         },
         {
-            "name": "cuda 2.1.1",
+            "name": "CUDA 2.1.1",
             "id": 4484
         },
         {
-            "name": "tensorflow 3.6",
+            "name": "TensorFlow 3.6",
             "id": 4510
         },
         {
-            "name": "blender 2.81",
+            "name": "Blender 2.81",
             "id": 4583
         },
         {
-            "name": "tensorboard 0.4",
+            "name": "TensorBoard 0.4",
             "id": 4487
         },
         {
-            "name": "keras 2.0.8",
+            "name": "Keras 2.0.8",
             "id": 4595
         },
         {
-            "name": "cudnn 9",
+            "name": "cuDNN 9",
             "id": 4562
         },
         {
-            "name": "wxpython 4",
+            "name": "wxPython 4",
             "id": 4490
         },
         {
-            "name": "numpy 1.6.2",
+            "name": "NumPy 1.6.2",
             "id": 4501
         },
         {
-            "name": "numpy 1.6.3",
+            "name": "NumPy 1.6.3",
             "id": 4504
         },
         {
@@ -5685,47 +5685,47 @@
             "id": 4506
         },
         {
-            "name": "ubuntu 18.04.3",
+            "name": "Ubuntu 18.04.3",
             "id": 4540
         },
         {
-            "name": "scipy 1.19.1",
+            "name": "SciPy 1.19.1",
             "id": 4513
         },
         {
-            "name": "ubuntu 11",
+            "name": "Ubuntu 11",
             "id": 4524
         },
         {
-            "name": "ubuntu 12",
+            "name": "Ubuntu 12",
             "id": 4523
         },
         {
-            "name": "ubuntu 12.10",
+            "name": "Ubuntu 12.10",
             "id": 4522
         },
         {
-            "name": "cuda 4.1",
+            "name": "CUDA 4.1",
             "id": 4545
         },
         {
-            "name": "cuda 3.5",
+            "name": "CUDA 3.5",
             "id": 4528
         },
         {
-            "name": "tfds 4",
+            "name": "TensorFlow Datasets 4",
             "id": 4582
         },
         {
-            "name": "gcc 4.3.2",
+            "name": "GCC 4.3.2",
             "id": 4564
         },
         {
-            "name": "ubuntu 8.10",
+            "name": "Ubuntu 8.10",
             "id": 4570
         },
         {
-            "name": "cuda 4",
+            "name": "CUDA 4",
             "id": 4571
         },
         {
