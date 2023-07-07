@@ -3,8 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
 import jsonData from "../data/new_records.json";
 import { createGraph } from './Chart_force';
-import { createClassifyGraph } from './Chart_classify';
-import { getselectedView } from './RadioPanel';
 
 const useStyles = makeStyles((theme) => ({
     searchResult: {
@@ -41,13 +39,7 @@ export const handleResultClick = (resultId) => {
         "nodes": filteredNodes,
         "links": filteredLinks
     };
-    const selectView = getselectedView();
-    console.log("selectView: ", selectView);
-    if (selectView === "forceView") {
-        createGraph(newData);
-    } else {
-        createClassifyGraph(newData);
-    }
+    createGraph(newData);
 }
 
 export const filterData = (resultId) => {
@@ -86,7 +78,7 @@ export default function SearchResult({results}) {
                     return (
                         <div className={classes.SingleSearchResult} 
                             key={id} 
-                            onClick={(e) => handleResultClick(result.name, result.id)}
+                            onClick={(e) => handleResultClick(result.id)}
                             >
                             {result.name}
                         </div>

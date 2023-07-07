@@ -108,7 +108,9 @@ export default function Barchart({label}) {
                         .transition()
                         .duration('200')
                         .style("opacity", 0);
-                })
+                    
+                    handleResultClick("");
+                });
 
         }
     }, [data]);

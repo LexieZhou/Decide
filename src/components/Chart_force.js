@@ -11,9 +11,8 @@ export const createGraph = (data) => {
   console.log("Run createGraph");
   // detect whether exists svg and tooltip
   const existingSvg = d3.select("#graph-svg");
-  const existingTooltip = d3.select("#tooltip");
+  const existingTooltip = d3.select("#chart").select(".tooltip");
   if (existingSvg) {
-    console.log("exist svg");
     existingSvg.remove();
   }
   if (existingTooltip) {

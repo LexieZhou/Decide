@@ -70,13 +70,13 @@ export default function SearchBar({setResults}) {
               );
             });
           } else {
-            console.error('API returned non-array data:', json);
+            console.error('non-array data:', json);
           }
           console.log(results);
           setResults(results);
         })
         .catch((error) => {
-          console.error('API request failed:', error);
+          console.error('request failed:', error);
         });
       }
       useEffect(()=>{

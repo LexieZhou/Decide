@@ -10,8 +10,23 @@ import ChartClassify from './Chart_classify';
 import ChartForce from './Chart_force';
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    margin: '10px 0px',
+  },
   button: {
-    margin: theme.spacing(1),
+    // margin: theme.spacing(1),
+    marginTop: '1px',
+    marginBottom: '1px',
+    marginLeft: '8px',
+    marginRight: '8px',
+    fontSize: '12px',
+    fontFamily: 'Open Sans',
+    fontWeight: 'bold',
+    height: '25px',
   },
 }));
 
@@ -33,25 +48,22 @@ export default function RadioButtonsGroup() {
 
   return (
     <div>
-        <FormControl component="fieldset" className={classes.root}>
-        <RadioGroup aria-label="radioTabs" value={value} onChange={handleChange} row>
-            <FormControlLabel value="forceView" control={<Radio size="small" />} label="Force-Directed View" />
-            <FormControlLabel value="classifyView" control={<Radio size="small" />} label="Label-Classified View" />
-        </RadioGroup>
-        {/* <Button 
-          variant="contained" 
-          color="secondary" 
-          className={classes.button}
-          onClick={() => { handleResultClick("") }}
-          >
-          Whole View
-        </Button> */}
+        <FormControl component="fieldset" className={classes.root} >
+          <RadioGroup aria-label="radioTabs" value={value} onChange={handleChange} row>
+              <FormControlLabel value="forceView" control={<Radio size="small" />} label="Force-Directed View" />
+              <FormControlLabel value="classifyView" control={<Radio size="small" />} label="Label-Classified View" />
+          </RadioGroup>
+          <Button 
+            variant="outlined" 
+            color="primary" 
+            size="small"
+            className={classes.button}
+            onClick={() => { handleResultClick("") }}
+            >
+            Whole View
+          </Button>
         </FormControl>
         {chartComponent}
     </div>
   );
 }
-
-export const getselectedView = () => {
-  return RadioButtonsGroup.value;
-};
