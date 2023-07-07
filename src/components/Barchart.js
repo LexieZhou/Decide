@@ -3,6 +3,7 @@ import linkData from '../data/linkNum_data.json';
 import configData from '../data/config.json';
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { handleResultClick } from "./SearchResult";
 
 export default function Barchart({label}) {
     const margin = {top: 40, right: 10, bottom: 30, left: 80};
@@ -32,8 +33,17 @@ export default function Barchart({label}) {
             
             var tooltip = d3.select("#Barchart")
                 .append("div")
-                .attr("class", "tooltip")
-                .style("opacity", 0);
+                .attr("class", "barchart-tooltip")
+                .style("opacity", 0)
+                .style("position", "absolute")
+                .style("background-color", "rgba(0, 0, 0, 0.8)")
+                .style("color", "#fff")
+                .style("padding", "10px")
+                .style("font-size", "9px")
+                .style("width", "60px")
+                .style("height", "30px")
+                .style("box-sizing", "border-box")
+                .style("border-radius", "5px");
 
             
             svg.append("g")
@@ -76,17 +86,18 @@ export default function Barchart({label}) {
                         .attr("y", function(d) { return y(d.name)+3; })
                         .attr("height", y.bandwidth()-6 )
                     
+                    // filter graph
+                    handleResultClick(d.id);
+                    
                     tooltip.transition()
                         .duration(100)
-                        .style("opacity", 1);
+                        .style("opacity", 1)
+                        .style('top', event.pageY - 10 + 'px')
+                        .style('left', event.pageX + 10 + 'px');
                       
                     tooltip
                         .html("Links: " + d.link_num);
-                })
-                .on('mousemove', function (event) {
-                    tooltip
-                      .style('top', event.pageY - 10 + 'px')
-                      .style('left', event.pageX + 10 + 'px');
+                        
                 })
                 .on('mouseout', function (actual, i) {
                     d3.select(this)
@@ -97,7 +108,9 @@ export default function Barchart({label}) {
                         .transition()
                         .duration('200')
                         .style("opacity", 0);
-                })
+                    
+                    handleResultClick("");
+                });
 
         }
     }, [data]);

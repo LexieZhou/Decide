@@ -3,8 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
 import jsonData from "../data/new_records.json";
 import { createGraph } from './Chart_force';
-import { createClassifyGraph } from './Chart_classify';
-import { selectedView } from './RadioPanel';
 
 const useStyles = makeStyles((theme) => ({
     searchResult: {
@@ -32,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const handleResultClick = (resultName, resultId) => {
+export const handleResultClick = (resultId) => {
     // console.log(`You clicked on ${resultName}, id: ${resultId}`);
     const [filteredNodes, filteredLinks] = filterData(resultId);
     // console.log("filteredNodes: ", filteredNodes);
@@ -41,15 +39,10 @@ const handleResultClick = (resultName, resultId) => {
         "nodes": filteredNodes,
         "links": filteredLinks
     };
-    const selectView = selectedView();
-    if (selectView === "forceView") {
-        createGraph(newData);
-    } else {
-        createClassifyGraph(newData);
-    }
+    createGraph(newData);
 }
 
-const filterData = (resultId) => {
+export const filterData = (resultId) => {
     if (resultId === "") {
         // console.log("no received data");
         return [jsonData.nodes, jsonData.links];
@@ -85,7 +78,7 @@ export default function SearchResult({results}) {
                     return (
                         <div className={classes.SingleSearchResult} 
                             key={id} 
-                            onClick={(e) => handleResultClick(result.name, result.id)}
+                            onClick={(e) => handleResultClick(result.id)}
                             >
                             {result.name}
                         </div>

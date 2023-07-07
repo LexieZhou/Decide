@@ -14,26 +14,26 @@ sw_link_num = []
 tool_link_num = []
 
 
-# add node name and version information
+# add node id, name and version information
 for i in range(len(data['nodes'])):
     name_info = data['nodes'][i]['name'] + ' ' + data['nodes'][i]['version']
     nodes_data.append({"name": name_info, "id": data['nodes'][i]['id']})
     if data['nodes'][i]['label'][0] == 'api':
-        api_link_num.append({"name": name_info, "link_num": data['nodes'][i]['links_num']})
+        api_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
     elif data['nodes'][i]['label'][0] == 'database':
-        db_link_num.append({"name": name_info, "link_num": data['nodes'][i]['links_num']})
+        db_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
     elif data['nodes'][i]['label'][0] == 'hardware':
-        hw_link_num.append({"name": name_info, "link_num": data['nodes'][i]['links_num']})
+        hw_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
     elif data['nodes'][i]['label'][0] == 'library':
-        lib_link_num.append({"name": name_info, "link_num": data['nodes'][i]['links_num']})
+        lib_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
     elif data['nodes'][i]['label'][0] == 'operating_system':
-        os_link_num.append({"name": name_info, "link_num": data['nodes'][i]['links_num']})
+        os_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
     elif data['nodes'][i]['label'][0] == 'programming_language':
-        pl_link_num.append({"name": name_info, "link_num": data['nodes'][i]['links_num']})
+        pl_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
     elif data['nodes'][i]['label'][0] == 'software':
-        sw_link_num.append({"name": name_info, "link_num": data['nodes'][i]['links_num']})
+        sw_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
     elif data['nodes'][i]['label'][0] == 'tool':
-        tool_link_num.append({"name": name_info, "link_num": data['nodes'][i]['links_num']})
+        tool_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
 
 # add label information
 for i in range(len(labels)):

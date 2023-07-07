@@ -13,9 +13,11 @@ export const createClassifyGraph = (data) => {
   const existingSvg = d3.select("#graph-svg");
   const existingTooltip = d3.select("#tooltip");
   if (existingSvg) {
+    console.log("exist svg");
     existingSvg.remove();
   }
   if (existingTooltip) {
+    console.log("exist tooltip");
     existingTooltip.remove();
   }
     
@@ -85,8 +87,6 @@ export const createClassifyGraph = (data) => {
     d.fy = null;
   }
 
-  var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
-
   var links = g.append("g")
     .attr("class", "links")
     .selectAll(".link")
@@ -116,7 +116,6 @@ export const createClassifyGraph = (data) => {
         return configData.SMALL_NODE_RADIUS;
       }
     })
-    //.style("fill", d => colorScale(d.label[0]))
     .style("fill", d => configData.COLOR[d.label[0]])
     .call(d3.drag()
       .on("start", dragstarted)
