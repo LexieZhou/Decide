@@ -8,7 +8,7 @@ import Barchart from './Barchart';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // display: 'flex',
+    display: 'flex',
     width: '100vw',
   },
   drawer: {
@@ -22,10 +22,10 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '1vw',
   },
   drawerContainer: {
-    overflow: 'auto',
+    // overflow: 'auto',
     marginTop: '2vh',
-    marginLeft: '1vw',
-    width: '30vw',
+    marginLeft: '0vw',
+    width: '250px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -52,7 +52,7 @@ export default function SideBar() {
           <Barchart label="library"/>
           <Barchart label="operating_system"/>
           <Barchart label="programming_language"/>
-          <Barchart label="Software"/>
+          <Barchart label="software"/>
           <Barchart label="tool"/>
         </div>
       </Drawer>

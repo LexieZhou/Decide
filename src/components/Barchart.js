@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { handleResultClick } from "./Chart_force";
 
 export default function Barchart({label}) {
-    const margin = {top: 40, right: 10, bottom: 30, left: 80};
+    const margin = {top: 40, right: 10, bottom: 30, left: 100};
     const width = 200 - margin.left - margin.right;
     const height = 150 - margin.top - margin.bottom;
 
@@ -49,12 +49,28 @@ export default function Barchart({label}) {
             
             svg.append("g")
                 .append("text")
-                .attr("x", 0 - margin.left)
+                .attr("x", 8 - margin.left)
                 .attr("y", 0 - (margin.top / 2))
                 .attr("text-anchor", "start")
                 .style("font-size", "13px")
                 .style("font-weight", "bold")
-                .text(label);
+                .text(function() {
+                    if (label === "database") {
+                      return "Database";
+                    } else if (label === "hardware") {
+                        return "Driver";
+                    } else if (label === "library") {
+                        return "Library";
+                    } else if (label === "operating_system") {
+                        return "OS";
+                    } else if (label === "programming_language") {
+                        return "Runtime";
+                    } else if (label === "software") {
+                        return "Software";
+                    } else if (label === "tool") {
+                        return "Tool";
+                    }
+                  });
 
             svg.append("g")
                 .attr("transform", "translate(0," + height + ")")
