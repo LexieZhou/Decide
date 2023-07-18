@@ -3,6 +3,7 @@ import * as d3 from "d3";
 import jsonData from '../data/new_records.json';
 import configData from '../data/config.json';
 import './Chart.css';
+import ToggleSideBar from './ToggleSideBar';
 
 export const handleResultClick = (resultId) => {
   // console.log(`You clicked on ${resultName}, id: ${resultId}`);
@@ -122,7 +123,19 @@ export const createGraph = (data, wholeView) => {
     })
     .attr("stroke", "#aaa")
     .attr("stroke-width", configData.LINK_WIDTH)
-    .attr('marker-end','url(#arrowhead)');
+    .attr('marker-end','url(#arrowhead)')
+    .on('click', function(d) {
+      var linkData = d.srcElement.__data__;
+      console.log("click link", linkData.id);
+      document.getElementById('right-panel').classList.add('open');
+      const event = new CustomEvent('linkClick', { detail: linkData });
+      window.dispatchEvent(event);
+      // var panelContent = document.getElementById('panel-content');
+      // panelContent.innerHTML = '<h2>Link Info</h2>' +
+      // '<p>Link Id: ' + linkData.id + '</p>' +
+      // '<p>Node 1: ' + linkData.source.name + '</p>' +
+      // '<p>Node 2: ' + linkData.target.name + '</p>'
+    });
 
   var nodes = g.append("g")
     .attr("class", "nodes")
@@ -284,6 +297,7 @@ const ChartForce = () => {
   
   return (
     <div id="chart">
+      <ToggleSideBar />
     </div>
   );
 };
