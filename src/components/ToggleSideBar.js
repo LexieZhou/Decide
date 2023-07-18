@@ -96,10 +96,10 @@ const ToggleSideBar = () => {
               <Typography className={classes.nodeTxt}>{linkData.target.name} {linkData.target.version}</Typography>
             </div>
             <div className={classes.voteInfo}>
-              <Typography className={classes.voteTitle}>Positive Vote: {linkData.properties.pos_vote === '' ? 0 : linkData.properties.pos_vote}</Typography>
+              <Typography className={classes.voteTitle}>Positive Vote: {linkData.properties.pos_vote_num}</Typography>
             </div>
             <div className={classes.voteInfo}>
-              <Typography className={classes.voteTitle}>Negative Vote: {linkData.properties.neg_vote === '' ? 0 : linkData.properties.neg_vote}</Typography>
+              <Typography className={classes.voteTitle}>Negative Vote: {linkData.properties.neg_vote_num}</Typography>
             </div>
         </div>}
       </div>

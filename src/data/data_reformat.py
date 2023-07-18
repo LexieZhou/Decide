@@ -74,6 +74,15 @@ def add_links(node_id, children_id):
             node["childrens"].append(children_id)
             return
 
+def separate_post_id(post_string):
+    pos_post_id_list = [x for x in post_string.split("_")]
+    return pos_post_id_list
+
+def calculate_pos_num(post_vote_string):
+    if post_vote_string == "":
+        return 0
+    else:
+        return len(post_vote_string.split("_"))
 
 nodes = []
 links = []
@@ -108,8 +117,16 @@ for i in range(len(data)):
                       "source": data[i]['p']['start']['identity'],
                       "target": data[i]['p']['end']['identity'],
                       "type": data[i]['p']['segments'][0]['relationship']['type'],
-                      "properties": data[i]['p']['segments'][0]['relationship']['properties']
-                      })
+                      "properties": {
+                            "neg_vote_num": calculate_pos_num(data[i]['p']['segments'][0]['relationship']['properties']['neg_vote']),
+                            "pos_vote_num": calculate_pos_num(data[i]['p']['segments'][0]['relationship']['properties']['pos_vote']),
+                            "neg_vote": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['neg_vote']),
+                            "pos_vote": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['pos_vote']),
+                            "verdict": data[i]['p']['segments'][0]['relationship']['properties']['verdict'],
+                            "pos_post_id": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['pos_post_id']),
+                            "neg_post_id": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['neg_post_id'])
+                      }
+        })
         add_links(data[i]['p']['start']['identity'], data[i]['p']['end']['identity'])
         add_links(data[i]['p']['end']['identity'], data[i]['p']['start']['identity'])
 
