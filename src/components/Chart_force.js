@@ -39,7 +39,7 @@ export const createGraph = (data, wholeView) => {
   const GRAPH_WIDTH = configData.GRAPH_WIDTH;
   const GRAPH_HEIGHT = configData.GRAPH_HEIGHT;
 
-  console.log("Run createGraph");
+  // console.log("Run createGraph");
   // detect whether exists svg and tooltip
   const existingSvg = d3.select("#graph-svg");
   const existingTooltip = d3.select("#chart").select(".tooltip");
@@ -47,7 +47,7 @@ export const createGraph = (data, wholeView) => {
     existingSvg.remove();
   }
   if (existingTooltip) {
-    console.log("exist tooltip");
+    // console.log("exist tooltip");
     existingTooltip.remove();
   }
 

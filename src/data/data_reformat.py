@@ -117,15 +117,16 @@ for i in range(len(data)):
                       "source": data[i]['p']['start']['identity'],
                       "target": data[i]['p']['end']['identity'],
                       "type": data[i]['p']['segments'][0]['relationship']['type'],
-                      "properties": {
-                            "neg_vote_num": calculate_pos_num(data[i]['p']['segments'][0]['relationship']['properties']['neg_vote']),
-                            "pos_vote_num": calculate_pos_num(data[i]['p']['segments'][0]['relationship']['properties']['pos_vote']),
-                            "neg_vote": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['neg_vote']),
-                            "pos_vote": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['pos_vote']),
-                            "verdict": data[i]['p']['segments'][0]['relationship']['properties']['verdict'],
-                            "pos_post_id": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['pos_post_id']),
-                            "neg_post_id": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['neg_post_id'])
-                      }
+                      "properties": data[i]['p']['segments'][0]['relationship']['properties'],
+                    #   "properties": {
+                    #         "neg_vote_num": calculate_pos_num(data[i]['p']['segments'][0]['relationship']['properties']['neg_vote']),
+                    #         "pos_vote_num": calculate_pos_num(data[i]['p']['segments'][0]['relationship']['properties']['pos_vote']),
+                    #         "neg_vote": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['neg_vote']),
+                    #         "pos_vote": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['pos_vote']),
+                    #         "verdict": data[i]['p']['segments'][0]['relationship']['properties']['verdict'],
+                    #         "pos_post_id": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['pos_post_id']),
+                    #         "neg_post_id": separate_post_id(data[i]['p']['segments'][0]['relationship']['properties']['neg_post_id'])
+                    #   }
         })
         add_links(data[i]['p']['start']['identity'], data[i]['p']['end']['identity'])
         add_links(data[i]['p']['end']['identity'], data[i]['p']['start']['identity'])
