@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import AppBar from './components/AppBar';
 import SideBar from './components/SideBar';
@@ -48,10 +48,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-
 export default function APP() {
   const classes = useStyles();
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:8000/message")
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message));
+  }, []);
+
 
   return (
     <ThemeProvider theme={themeLight}>
@@ -65,6 +71,7 @@ export default function APP() {
             <SideBar />
           </div>
           <div className={classes.chartContainer}>
+            <h1>{message}</h1>
             <div className={classes.radioPanel}>
               <RadioPanel />
             </div>
