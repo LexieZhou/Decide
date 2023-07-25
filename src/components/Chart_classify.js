@@ -3,6 +3,7 @@ import * as d3 from "d3";
 import jsonData from '../data/new_records.json';
 import configData from '../data/config.json';
 import './Chart.css';
+import ToggleSideBar from './ToggleSideBar';
 
 export const createClassifyGraph = (data) => {
   const GRAPH_WIDTH = configData.GRAPH_WIDTH;
@@ -98,7 +99,11 @@ export const createClassifyGraph = (data) => {
     })
     .attr("stroke", "#aaa")
     .attr("stroke-width", configData.LINK_WIDTH)
-    .attr('marker-end','url(#arrowhead)');
+    .attr('marker-end','url(#arrowhead)')
+    .on('click', function() {
+      console.log("click link");
+      document.getElementById('right-panel').classList.add('open');
+    });
 
   var nodes = g.append("g")
     .attr("class", "nodes")
@@ -313,6 +318,7 @@ const ChartClassify = () => {
   
   return (
     <div id="chart">
+      <ToggleSideBar />
     </div>
   );
 };
