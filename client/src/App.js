@@ -50,14 +50,21 @@ const useStyles = makeStyles((theme) => ({
 
 export default function APP() {
   const classes = useStyles();
-  const [message, setMessage] = useState("");
+  const [nodesData, setNodesData] = useState([]);
+  const [linksData, setLinksData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/message")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message));
-  }, []);
+    const fetchData = async () => {
+      const nodesResponse = await fetch("http://localhost:4000/nodes");
+      const nodesData = await nodesResponse.json();
+      const linksResponse = await fetch("http://localhost:4000/links");
+      const linksData = await linksResponse.json();
+      setNodesData(nodesData);
+      setLinksData(linksData);
 
+    };
+    fetchData();
+  }, []);
 
   return (
     <ThemeProvider theme={themeLight}>
@@ -71,9 +78,8 @@ export default function APP() {
             <SideBar />
           </div>
           <div className={classes.chartContainer}>
-            <h1>{message}</h1>
             <div className={classes.radioPanel}>
-              <RadioPanel />
+              <RadioPanel nodesData={nodesData} linksData={linksData}/>
             </div>
           </div>
         </div>

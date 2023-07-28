@@ -1,41 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import * as d3 from "d3";
-import jsonData from '../data/new_records.json';
+// import jsonData from '../data/new_records.json';
 import configData from '../data/config.json';
 import './Chart.css';
 import ToggleSideBar from './ToggleSideBar';
 
-export const handleResultClick = (resultId) => {
+export const handleResultClick = (nodesData, linksData, resultId) => {
   // console.log(`You clicked on ${resultName}, id: ${resultId}`);
   var wholeView = true;
+
   if (resultId === "") {
     wholeView = true;
-    createGraph(jsonData, wholeView);
+    createGraph(nodesData, linksData, wholeView);
   } else {
     wholeView = false;
-    const [filteredNodes, filteredLinks] = filterData(resultId);
-    const newData = {
-      "nodes": filteredNodes,
-      "links": filteredLinks
-    };
-    createGraph(newData, wholeView);
+    const [filteredNodes, filteredLinks] = filterData(nodesData, linksData, resultId);
+    createGraph(filteredNodes, filteredLinks, wholeView);
   }
 }
 
-export const filterData = (resultId) => {
+export const filterData = (nodesData, linksData, resultId) => {
   console.log("resultId: ", resultId);
   const targetId = parseInt(resultId);
-  const filteredNodes = jsonData.nodes.filter(node => {
+
+  const filteredNodes = nodesData.filter(node => {
       return node.id === targetId || node.childrens.includes(targetId);
   });
-  const filteredLinks = jsonData.links.filter(link => {
+  const filteredLinks = linksData.filter(link => {
       // console.log("link: ", link);
       return link.source.id === targetId || link.target.id === targetId;
   });
   return [filteredNodes, filteredLinks];
 }
 
-export const createGraph = (data, wholeView) => {
+export const createGraph = (nodesData, linksData, wholeView) => {
   const GRAPH_WIDTH = configData.GRAPH_WIDTH;
   const GRAPH_HEIGHT = configData.GRAPH_HEIGHT;
 
@@ -66,11 +64,11 @@ export const createGraph = (data, wholeView) => {
     .attr('transform', 'translate(0, 0) scale(1)');
 
   const simulation = d3
-    .forceSimulation(data.nodes)
+    .forceSimulation(nodesData)
     .force("link", 
-      d3.forceLink(data.links)                // This force provides links between nodes
+      d3.forceLink(linksData)                // This force provides links between nodes
         .id(function(d) { return d.id; })    // provide the id of a node
-        .links(data.links)
+        .links(linksData)
         .distance(configData.LINK_DISTANCE_FORCE)    // the list of links
       )
     .force("charge", d3.forceManyBody().strength(configData.DRAG__STRENGTH_FORCE))
@@ -115,7 +113,7 @@ export const createGraph = (data, wholeView) => {
   var links = g.append("g")
     .attr("class", "links")
     .selectAll(".link")
-    .data(data.links)
+    .data(linksData)
     .enter()
     .append("line")
     .attr("id", function(d, i) {
@@ -140,7 +138,7 @@ export const createGraph = (data, wholeView) => {
   var nodes = g.append("g")
     .attr("class", "nodes")
     .selectAll(".node")
-    .data(data.nodes)
+    .data(nodesData)
     .enter()
     .append("circle")
     .attr("class", "node")
@@ -162,7 +160,7 @@ export const createGraph = (data, wholeView) => {
   var label = g.append("g")
     .attr("class", "labels")
     .selectAll("text")
-    .data(data.nodes)
+    .data(nodesData)
     .enter().append("text")
     .text(function(d) { 
       if (d.version) {
@@ -289,11 +287,10 @@ export const createGraph = (data, wholeView) => {
 
 };
 
-const ChartForce = () => {
-
+const ChartForce = ({nodesData, linksData}) => {
   useEffect(() => {
-    createGraph(jsonData);
-  }, [jsonData]);
+    createGraph(nodesData, linksData);
+  }, [nodesData, linksData]);
   
   return (
     <div id="chart">

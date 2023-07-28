@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RadioButtonsGroup() {
+export default function RadioButtonsGroup({nodesData, linksData}) {
   const classes = useStyles();
   const [value, setValue] = React.useState('forceView');
 
@@ -40,9 +40,9 @@ export default function RadioButtonsGroup() {
 
   let chartComponent;
   if (value === 'forceView') {
-      chartComponent = <ChartForce />;
+      chartComponent = <ChartForce nodesData={nodesData} linksData={linksData}/>;
   } else if (value === 'classifyView') {
-      chartComponent = <ChartClassify />;
+      chartComponent = <ChartClassify nodesData={nodesData} linksData={linksData}/>;
   }
 
 
@@ -58,7 +58,7 @@ export default function RadioButtonsGroup() {
             color="primary" 
             size="small"
             className={classes.button}
-            onClick={() => { handleResultClick("") }}
+            onClick={() => { handleResultClick(nodesData, linksData, "") }}
             >
             Whole View
           </Button>

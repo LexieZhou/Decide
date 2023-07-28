@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import * as d3 from "d3";
-import jsonData from '../data/new_records.json';
+// import jsonData from '../data/new_records.json';
 import configData from '../data/config.json';
 import './Chart.css';
 import ToggleSideBar from './ToggleSideBar';
 
-export const createClassifyGraph = (data) => {
+export const createClassifyGraph = (nodesData, linksData) => {
   const GRAPH_WIDTH = configData.GRAPH_WIDTH;
   const GRAPH_HEIGHT = configData.GRAPH_HEIGHT;
   
@@ -37,9 +37,9 @@ export const createClassifyGraph = (data) => {
     .attr('transform', 'translate(100, 100) scale(1)');
 
   const simulation = d3
-    .forceSimulation(data.nodes)
+    .forceSimulation(nodesData)
     .force("link", 
-      d3.forceLink(data.links)                // This force provides links between nodes
+      d3.forceLink(linksData)                // This force provides links between nodes
         .id(function(d) { return d.id; })    // provide the id of a node
         .strength(function(d) {   
           if (d.source.label[0] === d.target.label[0]) {
@@ -91,7 +91,7 @@ export const createClassifyGraph = (data) => {
   var links = g.append("g")
     .attr("class", "links")
     .selectAll(".link")
-    .data(data.links)
+    .data(linksData)
     .enter()
     .append("line")
     .attr("id", function(d, i) {
@@ -108,7 +108,7 @@ export const createClassifyGraph = (data) => {
   var nodes = g.append("g")
     .attr("class", "nodes")
     .selectAll(".node")
-    .data(data.nodes)
+    .data(nodesData)
     .enter()
     .append("circle")
     .attr("class", "node")
@@ -130,7 +130,7 @@ export const createClassifyGraph = (data) => {
   var label = g.append("g")
     .attr("class", "labels")
     .selectAll("text")
-    .data(data.nodes)
+    .data(nodesData)
     .enter().append("text")
     .text(function(d) { 
       if (d.version) {
@@ -310,11 +310,11 @@ export const createClassifyGraph = (data) => {
     });
 };
 
-const ChartClassify = () => {
+const ChartClassify = ({nodesData, linksData}) => {
 
   useEffect(() => {
-    createClassifyGraph(jsonData);
-  }, [jsonData]);
+    createClassifyGraph(nodesData, linksData);
+  }, [nodesData, linksData]);
   
   return (
     <div id="chart">
