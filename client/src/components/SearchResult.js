@@ -51,7 +51,7 @@ export default function SearchResult({results}) {
                             key={id} 
                             onClick={(e) => handleResultClick(result.id)}
                             >
-                            {result.name}
+                            {result.name + ' ' + result.version}
                         </div>
                     );
                   })}
