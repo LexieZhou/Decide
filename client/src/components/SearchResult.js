@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
-import { filterData, handleResultClick } from './Chart_force';
+import { filterData } from './Chart_force';
 
 const useStyles = makeStyles((theme) => ({
     searchResult: {

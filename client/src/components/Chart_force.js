@@ -7,11 +7,11 @@ import ToggleSideBar from './ToggleSideBar';
 // filter data by targetId
 export const filterData = async (targetId) => {
   try {
-    const response1 = await fetch(`http://localhost:4018/filter/nodes/${targetId}`);
+    const response1 = await fetch(`http://localhost:4024/filter/nodes/${targetId}`);
     const filteredNodesData = await response1.json();
     // console.log(filteredNodesData);
 
-    const response2 = await fetch(`http://localhost:4018/filter/links/${targetId}`);
+    const response2 = await fetch(`http://localhost:4024/filter/links/${targetId}`);
     const filteredlinksData = await response2.json();
     // console.log(filteredlinksData);
 
@@ -25,11 +25,11 @@ export const filterData = async (targetId) => {
 // fetch whole nodes and links data
 export const fetchData = async () => {
   try {
-    const response1 = await fetch(`http://localhost:4018/nodes`);
+    const response1 = await fetch(`http://localhost:4024/nodes`);
     const nodesData = await response1.json();
     // console.log(nodesData);
 
-    const response2 = await fetch(`http://localhost:4018/links`);
+    const response2 = await fetch(`http://localhost:4024/links`);
     const linksData = await response2.json();
     // console.log(linksData);
     

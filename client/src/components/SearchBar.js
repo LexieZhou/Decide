@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchBar({setResults}) {
     const [input, setInput] = useState("");
-    const url = "http://localhost:4018/nodes";
+    const url = "http://localhost:4024/nodes";
 
     const fetchData = (value) => {
       fetch(url)

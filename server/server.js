@@ -45,7 +45,7 @@ app.get("/links", async (req, res) => {
 app.get('/filter/nodes/:targetId', async (req, res) => {
   try {
     const targetId = Number(req.params.targetId);
-    console.log("resultId: ", targetId);
+    // console.log("resultId: ", targetId);
     const database = client.db('kgDB');
     const collection = database.collection('nodes');
     const filteredNodes = await collection.find(
@@ -61,7 +61,7 @@ app.get('/filter/nodes/:targetId', async (req, res) => {
 app.get('/filter/links/:targetId', async (req, res) => {
   try {
     const targetId = Number(req.params.targetId);
-    console.log("resultId: ", targetId);
+    // console.log("resultId: ", targetId);
     const database = client.db('kgDB');
     const collection = database.collection('links');
     const filteredLinks = await collection.find(
@@ -74,9 +74,30 @@ app.get('/filter/links/:targetId', async (req, res) => {
   }
 });
 
+const labels = ['api', 'database', 'hardware', 'library', 'operating_system', 'programming_language', 'software', 'tool'];
+app.get('/topNodes/:label', async (req, res) => {
+  try {
+    const label = String(req.params.label);
+    console.log("label: ", label);
+    const database = client.db('kgDB');
+    const collection = database.collection('nodes');
+
+    const pipeline = [
+      { $match: { label: { $in: [label] } } },
+      { $sort: { links_num: -1 } },
+      { $limit: 5 },
+    ];
+    const topNodes = await collection.aggregate(pipeline).toArray();
+    res.json(topNodes);
+
+  } catch (e) {
+    console.error(e);
+    res.status(500).send('Error occurred while fetching data');
+  }
+});
 
 // Start the server
-const PORT = process.env.PORT || 4018;
+const PORT = process.env.PORT || 4024;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

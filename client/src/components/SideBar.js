@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SideBar() {
   const classes = useStyles();
+  const labels = ['database', 'hardware', 'library', 'operating_system', 'programming_language', 'software', 'tool'];
 
   return (
       <Drawer
@@ -47,13 +48,11 @@ export default function SideBar() {
         <Toolbar />
         <Typography className={classes.title}>Top 5 link-number nodes</Typography>
         <div className={classes.drawerContainer}>
-          <Barchart label="database"/>
-          <Barchart label="hardware"/>
-          <Barchart label="library"/>
-          <Barchart label="operating_system"/>
-          <Barchart label="programming_language"/>
-          <Barchart label="software"/>
-          <Barchart label="tool"/>
+        {labels.map((label, index) => (
+          <div id={`barchart-${index}`} key={index}>
+            <Barchart label={label} />
+          </div>
+        ))}
         </div>
       </Drawer>
   );

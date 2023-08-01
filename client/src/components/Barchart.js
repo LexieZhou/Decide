@@ -1,5 +1,4 @@
 import * as d3 from "d3";
-import linkData from '../data/linkNum_data.json';
 import configData from '../data/config.json';
 import React from 'react';
 import { useState, useEffect } from 'react';
@@ -11,13 +10,19 @@ export default function Barchart({label}) {
     const height = 150 - margin.top - margin.bottom;
 
     const [data, setData] = useState(null);
+
     useEffect(() => {
-        setData(linkData[label]);
+        fetch(`http://localhost:4024/topNodes/${label}`)
+            .then(res => res.json())
+            .then(data => {
+                setData(data);
+            });
     }, []);
 
     useEffect(() => {
         if (data) {
-            const maxLinkNum = d3.max(data, function(d) { return d.link_num; });
+            const maxLinkNum = d3.max(data, function(d) { return d.links_num; });
+            const getNameWithVersion = (d) => { return d.name + " " + d.version; };
 
             const svg = d3.select("#Barchart")
                 .append("svg")
@@ -82,7 +87,7 @@ export default function Barchart({label}) {
             
             var y = d3.scaleBand()
                 .range([ 0, height ])
-                .domain(data.map(function(d) { return d.name; }))
+                .domain(data.map(function(d) { return getNameWithVersion(d); }))
                 .padding(.05);
             
             svg.append("g")
@@ -93,14 +98,14 @@ export default function Barchart({label}) {
                 .enter()
                 .append("rect")
                 .attr("x", x(0) )
-                .attr("y", function(d) { return y(d.name)+4; })
-                .attr("width", function(d) { return x(d.link_num); })
+                .attr("y", function(d) { return y(getNameWithVersion(d))+4; })
+                .attr("width", function(d) { return x(d.links_num); })
                 .attr("height", y.bandwidth()-8 )
                 .attr("fill", configData.COLOR[label])
                 .on('mouseover', function (event, d) {
                     d3.select(this)
                         .attr('opacity', 0.8)
-                        .attr("y", function(d) { return y(d.name)+3; })
+                        .attr("y", function(d) { return y(getNameWithVersion(d))+3; })
                         .attr("height", y.bandwidth()-6 )
                     
                     // filter graph
@@ -113,13 +118,13 @@ export default function Barchart({label}) {
                         .style('left', event.pageX + 10 + 'px');
                       
                     tooltip
-                        .html("Links: " + d.link_num);
+                        .html("Links: " + d.links_num);
                         
                 })
                 .on('mouseout', function (actual, i) {
                     d3.select(this)
                         .attr('opacity', 1)
-                        .attr("y", function(d) { return y(d.name)+4; })
+                        .attr("y", function(d) { return y(getNameWithVersion(d))+4; })
                         .attr("height", y.bandwidth()-8 )
                     tooltip
                         .transition()
