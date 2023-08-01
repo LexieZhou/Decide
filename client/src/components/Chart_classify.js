@@ -1,9 +1,27 @@
 import React, { useEffect } from 'react';
 import * as d3 from "d3";
-// import jsonData from '../data/new_records.json';
 import configData from '../data/config.json';
 import './Chart.css';
 import ToggleSideBar from './ToggleSideBar';
+
+// fetch whole nodes and links data
+export const fetchClassifyData = async () => {
+  try {
+    const response1 = await fetch(`http://localhost:4018/nodes`);
+    const nodesData = await response1.json();
+    // console.log(nodesData);
+
+    const response2 = await fetch(`http://localhost:4018/links`);
+    const linksData = await response2.json();
+    // console.log(linksData);
+    
+    createClassifyGraph(nodesData, linksData, true);
+
+  } catch (error) {
+    console.error('Error:', error);
+    return null;
+  }
+};
 
 export const createClassifyGraph = (nodesData, linksData) => {
   const GRAPH_WIDTH = configData.GRAPH_WIDTH;
@@ -310,11 +328,11 @@ export const createClassifyGraph = (nodesData, linksData) => {
     });
 };
 
-const ChartClassify = ({nodesData, linksData}) => {
+const ChartClassify = () => {
 
   useEffect(() => {
-    createClassifyGraph(nodesData, linksData);
-  }, [nodesData, linksData]);
+    fetchClassifyData();
+  }, []);
   
   return (
     <div id="chart">

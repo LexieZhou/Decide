@@ -5,7 +5,8 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { makeStyles } from '@material-ui/core/styles';
-import { handleResultClick } from "./Chart_force";
+import { fetchData } from "./Chart_force";
+import { fetchClassifyData } from './Chart_classify';
 import ChartClassify from './Chart_classify';
 import ChartForce from './Chart_force';
 
@@ -40,9 +41,9 @@ export default function RadioButtonsGroup({nodesData, linksData}) {
 
   let chartComponent;
   if (value === 'forceView') {
-      chartComponent = <ChartForce nodesData={nodesData} linksData={linksData}/>;
+      chartComponent = <ChartForce />;
   } else if (value === 'classifyView') {
-      chartComponent = <ChartClassify nodesData={nodesData} linksData={linksData}/>;
+      chartComponent = <ChartClassify />;
   }
 
 
@@ -58,7 +59,13 @@ export default function RadioButtonsGroup({nodesData, linksData}) {
             color="primary" 
             size="small"
             className={classes.button}
-            onClick={() => { handleResultClick(nodesData, linksData, "") }}
+            onClick={() => {
+              if (value === "forceView") {
+                fetchData();
+              } else if (value === "classifyView") {
+                fetchClassifyData();
+              }
+            }}
             >
             Whole View
           </Button>

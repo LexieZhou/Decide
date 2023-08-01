@@ -16,7 +16,7 @@ client.connect().then(() => {
   console.error("Failed to connect to MongoDB:", e);
 });
 
-// Define your API endpoints
+// Define API endpoints
 app.get("/nodes", async (req, res) => {
   try {
     const database = client.db('kgDB');
@@ -41,8 +41,42 @@ app.get("/links", async (req, res) => {
   }
 });
 
+// filter data by targetId
+app.get('/filter/nodes/:targetId', async (req, res) => {
+  try {
+    const targetId = Number(req.params.targetId);
+    console.log("resultId: ", targetId);
+    const database = client.db('kgDB');
+    const collection = database.collection('nodes');
+    const filteredNodes = await collection.find(
+      {$or: [{ "id": targetId }, { "childrens": { $in: [targetId] } }]}
+    ).toArray();
+    res.json(filteredNodes);
+  } catch (e) {
+    console.error(e);
+    res.status(500).send('Error occurred while fetching data');
+  }
+});
+
+app.get('/filter/links/:targetId', async (req, res) => {
+  try {
+    const targetId = Number(req.params.targetId);
+    console.log("resultId: ", targetId);
+    const database = client.db('kgDB');
+    const collection = database.collection('links');
+    const filteredLinks = await collection.find(
+      {$or: [{ "source": targetId }, { "target": targetId }]}
+    ).toArray();
+    res.json(filteredLinks);
+  } catch (e) {
+    console.error(e);
+    res.status(500).send('Error occurred while fetching data');
+  }
+});
+
+
 // Start the server
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4018;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

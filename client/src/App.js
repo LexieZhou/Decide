@@ -50,21 +50,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function APP() {
   const classes = useStyles();
-  const [nodesData, setNodesData] = useState([]);
-  const [linksData, setLinksData] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const nodesResponse = await fetch("http://localhost:4000/nodes");
-      const nodesData = await nodesResponse.json();
-      const linksResponse = await fetch("http://localhost:4000/links");
-      const linksData = await linksResponse.json();
-      setNodesData(nodesData);
-      setLinksData(linksData);
-
-    };
-    fetchData();
-  }, []);
 
   return (
     <ThemeProvider theme={themeLight}>
@@ -79,7 +64,7 @@ export default function APP() {
           </div>
           <div className={classes.chartContainer}>
             <div className={classes.radioPanel}>
-              <RadioPanel nodesData={nodesData} linksData={linksData}/>
+              <RadioPanel />
             </div>
           </div>
         </div>

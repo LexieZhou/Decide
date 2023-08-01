@@ -1,37 +1,45 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as d3 from "d3";
-// import jsonData from '../data/new_records.json';
 import configData from '../data/config.json';
 import './Chart.css';
 import ToggleSideBar from './ToggleSideBar';
 
-export const handleResultClick = (nodesData, linksData, resultId) => {
-  // console.log(`You clicked on ${resultName}, id: ${resultId}`);
-  var wholeView = true;
+// filter data by targetId
+export const filterData = async (targetId) => {
+  try {
+    const response1 = await fetch(`http://localhost:4018/filter/nodes/${targetId}`);
+    const filteredNodesData = await response1.json();
+    // console.log(filteredNodesData);
 
-  if (resultId === "") {
-    wholeView = true;
-    createGraph(nodesData, linksData, wholeView);
-  } else {
-    wholeView = false;
-    const [filteredNodes, filteredLinks] = filterData(nodesData, linksData, resultId);
-    createGraph(filteredNodes, filteredLinks, wholeView);
+    const response2 = await fetch(`http://localhost:4018/filter/links/${targetId}`);
+    const filteredlinksData = await response2.json();
+    // console.log(filteredlinksData);
+
+    createGraph(filteredNodesData, filteredlinksData, false);
+  } catch (error) {
+    console.error('Error:', error);
+    return null;
   }
-}
+};
 
-export const filterData = (nodesData, linksData, resultId) => {
-  console.log("resultId: ", resultId);
-  const targetId = parseInt(resultId);
+// fetch whole nodes and links data
+export const fetchData = async () => {
+  try {
+    const response1 = await fetch(`http://localhost:4018/nodes`);
+    const nodesData = await response1.json();
+    // console.log(nodesData);
 
-  const filteredNodes = nodesData.filter(node => {
-      return node.id === targetId || node.childrens.includes(targetId);
-  });
-  const filteredLinks = linksData.filter(link => {
-      // console.log("link: ", link);
-      return link.source.id === targetId || link.target.id === targetId;
-  });
-  return [filteredNodes, filteredLinks];
-}
+    const response2 = await fetch(`http://localhost:4018/links`);
+    const linksData = await response2.json();
+    // console.log(linksData);
+    
+    createGraph(nodesData, linksData, true);
+
+  } catch (error) {
+    console.error('Error:', error);
+    return null;
+  }
+};
 
 export const createGraph = (nodesData, linksData, wholeView) => {
   const GRAPH_WIDTH = configData.GRAPH_WIDTH;
@@ -128,11 +136,6 @@ export const createGraph = (nodesData, linksData, wholeView) => {
       document.getElementById('right-panel').classList.add('open');
       const event = new CustomEvent('linkClick', { detail: linkData });
       window.dispatchEvent(event);
-      // var panelContent = document.getElementById('panel-content');
-      // panelContent.innerHTML = '<h2>Link Info</h2>' +
-      // '<p>Link Id: ' + linkData.id + '</p>' +
-      // '<p>Node 1: ' + linkData.source.name + '</p>' +
-      // '<p>Node 2: ' + linkData.target.name + '</p>'
     });
 
   var nodes = g.append("g")
@@ -287,10 +290,11 @@ export const createGraph = (nodesData, linksData, wholeView) => {
 
 };
 
-const ChartForce = ({nodesData, linksData}) => {
+const ChartForce = () => {
+
   useEffect(() => {
-    createGraph(nodesData, linksData);
-  }, [nodesData, linksData]);
+    fetchData();
+  }, []);
   
   return (
     <div id="chart">

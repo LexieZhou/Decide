@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchBar({setResults}) {
     const [input, setInput] = useState("");
-    const url = "http://localhost:4000/nodes";
+    const url = "http://localhost:4018/nodes";
 
     const fetchData = (value) => {
       fetch(url)
