@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
@@ -57,25 +57,21 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchBar({setResults}) {
     const [input, setInput] = useState("");
-    
+    const url = "http://localhost:4018/nodes";
+
     const fetchData = (value) => {
-      fetch("data.json",
-        {
-          headers : { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          }
-        })
+      fetch(url)
         .then((response) => response.json())
         .then((json) => {
           let results = [];
-          if (Array.isArray(json["nodes"])) {
-            results = json["nodes"].filter((node) => {
+          if (Array.isArray(json)) {
+            results = json.filter((node) => {
+              const nodeString = `${node.name} ${node.version || ''}`.toLowerCase();
               return (
                 value &&
                 node &&
                 node.name &&
-                node.name.toLowerCase().includes(value.toLowerCase())
+                nodeString.includes(value.toLowerCase())
               );
             });
           } else {
@@ -87,10 +83,7 @@ export default function SearchBar({setResults}) {
         .catch((error) => {
           console.error('request failed:', error);
         });
-      }
-      useEffect(()=>{
-        fetchData()
-      },[])
+    }
     
     const handleChange = (value) => {
         setInput(value);

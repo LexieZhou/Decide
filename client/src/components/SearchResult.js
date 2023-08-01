@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
-import { handleResultClick } from './Chart_force';
+import { filterData, handleResultClick } from './Chart_force';
 
 const useStyles = makeStyles((theme) => ({
     searchResult: {
@@ -49,9 +49,12 @@ export default function SearchResult({results}) {
                     return (
                         <div className={classes.SingleSearchResult} 
                             key={id} 
-                            onClick={(e) => handleResultClick(result.id)}
+                            onClick={(e) => 
+                                //handleResultClick(result.id)
+                                filterData(result.id)
+                            }
                             >
-                            {result.name}
+                            {result.name + ' ' + result.version}
                         </div>
                     );
                   })}

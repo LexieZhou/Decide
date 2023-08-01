@@ -3,7 +3,7 @@ import linkData from '../data/linkNum_data.json';
 import configData from '../data/config.json';
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { handleResultClick } from "./Chart_force";
+import { filterData, fetchData } from "./Chart_force";
 
 export default function Barchart({label}) {
     const margin = {top: 40, right: 10, bottom: 30, left: 100};
@@ -104,7 +104,7 @@ export default function Barchart({label}) {
                         .attr("height", y.bandwidth()-6 )
                     
                     // filter graph
-                    handleResultClick(d.id);
+                    filterData(d.id);
                     
                     tooltip.transition()
                         .duration(100)
@@ -126,7 +126,8 @@ export default function Barchart({label}) {
                         .duration('200')
                         .style("opacity", 0);
                     
-                    handleResultClick("");
+                    // get whole view
+                    fetchData();
                 });
 
         }

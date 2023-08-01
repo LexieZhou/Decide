@@ -5,7 +5,8 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { makeStyles } from '@material-ui/core/styles';
-import { handleResultClick } from "./Chart_force";
+import { fetchData } from "./Chart_force";
+import { fetchClassifyData } from './Chart_classify';
 import ChartClassify from './Chart_classify';
 import ChartForce from './Chart_force';
 
@@ -30,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RadioButtonsGroup() {
+export default function RadioButtonsGroup({nodesData, linksData}) {
   const classes = useStyles();
   const [value, setValue] = React.useState('forceView');
 
@@ -58,7 +59,13 @@ export default function RadioButtonsGroup() {
             color="primary" 
             size="small"
             className={classes.button}
-            onClick={() => { handleResultClick("") }}
+            onClick={() => {
+              if (value === "forceView") {
+                fetchData();
+              } else if (value === "classifyView") {
+                fetchClassifyData();
+              }
+            }}
             >
             Whole View
           </Button>

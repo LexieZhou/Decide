@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import AppBar from './components/AppBar';
 import SideBar from './components/SideBar';
@@ -47,8 +47,6 @@ const useStyles = makeStyles((theme) => ({
     width: '80vw',
   },
 }));
-
-
 
 export default function APP() {
   const classes = useStyles();

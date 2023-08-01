@@ -1,6 +1,6 @@
 import json
 
-with open('/Users/zhouzihan/Desktop/visual_kg/src/data/records.json', encoding='utf-8-sig') as f:
+with open('/Users/zhouzihan/Desktop/visual_kg/client/src/data/records.json', encoding='utf-8-sig') as f:
     data = json.load(f)
 
 official_name = {
@@ -143,5 +143,10 @@ new_data = {
 #     links_num_sum += nodes[i]['links_num']
 # print("links_num_sum: ", links_num_sum)
 
-with open('/Users/zhouzihan/Desktop/visual_kg/src/data/new_records.json', 'w') as f:
+with open('/Users/zhouzihan/Desktop/visual_kg/client/src/data/new_records.json', 'w') as f:
     json.dump(new_data, f, indent=4)
+
+with open('/Users/zhouzihan/Desktop/visual_kg/client/src/data/nodes.json', 'w') as f:
+    json.dump(nodes, f, indent=4)
+with open('/Users/zhouzihan/Desktop/visual_kg/client/src/data/links.json', 'w') as f:
+    json.dump(links, f, indent=4)
