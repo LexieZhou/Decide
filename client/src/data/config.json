@@ -35,13 +35,11 @@
 
     "COLOR": {
         "LINK": "#aaa",
-        "api": "#00bcd4",
-        "database": "#7e57c2",
+        "application": "#7e57c2",
+        "driver": "#f48fb1",
         "hardware": "#ff9800",
         "library": "#ef5350",
         "operating_system": "#42a5f5",
-        "programming_language": "#66bb6a",
-        "software": "#a9cc49",
-        "tool": "#f48fb1"
+        "runtime": "#66bb6a"
     }
 }

@@ -5,22 +5,22 @@ import { useState, useEffect } from 'react';
 import { filterData, fetchData } from "./Chart_force";
 
 export default function Barchart({label}) {
-    const margin = {top: 40, right: 10, bottom: 30, left: 100};
-    const width = 200 - margin.left - margin.right;
-    const height = 150 - margin.top - margin.bottom;
 
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:4024/topNodes/${label}`)
+        fetch(`http://localhost:4025/topNodes/${label}`)
             .then(res => res.json())
             .then(data => {
                 setData(data);
             });
-    }, []);
+    }, [label]);
 
     useEffect(() => {
         if (data) {
+            const margin = {top: 40, right: 10, bottom: 30, left: 100};
+            const width = 200 - margin.left - margin.right;
+            const height = 150 - margin.top - margin.bottom;
             const maxLinkNum = d3.max(data, function(d) { return d.links_num; });
             const getNameWithVersion = (d) => { return d.name + " " + d.version; };
 
@@ -60,20 +60,10 @@ export default function Barchart({label}) {
                 .style("font-size", "13px")
                 .style("font-weight", "bold")
                 .text(function() {
-                    if (label === "database") {
-                      return "Database";
-                    } else if (label === "hardware") {
-                        return "Driver";
-                    } else if (label === "library") {
-                        return "Library";
-                    } else if (label === "operating_system") {
+                    if (label === "operating_system") {
                         return "OS";
-                    } else if (label === "programming_language") {
-                        return "Runtime";
-                    } else if (label === "software") {
-                        return "Software";
-                    } else if (label === "tool") {
-                        return "Tool";
+                    } else {
+                        return label.charAt(0).toUpperCase() + label.slice(1);
                     }
                   });
 
@@ -136,7 +126,7 @@ export default function Barchart({label}) {
                 });
 
         }
-    }, [data]);
+    }, [label, data]);
 
     return (
         <div id="Barchart">
