@@ -2,10 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
 import LinkIcon from '@material-ui/icons/Link';
-import Avatar from '@material-ui/core/Avatar';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
     postsList: {
@@ -13,11 +12,15 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '3vw',
     },
     itemText: {
-        fontSize: '8px',
+        fontSize: '15px',
         fontFamily: 'Open Sans',
     },
-    avatar: {
-        backgroundColor: '#e0e0e0',
+    itemContainer: {
+        display: 'flex',
+        alignItems: 'center',
+    },
+    linkIcon: {
+        marginRight: '1vw',
     }
 }));
   
@@ -36,14 +39,15 @@ const PostsList = ({posts_id, posts_vote}) => {
         <List>
             {postIds.map((id, index) => (
                 <ListItem key={index}>
-                    <ListItemAvatar>
-                    <Avatar className={classes.avatar}>
+                    <div className={classes.itemContainer}>
+                        {/* <ListItemText className={classes.itemText} primary={`Votes: ${postVotes[index]}`}/> */}
                         <a href={`https://stackoverflow.com/questions/${id}`}>
-                            <LinkIcon />
+                            <LinkIcon className={classes.linkIcon} color='primary' />
                         </a>
-                    </Avatar>
-                  </ListItemAvatar>
-                    <ListItemText className={classes.itemText} primary={`Votes: ${postVotes[index]}`}/>
+                        <Typography variant="subtitle2" className={classes.itemText}>
+                                {`Votes: ${postVotes[index]}`}
+                        </Typography>
+                    </div>
                 </ListItem>
             ))}
         </List>

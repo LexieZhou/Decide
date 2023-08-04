@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function RadioButtonsGroup({nodesData, linksData}) {
+export default function RadioButtonsGroup() {
   const classes = useStyles();
   const [value, setValue] = React.useState('forceView');
 

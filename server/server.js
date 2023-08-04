@@ -70,7 +70,7 @@ app.get('/filter/links/:targetId', async (req, res) => {
 app.get('/topNodes/:label', async (req, res) => {
   try {
     const label = String(req.params.label);
-    console.log("label: ", label);
+    // console.log("label: ", label);
 
     const pipeline = [
       { $match: { label: { $in: [label] } } },

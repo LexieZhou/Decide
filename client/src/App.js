@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
     width: '80vw',
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: '12vw',
   },
   radioPanel: {
     marginTop: '1vh',

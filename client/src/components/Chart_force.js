@@ -130,6 +130,13 @@ export const createGraph = (nodesData, linksData, wholeView) => {
     .attr("stroke", "#aaa")
     .attr("stroke-width", configData.LINK_WIDTH)
     .attr('marker-end','url(#arrowhead)')
+    .attr("stroke-dasharray", function(d) {
+      if (d.properties.verdict === "no") {
+          return "5,5";
+      } else {
+          return null;
+      }
+    })
     .on('click', function(d) {
       var linkData = d.srcElement.__data__;
       console.log("click link", linkData.id);

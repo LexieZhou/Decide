@@ -126,7 +126,7 @@ export default function Barchart({label}) {
                 });
 
         }
-    }, [label, data]);
+    }, [data]);
 
     return (
         <div id="Barchart">
