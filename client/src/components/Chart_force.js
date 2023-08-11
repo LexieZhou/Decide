@@ -7,11 +7,11 @@ import ToggleSideBar from './ToggleSideBar';
 // filter data by targetId
 export const filterData = async (targetId) => {
   try {
-    const response1 = await fetch(`http://localhost:4025/filter/nodes/${targetId}`);
+    const response1 = await fetch(`http://localhost:4027/filter/nodes/${targetId}`);
     const filteredNodesData = await response1.json();
     // console.log(filteredNodesData);
 
-    const response2 = await fetch(`http://localhost:4025/filter/links/${targetId}`);
+    const response2 = await fetch(`http://localhost:4027/filter/links/${targetId}`);
     const filteredlinksData = await response2.json();
     // console.log(filteredlinksData);
 
@@ -25,11 +25,11 @@ export const filterData = async (targetId) => {
 // fetch whole nodes and links data
 export const fetchData = async () => {
   try {
-    const response1 = await fetch(`http://localhost:4025/nodes`);
+    const response1 = await fetch(`http://localhost:4027/nodes`);
     const nodesData = await response1.json();
     // console.log(nodesData);
 
-    const response2 = await fetch(`http://localhost:4025/links`);
+    const response2 = await fetch(`http://localhost:4027/links`);
     const linksData = await response2.json();
     // console.log(linksData);
     
@@ -40,6 +40,21 @@ export const fetchData = async () => {
     return null;
   }
 };
+
+export const filterDatabyEntityName = async (entityName) => {
+  try {
+    const official_entityName = configData.LIBRARIES[entityName];
+    const response1 = await fetch(`http://localhost:4027/filter/nodes/entity/${official_entityName}`);
+    const filteredEntityData = await response1.json();
+    const filteredlinksData = [];
+
+    createGraph(filteredEntityData, filteredlinksData, false);
+  } catch (error) {
+    console.error('Error:', error);
+    return null;
+  }
+};
+
 
 export const createGraph = (nodesData, linksData, wholeView) => {
   const GRAPH_WIDTH = configData.GRAPH_WIDTH;
@@ -255,8 +270,6 @@ export const createGraph = (nodesData, linksData, wholeView) => {
   if (wholeView === false) {
     initialScale = configData.RESULT_SCALE;
   }
-  console.log("initilaScale: " + initialScale);
-  // const initialScale = configData.INITIAL_SCALE;
   const zoom = d3.zoom()
     .extent([[0, 0], [GRAPH_WIDTH, GRAPH_HEIGHT]])
     .scaleExtent([-50, 100])
@@ -269,10 +282,10 @@ export const createGraph = (nodesData, linksData, wholeView) => {
     // g.attr("transform", `translate(${transform.x + centerX}, ${transform.y + centerY}) scale(${transform.k})`);
   }
   var initialTransform = d3.zoomIdentity
-    .translate(configData.GRAPH_WIDTH / 18 / initialScale, configData.GRAPH_HEIGHT / 18 / initialScale)
+    .translate(configData.GRAPH_WIDTH / 15 / initialScale, configData.GRAPH_HEIGHT / 15 / initialScale)
     .scale(initialScale);
 
-  svg.call(zoom.transform,initialTransform);
+  svg.call(zoom.transform, initialTransform);
 
   simulation.on("tick", () => {
     nodes

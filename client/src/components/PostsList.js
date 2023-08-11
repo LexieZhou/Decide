@@ -1,56 +1,89 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import LinkIcon from '@material-ui/icons/Link';
 import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 const useStyles = makeStyles((theme) => ({
     postsList: {
         width: '100%',
-        marginLeft: '3vw',
+        marginLeft: '0.5vw',
     },
     itemText: {
-        fontSize: '15px',
+        fontSize: '11px',
         fontFamily: 'Open Sans',
     },
     itemContainer: {
         display: 'flex',
-        alignItems: 'center',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
     },
-    linkIcon: {
-        marginRight: '1vw',
+    link: {
+        fontSize: '11px',
+        fontFamily: 'Open Sans',
+    },
+    btn: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    expandBtn: {
+        marginLeft: 'auto',
+        marginRight: 'auto',
     }
 }));
   
 const PostsList = ({posts_id, posts_vote}) => {
 
     const classes = useStyles();
-    // console.log("posts_id: ", posts_id);
-    // console.log("posts_vote: ", posts_vote);
 
-    // Split the strings into arrays
     const postIds = posts_id.split('_');
     const postVotes = posts_vote.split('_');
+    
+    const [numToShow, setNumToShow] = useState(4);
+    const [expanded, setExpanded] = useState(false);
+
+    const handleExpandClick = () => {
+        if (expanded) {
+            setNumToShow(5);
+        } else {
+        setNumToShow(postIds.length);
+        }
+        setExpanded(!expanded);
+    };
 
     return (
     <div className = {classes.postsList}>
         <List>
-            {postIds.map((id, index) => (
+            {postIds.slice(0, numToShow).map((id, index) => (
                 <ListItem key={index}>
                     <div className={classes.itemContainer}>
-                        {/* <ListItemText className={classes.itemText} primary={`Votes: ${postVotes[index]}`}/> */}
-                        <a href={`https://stackoverflow.com/questions/${id}`}>
-                            <LinkIcon className={classes.linkIcon} color='primary' />
-                        </a>
                         <Typography variant="subtitle2" className={classes.itemText}>
-                                {`Votes: ${postVotes[index]}`}
+                            {`Votes: ${postVotes[index]}`}
                         </Typography>
+                        <div className={classes.link}>
+                            <a href={`https://stackoverflow.com/questions/${id}`}>https://stackoverflow.com/questions/{id}</a>
+                        </div>
                     </div>
                 </ListItem>
             ))}
         </List>
+        <div className = {classes.btn}>
+            {expanded === false && postIds.length > numToShow && (
+                <IconButton color="primary" onClick={handleExpandClick} aria-label="Expand More">
+                    <ExpandMoreIcon fontSize='large'/>
+                </IconButton>
+            )}
+            {expanded === true && (
+                <IconButton color="primary" onClick={handleExpandClick} aria-label="Expand Less" className={classes.expandBtn}>
+                    <ExpandLessIcon fontSize="large"/>
+                </IconButton>
+            )}
+        </div>
     </div>
     )
 }

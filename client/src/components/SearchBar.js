@@ -5,6 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ClearIcon from '@material-ui/icons/Clear';
 import { alpha, makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
+import configData from '../data/config.json';
 
 const useStyles = makeStyles((theme) => ({
     searchBar: {
@@ -57,15 +58,26 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchBar({setResults}) {
     const [input, setInput] = useState("");
-    const url = "http://localhost:4025/nodes";
+    const url = "http://localhost:4027/nodes";
+    const libraries = configData.LIBRARIES;
 
     const fetchData = (value) => {
       fetch(url)
         .then((response) => response.json())
         .then((json) => {
           let results = [];
-          if (Array.isArray(json)) {
-            results = json.filter((node) => {
+          let entity_results = [];
+          let node_results = [];
+          entity_results = Object.keys(libraries).filter((libKey) => {
+            const lib = libraries[libKey];
+            return (
+              value &&
+              lib &&
+              lib.toLowerCase().includes(value.toLowerCase())
+            );
+          });
+          if (Array.isArray(json)) { 
+            node_results = json.filter((node) => {
               const nodeString = `${node.name} ${node.version || ''}`.toLowerCase();
               return (
                 value &&
@@ -74,6 +86,7 @@ export default function SearchBar({setResults}) {
                 nodeString.includes(value.toLowerCase())
               );
             });
+            results = entity_results.concat(node_results);
           } else {
             console.error('non-array data:', json);
           }

@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SideBar() {
   const classes = useStyles();
-  const labels = ['application', 'driver', 'hardware', 'library', 'operating_system', 'runtime'];
+  const labels = ['driver', 'library', 'operating_system', 'runtime'];
 
   return (
       <Drawer

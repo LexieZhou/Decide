@@ -1,7 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
-import { filterData } from './Chart_force';
+import { filterData, filterDatabyEntityName } from './Chart_force';
+import configData from '../data/config.json';
 
 const useStyles = makeStyles((theme) => ({
     searchResult: {
@@ -46,17 +47,30 @@ export default function SearchResult({results}) {
                 (
                 <div className={classes.searchResult}>
                   {results.map((result, id) => {
-                    return (
-                        <div className={classes.SingleSearchResult} 
-                            key={id} 
-                            onClick={(e) => 
-                                //handleResultClick(result.id)
-                                filterData(result.id)
-                            }
-                            >
-                            {result.name + ' ' + result.version}
-                        </div>
-                    );
+                    if (typeof result === 'string'){
+                        return (
+                            <div className={classes.SingleSearchResult} 
+                                key={id} 
+                                onClick={(e) => 
+                                    // handleResultClick(result.id)
+                                    filterDatabyEntityName(result)
+                                }
+                                >
+                                {configData.LIBRARIES[result]}
+                            </div>
+                        );
+                    } else {
+                        return (
+                            <div className={classes.SingleSearchResult} 
+                                key={id} 
+                                onClick={(e) => 
+                                    filterData(result.id)
+                                }
+                                >
+                                {result.name + ' ' + result.version}
+                            </div>
+                        );
+                    }
                   })}
                 </div>
                 )

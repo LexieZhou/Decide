@@ -67,6 +67,20 @@ app.get('/filter/links/:targetId', async (req, res) => {
   }
 });
 
+// filter data by entity name
+app.get('/filter/nodes/entity/:entityName', async (req, res) => {
+  try {
+    const entityName = String(req.params.entityName);
+    const filteredNodes = await nodesCollection.find(
+      { name: { $regex: new RegExp("^" + entityName + "$", "i") } }
+    ).toArray();
+    res.json(filteredNodes);
+  } catch (e) {
+    console.error(e);
+    res.status(500).send('Error occurred while fetching data');
+  }
+});
+
 app.get('/topNodes/:label', async (req, res) => {
   try {
     const label = String(req.params.label);
@@ -87,7 +101,7 @@ app.get('/topNodes/:label', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 4025;
+const PORT = process.env.PORT || 4027;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

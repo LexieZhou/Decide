@@ -19,7 +19,7 @@
 
     "INITIAL_SCALE": 0.4,
     "INITIAL_SCALE_FORCE": 0.2,
-    "RESULT_SCALE": 1,
+    "RESULT_SCALE": 0.6,
     "MIN_DISTANCE": 150,
 
     "labels": {
@@ -41,5 +41,48 @@
         "library": "#ef5350",
         "operating_system": "#42a5f5",
         "runtime": "#66bb6a"
+    },
+
+    "LIBRARIES": {
+        "wxpython": "wxPython",
+        "tensorflow": "TensorFlow",
+        "tfds": "TensorFlow Datasets",
+        "tensorboard": "TensorBoard",
+        "pytorch": "PyTorch",
+        "numpy": "NumPy",
+        "scipy": "SciPy",
+        "scikit-learn": "scikit-learn", 
+        "pandas": "pandas",
+        "keras": "Keras",
+        "flask": "Flask",
+        "tensorflow-transform": "TensorFlow Transform",
+        "zappa": "Zappa",
+        "subprocess": "subprocess",
+        "sqlalchemy": "SQLAlchemy",
+        "psycopg": "psycopg",
+        "flask-sqlalchemy": "Flask SQLAlchemy",
+        "airflow": "Airflow",
+        "fftw": "FFTW",
+        "tensorflow-core-platform": "TensorFlow Core Platform",
+        "cuda": "CUDA",
+        "cudnn": "cuDNN",
+        "python": "Python",
+        "ubuntu": "Ubuntu",
+        "windows": "Windows",
+        "macos": "macOS",
+        "centos": "CentOS",
+        "android": "Android",
+        "ios": "iOS",
+        "debian": "Debian",
+        "bazel": "Bazel",
+        "glibc": "glibc",
+        "jetpack": "JetPack",
+        "gcc": "GCC",
+        "gzip": "gzip",
+        "coremltools": "Core ML Tools",
+        "postgres": "PostgreSQL",
+        "mysql": "MySQL",
+        "blender": "Blender",
+        "emr": "Amazon EMR"    
     }
 }

@@ -2,8 +2,6 @@ import React, { useState, useEffect }  from 'react';
 import { Toolbar, IconButton } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import ThumbUpIcon from '@material-ui/icons/ThumbUp';
-import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
@@ -28,6 +26,14 @@ const useStyles = makeStyles((theme) => ({
     alignContent: 'center',
     justifyContent: 'flex-start',
   },
+  secondLine: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignContent: 'center',
+    justifyContent: 'flex-start',
+    marginLeft: '1vw',
+    marginBottom: '2vh',
+  },
   titleTxt: {
     fontSize: '16px',
     fontWeight: 'bold',
@@ -40,19 +46,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '0.5vh',
     marginLeft: '0.5vw',
   },
-  verdictTxt: {
+  scoreTxt: {
     fontSize: '12px',
     fontWeight: 'bold',
     marginTop: '0.5vh',
     marginLeft: '0.5vw',
-  },
-  verdictInfo: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignContent: 'center',
-    justifyContent: 'center',
-    marginLeft: '1vw',
-    marginTop: '1vh',
   },
   voteTitle: {
     fontSize: '14px',
@@ -79,29 +77,70 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignContent: 'center',
     justifyContent: 'flex-start',
-    //marginLeft: '1vw',
     marginTop: '1vh',
   },
   nodeInfo: {
     display: 'flex',
     flexDirection: 'row',
     alignContent: 'center',
-    // marginLeft: '1vw',
-    // alignContent: 'center',
   },
   voteInfo: {
     display: 'flex',
     flexDirection: 'column',
     alignContent: 'center',
-    marginLeft: '1vw',
+   // marginLeft: '1vw',
     marginTop: '1vh',
   },
 
 }));
 
+// const compatibleScore = (linkData) => {
+//   const pos_vote = linkData.properties.pos_vote;
+//   const neg_vote = linkData.properties.neg_vote;
+
+//   if (pos_vote !== "" && neg_vote !== "") {
+//     const posVotes = pos_vote.split('_');
+//     const negVotes = neg_vote.split('_');
+//     console.log(posVotes);
+//     console.log(negVotes);
+
+//     let sumPosVotes = 0;
+//     let sumNegVotes = 0;
+
+//     for (let i = 0; i < posVotes.length; i++) {
+//       sumPosVotes += parseInt(posVotes[i]);
+//     }
+//     for (let i = 0; i < negVotes.length; i++) {
+//       sumNegVotes += parseInt(negVotes[i]);
+//     }
+
+//     const score = (sumPosVotes - sumNegVotes) / (sumPosVotes + sumNegVotes);
+//     return score;
+//   } else if (pos_vote === "") {
+//     const negVotes = neg_vote.split('_');
+//     let sumNegVotes = 0;
+//     for (let i = 0; i < negVotes.length; i++) {
+//       sumNegVotes += parseInt(negVotes[i]);
+//     }
+//     const score = -1 * sumNegVotes;
+//     return score;
+//   } else if (neg_vote === "") {
+//     const posVotes = pos_vote.split('_');
+//     let sumPosVotes = 0;
+//     for (let i = 0; i < posVotes.length; i++) {
+//       sumPosVotes += parseInt(posVotes[i]);
+//     }
+//     const score = sumPosVotes;
+//     return score;
+//   }
+
+//   return 0;
+// };
+
 const ToggleSideBar = () => {
   const classes = useStyles();
   const [linkData, setLinkData] = useState(null);
+  // const [score, setScore] = useState(null);
 
   useEffect(() => {
       document.getElementById('close-panel').addEventListener('click', function() {
@@ -111,8 +150,8 @@ const ToggleSideBar = () => {
 
   useEffect(() => {
     window.addEventListener('linkClick', function(e) {
-      console.log("linkClick", e.detail);
       setLinkData(e.detail);
+      // setScore(compatibleScore(e.detail));
     });
   }, []);
   
@@ -123,7 +162,7 @@ const ToggleSideBar = () => {
         <IconButton id="close-panel" color="primary" aria-label="add to shopping cart">
             <CloseIcon />
         </IconButton>
-        <Typography className={classes.titleTxt}>Verdict Information</Typography>
+        <Typography className={classes.titleTxt}>Compatible Information</Typography>
         </div>
         {linkData && 
           <div className={classes.panelContent}>
@@ -138,11 +177,12 @@ const ToggleSideBar = () => {
                   <Typography className={classes.nodeTxt}>{linkData.target.name} {linkData.target.version}</Typography>
                 </div>
               </div>
-              <div className={classes.verdictInfo}>
-                {linkData.properties.verdict === 'yes' ? <ThumbUpIcon color="primary"/> : <ThumbDownIcon color="primary"/>}
-                <Typography className={classes.verdictTxt}>Verdict: {linkData.properties.verdict}</Typography>
-              </div>
             </div>
+            {/* <div className={classes.secondLine}>
+              <div className = {classes.score}>
+                <Typography className={classes.scoreTxt}>Compatible Score: {score}</Typography>
+              </div>
+            </div> */}
             <Divider />
             <div className={classes.detailInfo}>
               <div className={classes.voteInfo}>
