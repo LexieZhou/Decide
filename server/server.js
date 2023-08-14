@@ -71,10 +71,46 @@ app.get('/filter/links/:targetId', async (req, res) => {
 app.get('/filter/nodes/entity/:entityName', async (req, res) => {
   try {
     const entityName = String(req.params.entityName);
-    const filteredNodes = await nodesCollection.find(
+    const filteredParentNodes = await nodesCollection.find(
       { name: { $regex: new RegExp("^" + entityName + "$", "i") } }
     ).toArray();
+    const parentIds = filteredParentNodes.map(node => node.id);
+
+    const filteredNodes = await nodesCollection.find({
+      $or: [
+        { id: { $in: parentIds } },
+        { childrens: { $in: parentIds } }
+      ]
+    }).toArray();
+
+    // const filteredNodes = await nodesCollection.find(
+    //   { name: { $regex: new RegExp("^" + entityName + "$", "i") } }
+    // ).toArray();
     res.json(filteredNodes);
+  } catch (e) {
+    console.error(e);
+    res.status(500).send('Error occurred while fetching data');
+  }
+});
+
+app.get('/filter/links/entity/:entityName', async (req, res) => {
+  try {
+    const entityName = String(req.params.entityName);
+    const filteredParentNodes = await nodesCollection.find(
+      { name: { $regex: new RegExp("^" + entityName + "$", "i") } }
+    ).toArray();
+    const parentIds = filteredParentNodes.map(node => node.id);
+
+    const filteredLinks = await linksCollection.find(
+      {
+        $or: [
+          { "source": { $in: parentIds } },
+          { "target": { $in: parentIds } }
+        ]
+      }
+    ).toArray();
+
+    res.json(filteredLinks);
   } catch (e) {
     console.error(e);
     res.status(500).send('Error occurred while fetching data');
@@ -101,7 +137,7 @@ app.get('/topNodes/:label', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 4027;
+const PORT = process.env.PORT || 4030;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

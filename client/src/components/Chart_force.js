@@ -7,11 +7,11 @@ import ToggleSideBar from './ToggleSideBar';
 // filter data by targetId
 export const filterData = async (targetId) => {
   try {
-    const response1 = await fetch(`http://localhost:4027/filter/nodes/${targetId}`);
+    const response1 = await fetch(`http://localhost:4030/filter/nodes/${targetId}`);
     const filteredNodesData = await response1.json();
     // console.log(filteredNodesData);
 
-    const response2 = await fetch(`http://localhost:4027/filter/links/${targetId}`);
+    const response2 = await fetch(`http://localhost:4030/filter/links/${targetId}`);
     const filteredlinksData = await response2.json();
     // console.log(filteredlinksData);
 
@@ -25,11 +25,11 @@ export const filterData = async (targetId) => {
 // fetch whole nodes and links data
 export const fetchData = async () => {
   try {
-    const response1 = await fetch(`http://localhost:4027/nodes`);
+    const response1 = await fetch(`http://localhost:4030/nodes`);
     const nodesData = await response1.json();
     // console.log(nodesData);
 
-    const response2 = await fetch(`http://localhost:4027/links`);
+    const response2 = await fetch(`http://localhost:4030/links`);
     const linksData = await response2.json();
     // console.log(linksData);
     
@@ -44,9 +44,11 @@ export const fetchData = async () => {
 export const filterDatabyEntityName = async (entityName) => {
   try {
     const official_entityName = configData.LIBRARIES[entityName];
-    const response1 = await fetch(`http://localhost:4027/filter/nodes/entity/${official_entityName}`);
+    const response1 = await fetch(`http://localhost:4030/filter/nodes/entity/${official_entityName}`);
     const filteredEntityData = await response1.json();
-    const filteredlinksData = [];
+
+    const response2 = await fetch(`http://localhost:4030/filter/links/entity/${official_entityName}`);
+    const filteredlinksData = await response2.json();
 
     createGraph(filteredEntityData, filteredlinksData, false);
   } catch (error) {

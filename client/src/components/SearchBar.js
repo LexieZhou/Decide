@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SearchBar({setResults}) {
     const [input, setInput] = useState("");
-    const url = "http://localhost:4027/nodes";
+    const url = "http://localhost:4030/nodes";
     const libraries = configData.LIBRARIES;
 
     const fetchData = (value) => {
