@@ -49,7 +49,7 @@ export default function HeadingAppBar() {
               <MenuIcon />
             </IconButton>
             <Typography className={classes.title} variant="h6" noWrap>
-              Knowledge-Graph Visualization
+              DL Stack Version Compatibility Knowledge Base
             </Typography>
             <SearchBar setResults={setResults}/>  
           </Toolbar>

@@ -15,12 +15,7 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             backgroundColor: alpha(theme.palette.common.white, 0.25),
         },
-        marginLeft: 0,
-        width: '200px',
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: theme.spacing(1),
-            width: '200px',
-        },
+        width: '600px',
     },
     searchIcon: {
         padding: theme.spacing(0, 2),

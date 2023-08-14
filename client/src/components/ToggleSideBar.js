@@ -94,53 +94,9 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-// const compatibleScore = (linkData) => {
-//   const pos_vote = linkData.properties.pos_vote;
-//   const neg_vote = linkData.properties.neg_vote;
-
-//   if (pos_vote !== "" && neg_vote !== "") {
-//     const posVotes = pos_vote.split('_');
-//     const negVotes = neg_vote.split('_');
-//     console.log(posVotes);
-//     console.log(negVotes);
-
-//     let sumPosVotes = 0;
-//     let sumNegVotes = 0;
-
-//     for (let i = 0; i < posVotes.length; i++) {
-//       sumPosVotes += parseInt(posVotes[i]);
-//     }
-//     for (let i = 0; i < negVotes.length; i++) {
-//       sumNegVotes += parseInt(negVotes[i]);
-//     }
-
-//     const score = (sumPosVotes - sumNegVotes) / (sumPosVotes + sumNegVotes);
-//     return score;
-//   } else if (pos_vote === "") {
-//     const negVotes = neg_vote.split('_');
-//     let sumNegVotes = 0;
-//     for (let i = 0; i < negVotes.length; i++) {
-//       sumNegVotes += parseInt(negVotes[i]);
-//     }
-//     const score = -1 * sumNegVotes;
-//     return score;
-//   } else if (neg_vote === "") {
-//     const posVotes = pos_vote.split('_');
-//     let sumPosVotes = 0;
-//     for (let i = 0; i < posVotes.length; i++) {
-//       sumPosVotes += parseInt(posVotes[i]);
-//     }
-//     const score = sumPosVotes;
-//     return score;
-//   }
-
-//   return 0;
-// };
-
 const ToggleSideBar = () => {
   const classes = useStyles();
   const [linkData, setLinkData] = useState(null);
-  // const [score, setScore] = useState(null);
 
   useEffect(() => {
       document.getElementById('close-panel').addEventListener('click', function() {
@@ -151,7 +107,6 @@ const ToggleSideBar = () => {
   useEffect(() => {
     window.addEventListener('linkClick', function(e) {
       setLinkData(e.detail);
-      // setScore(compatibleScore(e.detail));
     });
   }, []);
   
@@ -178,11 +133,6 @@ const ToggleSideBar = () => {
                 </div>
               </div>
             </div>
-            {/* <div className={classes.secondLine}>
-              <div className = {classes.score}>
-                <Typography className={classes.scoreTxt}>Compatible Score: {score}</Typography>
-              </div>
-            </div> */}
             <Divider />
             <div className={classes.detailInfo}>
               <div className={classes.voteInfo}>
