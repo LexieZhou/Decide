@@ -51,9 +51,9 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function SearchBar({setResults}) {
+export default function SearchBar({setResults, setShowHints}) {
     const [input, setInput] = useState("");
-    const url = "http://localhost:4030/nodes";
+    const url = `${configData.SERVER_URL}/nodes`;
     const libraries = configData.LIBRARIES;
 
     const fetchData = (value) => {
@@ -63,6 +63,7 @@ export default function SearchBar({setResults}) {
           let results = [];
           let entity_results = [];
           let node_results = [];
+          // search by entity name
           entity_results = Object.keys(libraries).filter((libKey) => {
             const lib = libraries[libKey];
             return (
@@ -71,6 +72,7 @@ export default function SearchBar({setResults}) {
               lib.toLowerCase().includes(value.toLowerCase())
             );
           });
+          // search by node name and node version
           if (Array.isArray(json)) { 
             node_results = json.filter((node) => {
               const nodeString = `${node.name} ${node.version || ''}`.toLowerCase();
@@ -123,6 +125,8 @@ export default function SearchBar({setResults}) {
               }}
               inputProps={{ 'aria-label': 'search' }}
               onChange={(e) => handleChange(e.target.value)}
+              onFocus={() => setShowHints(true)}
+              onBlur={() => setShowHints(false)}
             />
             {input && (
             <IconButton

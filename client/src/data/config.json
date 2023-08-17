@@ -1,4 +1,5 @@
 {
+    "SERVER_URL": "http://localhost:4030",
     "GRAPH_WIDTH": 1000,
     "GRAPH_HEIGHT": 800,
     "LARGE_NODE_RADIUS": 10,

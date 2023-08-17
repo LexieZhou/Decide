@@ -9,7 +9,7 @@ export default function Barchart({label}) {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        fetch(`http://localhost:4027/topNodes/${label}`)
+        fetch(`${configData.SERVER_URL}/topNodes/${label}`)
             .then(res => res.json())
             .then(data => {
                 setData(data);

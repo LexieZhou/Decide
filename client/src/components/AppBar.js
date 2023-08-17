@@ -34,6 +34,7 @@ export default function HeadingAppBar() {
     },
   });
   const [results, setResults] = useState([]);
+  const [showHints, setShowHints] = useState(false);
 
   return (
     <ThemeProvider theme={theme}>
@@ -51,11 +52,11 @@ export default function HeadingAppBar() {
             <Typography className={classes.title} variant="h6" noWrap>
               DL Stack Version Compatibility Knowledge Base
             </Typography>
-            <SearchBar setResults={setResults}/>  
+            <SearchBar setResults={setResults} setShowHints={setShowHints}/>  
           </Toolbar>
         </AppBar> 
       </div>
-      <SearchResult results={results}/>
+      <SearchResult results={results} showHints={showHints}/>
     </ThemeProvider>
   );
 }
