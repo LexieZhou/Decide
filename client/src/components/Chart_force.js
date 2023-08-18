@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import * as d3 from "d3";
 import configData from '../data/config.json';
 import './Chart.css';
@@ -56,6 +56,45 @@ export const filterDatabyEntityName = async (entityName) => {
     return null;
   }
 };
+
+export const filterDatabyQuestion = async (question) => {
+  try {
+    const regex = /^(Is|Does)\s+(\w+)\s+(\d+(\.\d+)?)\s+(compatible with|work with)\s+(\w+)\s+(\d+(\.\d+)?)/i;
+    const match = question.match(regex);
+    if (match) {
+      const [, , node1Name, node1Version, , , node2Name, node2Version] = match;
+    
+      console.log("Node 1:", node1Name, node1Version);
+      console.log("Node 2:", node2Name, node2Version);
+      const response1 = await fetch(`${configData.SERVER_URL}/filter/nodes/${node1Name}/${node1Version}/${node2Name}/${node2Version}`);
+      const filteredPairNodesData = await response1.json();
+      const response2 = await fetch(`${configData.SERVER_URL}/filter/links/${node1Name}/${node1Version}/${node2Name}/${node2Version}`);
+      const filteredPairLinksData = await response2.json();
+
+      // check whether have enough evidence
+      if (!evidenceCheck(filteredPairNodesData)) {
+        alert("Do not have enough evidence from Stack Overflow to answer this question. Try other questions.");
+      } else {
+        createGraph(filteredPairNodesData, filteredPairLinksData, false);
+      }
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    return null;
+  }
+};
+
+const evidenceCheck = (filteredPairNodesData) => {
+  if (filteredPairNodesData.length === 0 || filteredPairNodesData.length === 1) {
+    return false;
+  } else {
+    const filteredPairNodesName = filteredPairNodesData.map(node => node.name);
+    const allNamesAreSame = filteredPairNodesName.every(name => name === filteredPairNodesName[0]);
+    return !allNamesAreSame;
+  }
+}
+  
+
 
 
 export const createGraph = (nodesData, linksData, wholeView) => {

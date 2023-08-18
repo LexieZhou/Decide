@@ -83,9 +83,6 @@ app.get('/filter/nodes/entity/:entityName', async (req, res) => {
       ]
     }).toArray();
 
-    // const filteredNodes = await nodesCollection.find(
-    //   { name: { $regex: new RegExp("^" + entityName + "$", "i") } }
-    // ).toArray();
     res.json(filteredNodes);
   } catch (e) {
     console.error(e);
@@ -117,10 +114,92 @@ app.get('/filter/links/entity/:entityName', async (req, res) => {
   }
 });
 
+// filter data by pairNodes
+app.get('/filter/nodes/:node1Name/:node1Version/:node2Name/:node2Version', async (req, res) => {
+  try {
+    const node1Name = String(req.params.node1Name).toLowerCase().replace(/\s/g, '');
+    const node1Version = String(req.params.node1Version).toLowerCase().replace(/\s/g, '');
+    const node2Name = String(req.params.node2Name).toLowerCase().replace(/\s/g, '');
+    const node2Version = String(req.params.node2Version).toLowerCase().replace(/\s/g, '');
+
+    const filteredPairNodes = await nodesCollection.find({
+      $or: [
+        {
+          name: { $regex: new RegExp(`^${node1Name}$`, 'i') },
+          version: { $regex: new RegExp(`^${node1Version}`, 'i') }
+        },
+        {
+          name: { $regex: new RegExp(`^${node2Name}$`, 'i') },
+          version: { $regex: new RegExp(`^${node2Version}`, 'i') }
+        }
+      ]
+    }).toArray();
+    res.json(filteredPairNodes);
+
+    // // show other connected nodes
+    // const pairIds = filteredPairNodes.map(node => node.id);
+
+    // const filteredNodes = await nodesCollection.find({
+    //   $or: [
+    //     { id: { $in: pairIds } },
+    //     { childrens: { $in: pairIds } }
+    //   ]
+    // }).toArray();
+
+    // res.json(filteredNodes);
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+app.get('/filter/links/:node1Name/:node1Version/:node2Name/:node2Version', async (req, res) => {
+  try {
+    const node1Name = String(req.params.node1Name).toLowerCase().replace(/\s/g, '');
+    const node1Version = String(req.params.node1Version).toLowerCase().replace(/\s/g, '');
+    const node2Name = String(req.params.node2Name).toLowerCase().replace(/\s/g, '');
+    const node2Version = String(req.params.node2Version).toLowerCase().replace(/\s/g, '');
+
+    const filteredPairNodes = await nodesCollection.find({
+      $or: [
+        {
+          name: { $regex: new RegExp(`^${node1Name}$`, 'i') },
+          version: { $regex: new RegExp(`^${node1Version}`, 'i') }
+        },
+        {
+          name: { $regex: new RegExp(`^${node2Name}$`, 'i') },
+          version: { $regex: new RegExp(`^${node2Version}`, 'i') }
+        }
+      ]
+    }).toArray();
+    const pairIds = filteredPairNodes.map(node => node.id);
+    const filteredLinks = await linksCollection.find(
+      {
+          "source": { $in: pairIds },
+          "target": { $in: pairIds },
+      }
+    ).toArray();
+
+    // // show other connected links
+    // const filteredLinks = await linksCollection.find(
+    //   {
+    //     $or: [
+    //       { "source": { $in: pairIds } },
+    //       { "target": { $in: pairIds } }
+    //     ]
+    //   }
+    // ).toArray();
+
+    res.json(filteredLinks);
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 app.get('/topNodes/:label', async (req, res) => {
   try {
     const label = String(req.params.label);
-    // console.log("label: ", label);
 
     const pipeline = [
       { $match: { label: { $in: [label] } } },
@@ -137,7 +216,7 @@ app.get('/topNodes/:label', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 4030;
+const PORT = process.env.PORT || 4034;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

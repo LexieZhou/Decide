@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
-import { filterData, filterDatabyEntityName } from './Chart_force';
+import { filterData, filterDatabyEntityName, filterDatabyQuestion } from './Chart_force';
 import configData from '../data/config.json';
 
 const useStyles = makeStyles((theme) => ({
@@ -52,10 +52,6 @@ export default function SearchResult({results, showHints}) {
     },
     });
 
-    function handleEntityClick(entityName) {
-        filterDatabyEntityName(entityName); 
-    }
-
 
     return (
         <ThemeProvider theme={theme}>
@@ -73,13 +69,17 @@ export default function SearchResult({results, showHints}) {
                     </div>
                     <p className={classes.HintTxt}>Tensorflow 1.3</p>
                 </div>
-                <div className={classes.SingleSearchResult}>
+                <div className={classes.SingleSearchResult} 
+                    onClick={(e) => filterDatabyQuestion('Is Python 3.6 compatible with Ubuntu 16.04')}
+                    >
                     <div className={classes.HintIcon}>
                         <SearchOutlinedIcon fontSize='small'/>
                     </div>
                     <p className={classes.HintTxt}>Is Python 3.6 compatible with Ubuntu 16.04?</p>
                 </div>
-                <div className={classes.SingleSearchResult}>
+                <div className={classes.SingleSearchResult}
+                    onClick={(e) => filterDatabyQuestion('Does CUDA 9 work with cuDNN 7.0.5')}
+                    >
                     <div className={classes.HintIcon}>
                         <SearchOutlinedIcon fontSize='small'/>
                     </div>
@@ -87,39 +87,60 @@ export default function SearchResult({results, showHints}) {
                 </div>
             </div>
             )}
-            { (results.length !== 0) && 
+
+            { (results.length !== 0 && results[0] !== "") && 
                 (
                 <div className={classes.searchResult}>
                   {results.map((result, id) => {
-                    if (typeof result === 'string'){
+                    // for search value itself
+                    if (id === 0 && result in configData.LIBRARIES){
+                        return null;
+                    } else if (id === 0 ){
                         return (
                             <div className={classes.SingleSearchResult} 
                                 key={id} 
                                 onClick={(e) => 
-                                    filterDatabyEntityName(result)
+                                    filterDatabyQuestion(result)
                                 }
                                 >
-                                    <div className={classes.HintIcon}>
-                                        <SearchOutlinedIcon fontSize='small'/>
-                                    </div>
-                                {configData.LIBRARIES[result]}
+                                <div className={classes.HintIcon}>
+                                    <SearchOutlinedIcon fontSize='small'/>
+                                </div>
+                                {result}
                             </div>
                         );
                     } else {
-                        return (
-                            <div className={classes.SingleSearchResult} 
-                                key={id} 
-                                onClick={(e) => 
-                                    filterData(result.id)
-                                }
-                                >
+                        if (typeof result === 'string' && result in configData.LIBRARIES ){
+                            return (
+                                <div className={classes.SingleSearchResult} 
+                                    key={id} 
+                                    onClick={(e) => 
+                                        filterDatabyEntityName(result)
+                                    }
+                                    >
                                     <div className={classes.HintIcon}>
                                         <SearchOutlinedIcon fontSize='small'/>
                                     </div>
-                                {result.name + ' ' + result.version}
-                            </div>
-                        );
+                                    {configData.LIBRARIES[result]}
+                                </div>
+                            );
+                        } else {
+                            return (
+                                <div className={classes.SingleSearchResult} 
+                                    key={id} 
+                                    onClick={(e) => 
+                                        filterData(result.id)
+                                    }
+                                    >
+                                    <div className={classes.HintIcon}>
+                                        <SearchOutlinedIcon fontSize='small'/>
+                                    </div>
+                                    {result.name + ' ' + result.version}
+                                </div>
+                            );
+                        }
                     }
+
                   })}
                 </div>
                 )

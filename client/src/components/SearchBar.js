@@ -28,19 +28,12 @@ const useStyles = makeStyles((theme) => ({
     },
     inputRoot: {
         color: 'inherit',
+        width: '100%',
     },
     inputInput: {
         padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
         transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-          width: '12ch',
-          '&:focus': {
-            width: '20ch',
-          },
-        },
     },
     clearButton: {
       position: 'absolute',
@@ -60,9 +53,10 @@ export default function SearchBar({setResults, setShowHints}) {
       fetch(url)
         .then((response) => response.json())
         .then((json) => {
-          let results = [];
+          let results = [value];
           let entity_results = [];
           let node_results = [];
+
           // search by entity name
           entity_results = Object.keys(libraries).filter((libKey) => {
             const lib = libraries[libKey];
@@ -72,22 +66,22 @@ export default function SearchBar({setResults, setShowHints}) {
               lib.toLowerCase().includes(value.toLowerCase())
             );
           });
+          results = results.concat(entity_results);
+          
           // search by node name and node version
-          if (Array.isArray(json)) { 
-            node_results = json.filter((node) => {
-              const nodeString = `${node.name} ${node.version || ''}`.toLowerCase();
-              return (
-                value &&
-                node &&
-                node.name &&
-                nodeString.includes(value.toLowerCase())
-              );
-            });
-            results = entity_results.concat(node_results);
-          } else {
-            console.error('non-array data:', json);
-          }
-          console.log(results);
+          node_results = json.filter((node) => {
+            const nodeString = `${node.name} ${node.version || ''}`.toLowerCase();
+            return (
+              value &&
+              node &&
+              node.name &&
+              nodeString.includes(value.toLowerCase())
+            );
+          });
+          // combine entity and node search results
+          results = results.concat(node_results);
+
+          console.log('results: ', results);
           setResults(results);
         })
         .catch((error) => {
@@ -96,8 +90,8 @@ export default function SearchBar({setResults, setShowHints}) {
     }
     
     const handleChange = (value) => {
-        setInput(value);
-        fetchData(value);
+      setInput(value);
+      fetchData(value);
     }
     const handleClearClick = () => {
       setInput("");
