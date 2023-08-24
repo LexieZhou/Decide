@@ -8,6 +8,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import TableSortLabel from '@material-ui/core/TableSortLabel';
 import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -49,11 +50,44 @@ function createData(postId, postVote) {
     return { postLink, postVote};
 }
 
+function descendingComparator(a,b, orderBy) {
+  const valueA = typeof a[orderBy] === 'string' ? parseInt(a[orderBy], 10) : a[orderBy];
+  const valueB = typeof b[orderBy] === 'string' ? parseInt(b[orderBy], 10) : b[orderBy];
+
+  if (valueB < valueA) {
+    return -1;
+  }
+  if (valueB > valueA) {
+    return 1;
+  }
+  return 0;
+}
+
+function getComparator(order, orderBy) {
+  return order === "desc" 
+    ? (a,b) => descendingComparator(a,b, orderBy)
+    : (a,b) => -descendingComparator(a,b, orderBy);
+
+}
+
+const sortedRowInformation = (rowArray, comparator) => {
+  const stabilizedRowArray = rowArray.map((el, index) => [el, index]);
+  stabilizedRowArray.sort((a,b) => {
+    const order = comparator(a[0],b[0]);
+    if (order !==0) return order;
+    return a[1] - b[1]
+
+  })
+  return stabilizedRowArray.map((el) => el[0]);
+}
+
 const PostsList = ({posts_id, posts_vote}) => {
 
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(10);
+    const [rowsPerPage, setRowsPerPage] = React.useState(4);
+    const [orderDirection, setOrderDirection] = React.useState('desc');
+    const [valueToOrderBy, setValueToOrderBy] = React.useState('postVote');
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
@@ -63,6 +97,16 @@ const PostsList = ({posts_id, posts_vote}) => {
         setRowsPerPage(+event.target.value);
         setPage(0);
     };
+
+    const handleRequestSort = (event, property) => {
+      const isAscending = (valueToOrderBy === property && orderDirection === 'desc');
+      setValueToOrderBy(property);
+      setOrderDirection(isAscending ? 'asc' : 'desc');
+    }
+
+    const createSortHandler = (property) => (event) => {
+      handleRequestSort(event, property);
+    }
 
     const postIds = posts_id.split('_');
     const postVotes = posts_vote.split('_');
@@ -78,36 +122,42 @@ const PostsList = ({posts_id, posts_vote}) => {
                     <TableCell
                       key={column.id}
                       align={column.align}
-                      style={
-                        { minWidth: column.minWidth }}
+                      style={{ minWidth: column.minWidth }}
                     >
-                      {column.label}
+                      <TableSortLabel
+                        active={valueToOrderBy === column.id}
+                        direction={valueToOrderBy === column.id ? orderDirection: 'desc'}
+                        onClick={createSortHandler(column.id)}
+                      >
+                        {column.label}
+                      </TableSortLabel>
+                      
                     </TableCell>
                   ))}
                 </TableRow>
               </TableHead>
+
+              
               <TableBody>
-                {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => {
-                  return (
-                    <TableRow hover role="checkbox" tabIndex={-1} key={row.postLink}>
-                      {columns.map((column) => {
-                        const value = row[column.id];
-                        return (
-                            <TableCell key={column.id} align={column.align}>
-                                <Typography className={classes.cellTxt}>
-                                    {column.format && typeof value === 'number' ? column.format(value) : value}
-                                </Typography>
-                            </TableCell>
-                        );
-                      })}
-                    </TableRow>
-                  );
-                })}
+                {
+                  sortedRowInformation(rows, getComparator(orderDirection, valueToOrderBy))
+                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                    .map((row, index) => (
+                      <TableRow key={index}>
+                        <TableCell>
+                          {row['postLink']}
+                        </TableCell>
+                        <TableCell>
+                          {row['postVote']}
+                        </TableCell>
+                      </TableRow>
+                  ))
+                }
               </TableBody>
             </Table>
           </TableContainer>
           <TablePagination
-            rowsPerPageOptions={[3]}
+            rowsPerPageOptions={[4]}
             component="div"
             count={rows.length}
             rowsPerPage={rowsPerPage}
