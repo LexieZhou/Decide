@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import AppBar from './components/AppBar';
 import SideBar from './components/SideBar';
@@ -34,16 +34,19 @@ const useStyles = makeStyles((theme) => ({
   },
   sideBar: {
     width: '20vw',
+    flex: '0 0 20vw'
   },
   chartContainer: {
     height: '91.8vh',
-    width: '80vw',
+    marginLeft: '2vw',
+    flexGrow: 1,
     display: 'flex',
     flexDirection: 'column',
+    overflow: 'auto',
   },
   radioPanel: {
     marginTop: '1vh',
-    width: '80vw',
+    width: '100%',
   },
 }));
 

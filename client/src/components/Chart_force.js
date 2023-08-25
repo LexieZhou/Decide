@@ -77,6 +77,8 @@ export const filterDatabyQuestion = async (question) => {
       } else {
         createGraph(filteredPairNodesData, filteredPairLinksData, false);
       }
+    } else {
+      alert("Question format doesn't match. Try searching for 'Is A compatible with B' or 'Does A work with B'.")
     }
   } catch (error) {
     console.error('Error:', error);
@@ -101,7 +103,7 @@ export const createGraph = (nodesData, linksData, wholeView) => {
   const GRAPH_WIDTH = configData.GRAPH_WIDTH;
   const GRAPH_HEIGHT = configData.GRAPH_HEIGHT;
 
-  // console.log("Run createGraph");
+  console.log("Run createGraph");
   // detect whether exists svg and tooltip
   const existingSvg = d3.select("#graph-svg");
   const existingTooltip = d3.select("#chart").select(".tooltip");

@@ -7,11 +7,11 @@ import ToggleSideBar from './ToggleSideBar';
 // fetch whole nodes and links data
 export const fetchClassifyData = async () => {
   try {
-    const response1 = await fetch(`http://localhost:4025/nodes`);
+    const response1 = await fetch(`${configData.SERVER_URL}/nodes`);
     const nodesData = await response1.json();
     // console.log(nodesData);
 
-    const response2 = await fetch(`http://localhost:4025/links`);
+    const response2 = await fetch(`${configData.SERVER_URL}/links`);
     const linksData = await response2.json();
     // console.log(linksData);
     

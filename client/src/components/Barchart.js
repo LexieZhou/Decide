@@ -6,7 +6,8 @@ import { filterData, fetchData } from "./Chart_force";
 
 export default function Barchart({label}) {
 
-    const [data, setData] = useState(null);
+    const [data, setData] = useState();
+    const chartId = `barchart-${label}`;
 
     useEffect(() => {
         fetch(`${configData.SERVER_URL}/topNodes/${label}`)
@@ -18,6 +19,11 @@ export default function Barchart({label}) {
 
     useEffect(() => {
         if (data) {
+            const existingChart = document.getElementById(chartId);
+            if (existingChart) {
+                return;
+            }
+
             const margin = {top: 40, right: 10, bottom: 30, left: 100};
             const width = 200 - margin.left - margin.right;
             const height = 150 - margin.top - margin.bottom;
@@ -26,6 +32,7 @@ export default function Barchart({label}) {
 
             const svg = d3.select("#Barchart")
                 .append("svg")
+                .attr("id", chartId)
                     .attr("width", width + margin.left + margin.right)
                     .attr("height", height + margin.top + margin.bottom)
                 .append("g")
@@ -62,6 +69,8 @@ export default function Barchart({label}) {
                 .text(function() {
                     if (label === "operating_system") {
                         return "OS";
+                    } else if (label === "application") {
+                        return "Database";
                     } else {
                         return label.charAt(0).toUpperCase() + label.slice(1);
                     }
@@ -126,7 +135,7 @@ export default function Barchart({label}) {
                 });
 
         }
-    }, [data]);
+    }, [data, chartId, label]);
 
     return (
         <div id="Barchart">

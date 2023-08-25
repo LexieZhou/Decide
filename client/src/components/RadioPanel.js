@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    margin: '10px 0px',
+    marginLeft: '20px',
+    marginBottom: '40px',
   },
   button: {
     // margin: theme.spacing(1),
@@ -70,7 +71,9 @@ export default function RadioButtonsGroup() {
             Whole View
           </Button>
         </FormControl>
-        {chartComponent}
+        <div>
+          {chartComponent}
+        </div>
     </div>
   );
 }
