@@ -118,9 +118,14 @@ export default function SearchBar({setResults, setShowHints}) {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
-              onChange={(e) => handleChange(e.target.value)}
+              onChange={(e) => {
+                if (e.target.value === "") {
+                  setShowHints(true);
+                }
+                handleChange(e.target.value);
+              }}
               onFocus={() => setShowHints(true)}
-              onBlur={() => setShowHints(false)}
+              // onBlur={() => setShowHints(false)}
             />
             {input && (
             <IconButton

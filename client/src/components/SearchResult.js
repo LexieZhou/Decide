@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
@@ -55,15 +55,18 @@ export default function SearchResult({results, showHints}) {
 
     return (
         <ThemeProvider theme={theme}>
-            {results.length === 0 && showHints && (
+            {(results.length === 0 || (results.length === 1 && results[0].length === 0)) 
+                && showHints && (
             <div className={classes.searchResult}>
-                <div className={classes.SingleSearchResult}>
+                <div className={classes.SingleSearchResult}
+                    onClick={(e) => filterDatabyEntityName("python")}>
                     <div className={classes.HintIcon}>
                         <SearchOutlinedIcon fontSize='small'/>
                     </div>
                     <p className={classes.HintTxt}>Python</p>
                 </div>
-                <div className={classes.SingleSearchResult}>
+                <div className={classes.SingleSearchResult}
+                    onClick={(e) => filterData(4453)}>
                     <div className={classes.HintIcon}>
                         <SearchOutlinedIcon fontSize='small'/>
                     </div>
