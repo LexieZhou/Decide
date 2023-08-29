@@ -22,13 +22,22 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         maxHeight: 1000,
     },
-    tableContent: {
+    table: {
         width: '100%',
     },
-    cellTxt: {
+    columnHeader: {
         fontFamily: 'Open Sans',
-        fontSize: '0.4rem',
-    }
+        fontSize: '0.8rem',
+        fontWeight: 'bold',
+    },
+    cellLinkText: {
+        fontFamily: 'Open Sans',
+        fontSize: '0.6rem',
+    },
+    cellVoteText: {
+        fontFamily: 'Open Sans',
+        fontSize: '0.7rem',
+    },
 }));
 
 const columns = [
@@ -114,7 +123,7 @@ const PostsList = ({posts_id, posts_vote}) => {
     return (
         <Paper className={classes.root}>
           <TableContainer className={classes.container}>
-            <Table stickyHeader aria-label="sticky table" className={classes.tableContent}>
+            <Table className={classes.table} size="small" aria-label="a dense table">
               <TableHead>
                 <TableRow>
                   {columns.map((column) => (
@@ -129,8 +138,10 @@ const PostsList = ({posts_id, posts_vote}) => {
                         active={valueToOrderBy === column.id}
                         direction={valueToOrderBy === column.id ? orderDirection: 'desc'}
                         onClick={createSortHandler(column.id)}
-                      >
-                        {column.label}
+                      > 
+                        <Typography variant="subtitle1" className={classes.columnHeader}>
+                          {column.label}
+                        </Typography>
                       </TableSortLabel>
                       
                     </TableCell>
@@ -146,10 +157,14 @@ const PostsList = ({posts_id, posts_vote}) => {
                     .map((row, index) => (
                       <TableRow key={index}>
                         <TableCell>
-                          {row['postLink']}
+                          <Typography variant="body1" className={classes.cellLinkText}>
+                            {row['postLink']}
+                          </Typography>
                         </TableCell>
                         <TableCell>
-                          {row['postVote']}
+                          <Typography variant="body2" className={classes.cellVoteText}>
+                            {row['postVote']}
+                          </Typography>
                         </TableCell>
                       </TableRow>
                   ))

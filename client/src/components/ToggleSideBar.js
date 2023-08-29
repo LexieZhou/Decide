@@ -93,6 +93,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '1vw',
     marginTop: '1vh',
   },
+  postList: {
+    marginTop: '1vh',
+  }
 
 }));
 
@@ -169,22 +172,23 @@ const ToggleSideBar = () => {
             </div>
             <Divider />
             <div className={classes.detailInfo}>
+              {linkData.properties.pos_post_id !== "" && (
               <div className={classes.voteInfo}>
                 <Typography className={classes.voteTitle}>Posts supporting compatible relationship</Typography>
                 <div className={classes.postList}>
-                  {linkData.properties.pos_post_id !== "" && (
-                    <PostsList posts_id={linkData.properties.pos_post_id} posts_vote={linkData.properties.pos_vote} />
-                  )}
+                  <PostsList posts_id={linkData.properties.pos_post_id} posts_vote={linkData.properties.pos_vote} />
                 </div>
-              </div>
+              </div> 
+              )}
+              
+              {linkData.properties.neg_post_id !== "" && (
               <div className={classes.voteInfo}>
                 <Typography className={classes.voteTitle}>Posts supporting incompatible relationship</Typography>
                 <div className={classes.postList}>
-                  {linkData.properties.neg_post_id !== "" && (
-                    <PostsList posts_id={linkData.properties.neg_post_id} posts_vote={linkData.properties.neg_vote} />
-                  )}
+                  <PostsList posts_id={linkData.properties.neg_post_id} posts_vote={linkData.properties.neg_vote} />
                 </div>
               </div>
+              )}
             </div>
         </div>}
       </div>
