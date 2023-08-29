@@ -97,6 +97,24 @@ export default function SearchBar({setResults, setShowHints}) {
       setInput("");
       fetchData("");
     }
+    
+    const handleSearchChange = (e) => {
+      if (e.target.value === '') {
+        setShowHints(true);
+      }
+      handleChange(e.target.value);
+    };
+  
+    const handleSearchFocus = () => {
+      setShowHints(true);
+    };
+  
+    const handleSearchBlur = () => {
+      setTimeout(() => {
+        setShowHints(false);
+      }, 200);
+    };
+
     const classes = useStyles();
     const theme = createTheme({
     typography: {
@@ -118,14 +136,9 @@ export default function SearchBar({setResults, setShowHints}) {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
-              onChange={(e) => {
-                if (e.target.value === "") {
-                  setShowHints(true);
-                }
-                handleChange(e.target.value);
-              }}
-              onFocus={() => setShowHints(true)}
-              // onBlur={() => setShowHints(false)}
+              onChange={handleSearchChange}
+              onFocus={handleSearchFocus}
+              onBlur={handleSearchBlur}
             />
             {input && (
             <IconButton

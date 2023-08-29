@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '5%',
         marginTop: '1vh',
         marginBottom: '1vh',
-
     },
     container: {
         width: '100%',
@@ -122,7 +121,9 @@ const PostsList = ({posts_id, posts_vote}) => {
                     <TableCell
                       key={column.id}
                       align={column.align}
-                      style={{ minWidth: column.minWidth }}
+                      style={{ 
+                        minWidth: column.minWidthWidth,
+                      }}
                     >
                       <TableSortLabel
                         active={valueToOrderBy === column.id}

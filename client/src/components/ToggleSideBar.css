@@ -1,8 +1,8 @@
 .right-panel {
     position: fixed;
     top: 0;
-    right: -300px;
-    width: 300px;
+    right: -400px;
+    width: 400px;
     height: 100%;
     background-color: white;
     transition: right 0.5s ease-out;
