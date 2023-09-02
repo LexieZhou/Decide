@@ -10,25 +10,31 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     width: '100vw',
+    overflow: 'hidden',
   },
   drawer: {
     flexShrink: 0,
     width: '30vw',
   },
+  drawerPaper: {
+    overflow: 'hidden',
+  },
   title: {
     fontSize: '16px',
     fontWeight: 'bold',
     marginTop: '2vh',
-    marginLeft: '1vw',
+    marginLeft: '2vw',
   },
   drawerContainer: {
-    // overflow: 'auto',
+    overflow: 'auto',
     marginTop: '2vh',
-    marginLeft: '0vw',
-    width: '250px',
+    marginLeft: '0.5vw',
+    marginRight: '0vw',
+    width: '260px',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
   },
 
 }));

@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '14px',
     fontWeight: 'bold',
     marginTop: '1vh',
-    marginLeft: '1vw',
+    marginLeft: '0.5vw',
   },
   panelContent: {
     display: 'flex',
@@ -90,7 +90,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignContent: 'center',
-    marginLeft: '1vw',
     marginTop: '1vh',
   },
   postList: {

@@ -24,8 +24,8 @@ export default function Barchart({label}) {
                 return;
             }
 
-            const margin = {top: 40, right: 10, bottom: 30, left: 100};
-            const width = 200 - margin.left - margin.right;
+            const margin = {top: 40, right: 20, bottom: 30, left: 90};
+            const width = 250 - margin.left - margin.right;
             const height = 150 - margin.top - margin.bottom;
             const maxLinkNum = d3.max(data, function(d) { return d.links_num; });
             const getNameWithVersion = (d) => { return d.name + " " + d.version; };

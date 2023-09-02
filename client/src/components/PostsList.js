@@ -10,38 +10,44 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import { Typography } from '@material-ui/core';
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '90%',
-        marginLeft: '5%',
-        marginTop: '1vh',
-        marginBottom: '1vh',
+      width: '100%',
+      marginTop: '1vh',
+      marginBottom: '1vh',
     },
     container: {
-        width: '100%',
-        maxHeight: 1000,
+      width: '100%',
+      maxHeight: 1000,
     },
     table: {
-        width: '100%',
+      width: '100%',
     },
     columnHeader: {
-        fontFamily: 'Open Sans',
-        fontSize: '0.8rem',
-        fontWeight: 'bold',
+      fontFamily: 'Open Sans',
+      fontSize: '0.8rem',
+      fontWeight: 'bold',
     },
     cellLinkText: {
-        fontFamily: 'Open Sans',
-        fontSize: '0.6rem',
+      fontFamily: 'Open Sans',
+      fontSize: '0.6rem',
     },
     cellVoteText: {
-        fontFamily: 'Open Sans',
-        fontSize: '0.7rem',
+      fontFamily: 'Open Sans',
+      fontSize: '0.7rem',
+    },
+    caption: {
+      marginTop: 'auto',
+      marginBottom: 'auto',
+      fontSize: "0.7rem",
+      fontFamily: 'Open Sans',
     },
 }));
 
 const columns = [
-    { id: 'postLink', label: 'Link', minWidth: 50, align: 'center' },
+    { id: 'postTitle', label: 'Title', minWidth: 50, align: 'center' },
     { id: 'postVote', label: 'Vote', minWidth: 20, align: 'center' },
 ];
 
@@ -54,8 +60,8 @@ function createRows(postIds, postVotes) {
 }
 
 function createData(postId, postVote) {
-    const postLink = `https://stackoverflow.com/questions/${postId}`;
-    return { postLink, postVote};
+    const postTitle = `https://stackoverflow.com/questions/${postId}`;
+    return { postTitle, postVote};
 }
 
 function descendingComparator(a,b, orderBy) {
@@ -158,7 +164,9 @@ const PostsList = ({posts_id, posts_vote}) => {
                       <TableRow key={index}>
                         <TableCell>
                           <Typography variant="body1" className={classes.cellLinkText}>
-                            {row['postLink']}
+                            <Link href={row['postTitle']} target="_blank" rel="noopener">
+                              {row['postTitle']}
+                            </Link>
                           </Typography>
                         </TableCell>
                         <TableCell>
@@ -180,6 +188,9 @@ const PostsList = ({posts_id, posts_vote}) => {
             page={page}
             onPageChange={handleChangePage}
             onRowsPerPageChange={handleChangeRowsPerPage}
+            classes={{
+              caption: classes.caption,
+            }}
           />
         </Paper>
       );
