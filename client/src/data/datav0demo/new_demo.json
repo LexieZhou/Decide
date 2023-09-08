@@ -1,0 +1,342 @@
+{
+    "nodes": [
+        {
+            "id": "4445",
+            "name": "extra_nvccflags",
+            "version": null,
+            "label": [
+                "api"
+            ]
+        },
+        {
+            "id": "4446",
+            "name": "gcc",
+            "version": "6",
+            "label": [
+                "tool"
+            ]
+        },
+        {
+            "id": "4463",
+            "name": "python",
+            "version": "3.5.4",
+            "label": [
+                "programming_language"
+            ]
+        },
+        {
+            "id": "4466",
+            "name": "processor_architecture",
+            "version": null,
+            "label": [
+                "api"
+            ]
+        },
+        {
+            "id": "4533",
+            "name": "tf.compat",
+            "version": null,
+            "label": [
+                "api"
+            ]
+        },
+        {
+            "id": "4409",
+            "name": "tensorflow",
+            "version": "1",
+            "label": [
+                "library"
+            ]
+        },
+        {
+            "id": "4567",
+            "name": "python",
+            "version": "2.7.3",
+            "label": [
+                "programming_language"
+            ]
+        },
+        {
+            "id": "4566",
+            "name": "unichr()",
+            "version": null,
+            "label": [
+                "api"
+            ]
+        },
+        {
+            "id": "4503",
+            "name": "python",
+            "version": "3.3",
+            "label": [
+                "programming_language"
+            ]
+        },
+        {
+            "id": "4383",
+            "name": "python",
+            "version": "3",
+            "label": [
+                "programming_language"
+            ]
+        },
+        {
+            "id": "4568",
+            "name": "chr()",
+            "version": null,
+            "label": [
+                "api"
+            ]
+        },
+        {
+            "id": "4402",
+            "name": "python",
+            "version": "2",
+            "label": [
+                "programming_language"
+            ]
+        },
+        {
+            "id": "4489",
+            "name": "python",
+            "version": "3.4",
+            "label": [
+                "programming_language"
+            ]
+        },
+        {
+            "id": "4578",
+            "name": "easy_install3",
+            "version": null,
+            "label": [
+                "api"
+            ]
+        }
+    ],
+    "links": [
+        {
+            "id": 9228,
+            "source": "4445",
+            "target": "4446",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 0.005474351346492767,
+                "neg_vote": "",
+                "pos_vote": "3",
+                "verdict": "yes",
+                "pos_post_id": "44950522",
+                "neg_post_id": ""
+            }
+        },
+        {
+            "id": 9229,
+            "source": "4446",
+            "target": "4445",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 0.005474351346492767,
+                "neg_vote": "",
+                "pos_vote": "3",
+                "verdict": "yes",
+                "pos_post_id": "44950522",
+                "neg_post_id": ""
+            }
+        },
+        {
+            "id": 9276,
+            "source": "4463",
+            "target": "4466",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 0.0002670766843948513,
+                "neg_vote": "",
+                "pos_vote": "15",
+                "verdict": "yes",
+                "pos_post_id": "50053286",
+                "neg_post_id": ""
+            }
+        },
+        {
+            "id": 9277,
+            "source": "4466",
+            "target": "4463",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 0.0002670766843948513,
+                "neg_vote": "",
+                "pos_vote": "15",
+                "verdict": "yes",
+                "pos_post_id": "50053286",
+                "neg_post_id": ""
+            }
+        },
+        {
+            "id": 9426,
+            "source": "4533",
+            "target": "4409",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 6.55650637781946e-07,
+                "neg_vote": "2",
+                "pos_vote": "",
+                "verdict": "no",
+                "pos_post_id": "",
+                "neg_post_id": "65432123"
+            }
+        },
+        {
+            "id": 9427,
+            "source": "4409",
+            "target": "4533",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 6.55650637781946e-07,
+                "neg_vote": "2",
+                "pos_vote": "",
+                "verdict": "no",
+                "pos_post_id": "",
+                "neg_post_id": "65432123"
+            }
+        },
+        {
+            "id": 9526,
+            "source": "4567",
+            "target": "4566",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 2.9802313861182483e-07,
+                "neg_vote": "",
+                "pos_vote": "8",
+                "verdict": "yes",
+                "pos_post_id": "13436167",
+                "neg_post_id": ""
+            }
+        },
+        {
+            "id": 9527,
+            "source": "4566",
+            "target": "4567",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 2.9802313861182483e-07,
+                "neg_vote": "",
+                "pos_vote": "8",
+                "verdict": "yes",
+                "pos_post_id": "13436167",
+                "neg_post_id": ""
+            }
+        },
+        {
+            "id": 9528,
+            "source": "4503",
+            "target": "4566",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 1.1920915312657598e-06,
+                "neg_vote": "8",
+                "pos_vote": "",
+                "verdict": "no",
+                "pos_post_id": "",
+                "neg_post_id": "13436167"
+            }
+        },
+        {
+            "id": 9529,
+            "source": "4566",
+            "target": "4503",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 1.1920915312657598e-06,
+                "neg_vote": "8",
+                "pos_vote": "",
+                "verdict": "no",
+                "pos_post_id": "",
+                "neg_post_id": "13436167"
+            }
+        },
+        {
+            "id": 9530,
+            "source": "4383",
+            "target": "4566",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 7.152552257139178e-07,
+                "neg_vote": "8",
+                "pos_vote": "",
+                "verdict": "no",
+                "pos_post_id": "",
+                "neg_post_id": "13436167"
+            }
+        },
+        {
+            "id": 9531,
+            "source": "4566",
+            "target": "4383",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 7.152552257139178e-07,
+                "neg_vote": "8",
+                "pos_vote": "",
+                "verdict": "no",
+                "pos_post_id": "",
+                "neg_post_id": "13436167"
+            }
+        },
+        {
+            "id": 9532,
+            "source": "4568",
+            "target": "4402",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 8.790913125267252e-05,
+                "neg_vote": "",
+                "pos_vote": "8",
+                "verdict": "yes",
+                "pos_post_id": "13436167",
+                "neg_post_id": ""
+            }
+        },
+        {
+            "id": 9533,
+            "source": "4402",
+            "target": "4568",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 8.790913125267252e-05,
+                "neg_vote": "",
+                "pos_vote": "8",
+                "verdict": "yes",
+                "pos_post_id": "13436167",
+                "neg_post_id": ""
+            }
+        },
+        {
+            "id": 9554,
+            "source": "4489",
+            "target": "4578",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 4.7683693082944956e-07,
+                "neg_vote": "",
+                "pos_vote": "42",
+                "verdict": "yes",
+                "pos_post_id": "33202506",
+                "neg_post_id": ""
+            }
+        },
+        {
+            "id": 9555,
+            "source": "4578",
+            "target": "4489",
+            "type": "API_WORK_WITH",
+            "properties": {
+                "loss": 4.7683693082944956e-07,
+                "neg_vote": "",
+                "pos_vote": "42",
+                "verdict": "yes",
+                "pos_post_id": "33202506",
+                "neg_post_id": ""
+            }
+        }
+    ]
+}

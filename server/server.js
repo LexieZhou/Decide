@@ -6,8 +6,8 @@ const { MongoClient } = require("mongodb");
 const uri = "mongodb+srv://admin:DXMWgyGa@kgdb.bibced2.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 const database = client.db('kgDB');
-const nodesCollection = database.collection('nodes2');
-const linksCollection = database.collection('links2');
+const nodesCollection = database.collection('nodes4');
+const linksCollection = database.collection('links4');
 
 app.use(cors());
 app.use(express.json());
@@ -216,7 +216,7 @@ app.get('/topNodes/:label', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 4034;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

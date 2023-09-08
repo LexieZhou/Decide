@@ -1,3 +1,4 @@
+# Link num data fetch for bar chart information
 import json
 with open('/Users/zhouzihan/Desktop/visual_kg/src/data/new_records.json', encoding='utf-8-sig') as f:
     data = json.load(f)
