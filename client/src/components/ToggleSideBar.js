@@ -24,29 +24,24 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'row',
     alignContent: 'center',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     marginTop: '2vh',
-    marginBottom: '1vh',
+    marginBottom: '2vh',
   },
-  firstColumn: {
+  Column: {
     display: 'flex',
     flexDirection: 'column',
     alignContent: 'center',
     justifyContent: 'flex-start',
     marginLeft: '1vw',
-  },
-  secondColumn: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignContent: 'center',
-    justifyContent: 'flex-start',
-    marginLeft: '3vw',
+    marginRight: '1vw',
   },
   titleTxt: {
     fontSize: '16px',
     fontWeight: 'bold',
     marginTop: '1.5vh',
-    marginLeft: '6vw',
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
   nodeTxt: {
     fontSize: '12px',
@@ -68,11 +63,6 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: '1vw',
     marginRight: '1vw',
     marginBottom: '1vh',
-  },
-  generalInfo: {
-    marginLeft: '1vw',
-    marginRight: '1vw',
-    marginBottom: '2vh',
   },
   detailInfo: {
     display: 'flex',
@@ -144,27 +134,25 @@ const ToggleSideBar = () => {
       <div id="right-panel" className="right-panel">
         <Toolbar />
         <div className ={classes.titleBar}>
-        <IconButton id="close-panel" color="primary" aria-label="add to shopping cart">
-            <CloseIcon />
-        </IconButton>
-        <Typography className={classes.titleTxt}>Compatible Information</Typography>
+          <IconButton id="close-panel" color="primary" aria-label="add to shopping cart">
+              <CloseIcon />
+          </IconButton>
+          <Typography className={classes.titleTxt}>Compatible Information</Typography>
         </div>
         {linkData && 
           <div className={classes.panelContent}>
             <div className={classes.basicInfo}>
-              <div className={classes.firstColumn}>
-                <div className={classes.generalInfo}>
-                  <div className={classes.nodeInfo}>
-                    <FiberManualRecordIcon style={{ color: configData.COLOR[linkData.source.label[0]] }}/>
-                    <Typography className={classes.nodeTxt}>{linkData.source.name} {linkData.source.version}</Typography>
-                  </div>
-                  <div className={classes.nodeInfo}>
-                    <FiberManualRecordIcon style={{ color: configData.COLOR[linkData.target.label[0]] }}/>
-                    <Typography className={classes.nodeTxt}>{linkData.target.name} {linkData.target.version}</Typography>
-                  </div>
+              <div className={classes.Column}>
+                <div className={classes.nodeInfo}>
+                  <FiberManualRecordIcon style={{ color: configData.COLOR[linkData.source.label[0]] }}/>
+                  <Typography className={classes.nodeTxt}>{linkData.source.name} {linkData.source.version}</Typography>
+                </div>
+                <div className={classes.nodeInfo}>
+                  <FiberManualRecordIcon style={{ color: configData.COLOR[linkData.target.label[0]] }}/>
+                  <Typography className={classes.nodeTxt}>{linkData.target.name} {linkData.target.version}</Typography>
                 </div>
               </div>
-              <div className={classes.secondColumn}>
+              <div className={classes.Column}>
                 <Typography className={classes.nodeTxt}>Relationship: {linkData.properties.verdict === "yes" ? "Compatible" : "Incompatible"}</Typography>
                 <Typography className={classes.nodeTxt}>Evidence Score: {score}</Typography>
               </div>

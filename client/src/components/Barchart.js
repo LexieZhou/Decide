@@ -69,8 +69,6 @@ export default function Barchart({label}) {
                 .text(function() {
                     if (label === "operating_system") {
                         return "OS";
-                    } else if (label === "application") {
-                        return "Database";
                     } else {
                         return label.charAt(0).toUpperCase() + label.slice(1);
                     }
