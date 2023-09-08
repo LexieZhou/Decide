@@ -8,6 +8,7 @@ const client = new MongoClient(uri);
 const database = client.db('kgDB');
 const nodesCollection = database.collection('nodes4');
 const linksCollection = database.collection('links4');
+const postsTitleCollection = database.collection('CorePostsTitle');
 
 app.use(cors());
 app.use(express.json());
@@ -215,8 +216,19 @@ app.get('/topNodes/:label', async (req, res) => {
   }
 });
 
+app.get("/postsTitle/:id", async (req, res) => {
+  try {
+    const postId = String(req.params.id);
+    const postsTitle = await postsTitleCollection.find({ id: postId}).toArray();
+    res.json(postsTitle);
+  } catch (e) {
+    console.error(e);
+    res.status(500).send('Error occurred while fetching post title data');
+  }
+});
+
 // Start the server
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4004;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

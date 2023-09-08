@@ -1,0 +1,143 @@
+{
+    "api": [],
+    "database": [],
+    "hardware": [],
+    "library": [
+        {
+            "id": 139,
+            "name": "psycopg 2",
+            "link_num": 38
+        },
+        {
+            "id": 4408,
+            "name": "TensorFlow 2",
+            "link_num": 32
+        },
+        {
+            "id": 4418,
+            "name": "Flask 0.10.1",
+            "link_num": 22
+        },
+        {
+            "id": 4477,
+            "name": "TensorFlow 2.1",
+            "link_num": 20
+        },
+        {
+            "id": 4456,
+            "name": "TensorFlow 1.12",
+            "link_num": 18
+        }
+    ],
+    "operating_system": [
+        {
+            "id": 4410,
+            "name": "Windows 7",
+            "link_num": 74
+        },
+        {
+            "id": 4495,
+            "name": "Windows 10",
+            "link_num": 72
+        },
+        {
+            "id": 4426,
+            "name": "Ubuntu 14.04",
+            "link_num": 46
+        },
+        {
+            "id": 4404,
+            "name": "Ubuntu 16.04",
+            "link_num": 42
+        },
+        {
+            "id": 4400,
+            "name": "Ubuntu 18.04",
+            "link_num": 32
+        }
+    ],
+    "programming_language": [],
+    "software": [],
+    "tool": [],
+    "driver": [
+        {
+            "id": 4443,
+            "name": "CUDA 8",
+            "link_num": 54
+        },
+        {
+            "id": 4449,
+            "name": "CUDA 9",
+            "link_num": 54
+        },
+        {
+            "id": 4474,
+            "name": "CUDA 10.1",
+            "link_num": 32
+        },
+        {
+            "id": 4473,
+            "name": "CUDA 11",
+            "link_num": 32
+        },
+        {
+            "id": 4434,
+            "name": "CUDA 10",
+            "link_num": 28
+        }
+    ],
+    "runtime": [
+        {
+            "id": 4378,
+            "name": "Python 2.7",
+            "link_num": 154
+        },
+        {
+            "id": 4383,
+            "name": "Python 3",
+            "link_num": 112
+        },
+        {
+            "id": 4480,
+            "name": "Python 3.7",
+            "link_num": 94
+        },
+        {
+            "id": 4436,
+            "name": "Python 3.6",
+            "link_num": 84
+        },
+        {
+            "id": 4381,
+            "name": "Python 3.5",
+            "link_num": 64
+        }
+    ],
+    "application": [
+        {
+            "id": 182,
+            "name": "MySQL 5.7",
+            "link_num": 12
+        },
+        {
+            "id": 4422,
+            "name": "PostgreSQL 9.4",
+            "link_num": 10
+        },
+        {
+            "id": 160,
+            "name": "PostgreSQL 9.3",
+            "link_num": 6
+        },
+        {
+            "id": 506,
+            "name": "MySQL 5",
+            "link_num": 4
+        },
+        {
+            "id": 508,
+            "name": "MySQL 5.6",
+            "link_num": 4
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
@@ -11,6 +11,7 @@ import TableRow from '@material-ui/core/TableRow';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import { Typography } from '@material-ui/core';
 import Link from '@material-ui/core/Link';
+import configData from '../data/config.json';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -51,19 +52,6 @@ const columns = [
     { id: 'postVote', label: 'Vote', minWidth: 20, align: 'center' },
 ];
 
-function createRows(postIds, postVotes) {
-    let rows = [];
-    for (let i = 0; i < postIds.length; i++) {
-        rows.push(createData(postIds[i], postVotes[i]));
-    }
-    return rows;
-}
-
-function createData(postId, postVote) {
-    const postTitle = `https://stackoverflow.com/questions/${postId}`;
-    return { postTitle, postVote};
-}
-
 function descendingComparator(a,b, orderBy) {
   const valueA = typeof a[orderBy] === 'string' ? parseInt(a[orderBy], 10) : a[orderBy];
   const valueB = typeof b[orderBy] === 'string' ? parseInt(b[orderBy], 10) : b[orderBy];
@@ -102,6 +90,7 @@ const PostsList = ({posts_id, posts_vote}) => {
     const [rowsPerPage, setRowsPerPage] = React.useState(4);
     const [orderDirection, setOrderDirection] = React.useState('desc');
     const [valueToOrderBy, setValueToOrderBy] = React.useState('postVote');
+    const [rows, setRows] = useState([]);
 
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
@@ -122,9 +111,40 @@ const PostsList = ({posts_id, posts_vote}) => {
       handleRequestSort(event, property);
     }
 
-    const postIds = posts_id.split('_');
-    const postVotes = posts_vote.split('_');
-    const rows = createRows(postIds, postVotes);
+    // const postIds = posts_id.split('_');
+    // const postVotes = posts_vote.split('_');
+    // const rows = createRows(postIds, postVotes);
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const postIds = posts_id.split('_');
+          const postVotes = posts_vote.split('_');
+          const data = await createRows(postIds, postVotes);
+          setRows(data);
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      };
+  
+      fetchData();
+    }, [posts_id, posts_vote]);
+
+    const createRows = async (ids, votes) => {
+      const rows = [];
+      for (let i = 0; i < ids.length; i++) {
+        try {
+          const response = await fetch(`${configData.SERVER_URL}/postsTitle/${ids[i]}`);
+          const data = await response.json();
+          const postId = ids[i];
+          const postTitle = data[0]['match_title'];
+          const postVote = votes[i];
+          rows.push({ 'postTitle': postTitle, 'postVote': postVote, 'postId': postId });
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      }
+      return rows;
+    };
 
     return (
         <Paper className={classes.root}>
@@ -164,7 +184,7 @@ const PostsList = ({posts_id, posts_vote}) => {
                       <TableRow key={index}>
                         <TableCell>
                           <Typography variant="body1" className={classes.cellLinkText}>
-                            <Link href={row['postTitle']} target="_blank" rel="noopener">
+                            <Link href={`https://stackoverflow.com/questions/${row['postId']}`} target="_blank" rel="noopener">
                               {row['postTitle']}
                             </Link>
                           </Typography>

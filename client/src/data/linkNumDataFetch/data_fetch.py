@@ -1,6 +1,6 @@
 # Link num data fetch for bar chart information
 import json
-with open('/Users/zhouzihan/Desktop/visual_kg/src/data/new_records.json', encoding='utf-8-sig') as f:
+with open('/Users/lexiezhou/Desktop/Visual_KnowledgeGraph/client/src/data/datav4/new_records4.json', encoding='utf-8-sig') as f:
     data = json.load(f)
 
 nodes_data = []
@@ -13,6 +13,9 @@ os_link_num = []
 pl_link_num = []
 sw_link_num = []
 tool_link_num = []
+driver_link_num = []
+runtime_link_num = []
+application_link_num = []
 
 official_name = {
     "wxpython": "wxPython",
@@ -81,6 +84,12 @@ for i in range(len(data['nodes'])):
         sw_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
     elif data['nodes'][i]['label'][0] == 'tool':
         tool_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
+    elif data['nodes'][i]['label'][0] == 'driver':
+        driver_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
+    elif data['nodes'][i]['label'][0] == 'runtime':
+        runtime_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
+    elif data['nodes'][i]['label'][0] == 'application':
+        application_link_num.append({"id": data['nodes'][i]['id'], "name": name_info, "link_num": data['nodes'][i]['links_num']})
 
 # add label information
 for i in range(len(labels)):
@@ -95,6 +104,9 @@ sorted_os_link_num = sorted(os_link_num, key=lambda x: x['link_num'], reverse=Tr
 sorted_pl_link_num = sorted(pl_link_num, key=lambda x: x['link_num'], reverse=True)[:5]
 sorted_sw_link_num = sorted(sw_link_num, key=lambda x: x['link_num'], reverse=True)[:5]
 sorted_tool_link_num = sorted(tool_link_num, key=lambda x: x['link_num'], reverse=True)[:5]
+sorted_driver_link_num = sorted(driver_link_num, key=lambda x: x['link_num'], reverse=True)[:5]
+runtime_link_num = sorted(runtime_link_num, key=lambda x: x['link_num'], reverse=True)[:5]
+application_link_num = sorted(application_link_num, key=lambda x: x['link_num'], reverse=True)[:5]
 
 
 search_data = {'nodes': nodes_data}
@@ -105,9 +117,12 @@ linkNum_data = {'api': sorted_api_link_num,
                 'operating_system': sorted_os_link_num, 
                 'programming_language': sorted_pl_link_num, 
                 'software': sorted_sw_link_num, 
-                'tool': sorted_tool_link_num}
+                'tool': sorted_tool_link_num,
+                'driver': sorted_driver_link_num,
+                'runtime': runtime_link_num,
+                'application': application_link_num}
 
-with open('/Users/zhouzihan/Desktop/visual_kg/public/data.json', 'w') as f:
-    json.dump(search_data, f, indent=4)
-with open('/Users/zhouzihan/Desktop/visual_kg/src/data/linkNum_data.json', 'w') as f:
+# with open('/Users/zhouzihan/Desktop/visual_kg/public/data.json', 'w') as f:
+#     json.dump(search_data, f, indent=4)
+with open('/Users/lexiezhou/Desktop/Visual_KnowledgeGraph/client/src/data/linkNum_data.json', 'w') as f:
     json.dump(linkNum_data, f, indent=4)
