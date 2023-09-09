@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'row',
     alignContent: 'center',
     justifyContent: 'center',
-    marginTop: '2vh',
+    // marginTop: '2vh',
     marginBottom: '2vh',
   },
   Column: {

@@ -87,7 +87,7 @@ const PostsList = ({posts_id, posts_vote}) => {
 
     const classes = useStyles();
     const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(4);
+    const [rowsPerPage, setRowsPerPage] = React.useState(5);
     const [orderDirection, setOrderDirection] = React.useState('desc');
     const [valueToOrderBy, setValueToOrderBy] = React.useState('postVote');
     const [rows, setRows] = useState([]);
@@ -111,9 +111,6 @@ const PostsList = ({posts_id, posts_vote}) => {
       handleRequestSort(event, property);
     }
 
-    // const postIds = posts_id.split('_');
-    // const postVotes = posts_vote.split('_');
-    // const rows = createRows(postIds, postVotes);
     useEffect(() => {
       const fetchData = async () => {
         try {
@@ -201,7 +198,7 @@ const PostsList = ({posts_id, posts_vote}) => {
             </Table>
           </TableContainer>
           <TablePagination
-            rowsPerPageOptions={[4]}
+            rowsPerPageOptions={[5]}
             component="div"
             count={rows.length}
             rowsPerPage={rowsPerPage}
