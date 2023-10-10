@@ -3,6 +3,7 @@ import * as d3 from "d3";
 import configData from '../data/config.json';
 import './Chart.css';
 import ToggleSideBar from './ToggleSideBar';
+import NodeToggleSideBar from './NodeToggleSideBar';
 
 // filter data by targetId
 export const filterData = async (targetId) => {
@@ -199,6 +200,7 @@ export const createGraph = (nodesData, linksData, wholeView) => {
       var linkData = d.srcElement.__data__;
       console.log("click link", linkData.id);
       document.getElementById('right-panel').classList.add('open');
+      document.getElementById('node-right-panel').classList.remove('open');
       const event = new CustomEvent('linkClick', { detail: linkData });
       window.dispatchEvent(event);
     });
@@ -305,7 +307,12 @@ export const createGraph = (nodesData, linksData, wholeView) => {
         .style("opacity", 0);
     })
     .on("click", function(event, d) {
-      console.log(d);
+      console.log(d.name);
+      var nodeName = d.name;
+      document.getElementById('node-right-panel').classList.add('open');
+      document.getElementById('right-panel').classList.remove('open');
+      const nodeClickEvent = new CustomEvent('nodeClick', { detail: { name: d.name, version: d.version } } );
+      window.dispatchEvent(nodeClickEvent);
     });
 
   //d3 zoom
@@ -362,6 +369,7 @@ const ChartForce = () => {
   return (
     <div id="chart">
       <ToggleSideBar />
+      <NodeToggleSideBar />
     </div>
   );
 };

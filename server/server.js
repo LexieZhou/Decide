@@ -8,6 +8,7 @@ const client = new MongoClient(uri);
 const database = client.db('kgDB');
 const nodesCollection = database.collection('nodes4');
 const linksCollection = database.collection('links4');
+const statsCollection = database.collection('stats');
 const postsTitleCollection = database.collection('CorePostsTitle');
 
 app.use(cors());
@@ -227,8 +228,19 @@ app.get("/postsTitle/:id", async (req, res) => {
   }
 });
 
+// stats information
+app.get("/stats", async (req, res) => {
+  try {
+    const stats = await statsCollection.find().toArray();
+    res.json(stats);
+  } catch (e) {
+    console.error(e);
+    res.status(500).send('Error occurred while fetching stats data');
+  }
+});
+
 // Start the server
-const PORT = process.env.PORT || 4004;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });

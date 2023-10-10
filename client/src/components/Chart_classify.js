@@ -3,6 +3,7 @@ import * as d3 from "d3";
 import configData from '../data/config.json';
 import './Chart.css';
 import ToggleSideBar from './ToggleSideBar';
+import NodeToggleSideBar from './NodeToggleSideBar';
 
 // fetch whole nodes and links data
 export const fetchClassifyData = async () => {
@@ -125,9 +126,13 @@ export const createClassifyGraph = (nodesData, linksData) => {
           return null;
       }
     })
-    .on('click', function() {
-      console.log("click link");
+    .on('click', function(d) {
+      var linkData = d.srcElement.__data__;
+      console.log("click link", linkData.id);
       document.getElementById('right-panel').classList.add('open');
+      document.getElementById('node-right-panel').classList.remove('open');
+      const event = new CustomEvent('linkClick', { detail: linkData });
+      window.dispatchEvent(event);
     });
 
   var nodes = g.append("g")
@@ -232,7 +237,11 @@ export const createClassifyGraph = (nodesData, linksData) => {
         .style("opacity", 0);
   })
     .on("click", function(event, d) {
-      console.log(d);
+      console.log(d.name);
+      document.getElementById('node-right-panel').classList.add('open');
+      document.getElementById('right-panel').classList.remove('open');
+      const nodeClickEvent = new CustomEvent('nodeClick', { detail: { name: d.name, version: d.version } });
+      window.dispatchEvent(nodeClickEvent);
   });
 
   //d3 zoom
@@ -344,6 +353,7 @@ const ChartClassify = () => {
   return (
     <div id="chart">
       <ToggleSideBar />
+      <NodeToggleSideBar />
     </div>
   );
 };

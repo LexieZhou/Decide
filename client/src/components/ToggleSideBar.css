@@ -14,3 +14,20 @@
     right: 0;
     overflow: auto;
 }
+
+.node-right-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100%;
+    background-color: white;
+    transition: right 0.5s ease-out;
+    outline: 1px solid rgba(0, 0, 0, 0.12);
+    overflow: auto;
+}
+
+.node-right-panel.open {
+    right: 0;
+    overflow: auto;
+}
