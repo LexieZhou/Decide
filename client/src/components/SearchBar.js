@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SearchBar({setResults, setShowHints}) {
     const [input, setInput] = useState("");
     const url = `${configData.SERVER_URL}/nodes`;
-    const libraries = configData.LIBRARIES;
+    const entities = configData.ENTITIES;
 
     const fetchData = (value) => {
       fetch(url)
@@ -58,8 +58,8 @@ export default function SearchBar({setResults, setShowHints}) {
           let node_results = [];
 
           // search by entity name
-          entity_results = Object.keys(libraries).filter((libKey) => {
-            const lib = libraries[libKey];
+          entity_results = Object.keys(entities).filter((libKey) => {
+            const lib = entities[libKey];
             return (
               value &&
               lib &&

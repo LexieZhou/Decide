@@ -96,7 +96,7 @@ export default function SearchResult({results, showHints}) {
                 <div className={classes.searchResult}>
                   {results.map((result, id) => {
                     // for search value itself
-                    if (id === 0 && result in configData.LIBRARIES){
+                    if (id === 0 && result in configData.ENTITIES){
                         return null;
                     } else if (id === 0 ){
                         return (
@@ -113,7 +113,7 @@ export default function SearchResult({results, showHints}) {
                             </div>
                         );
                     } else {
-                        if (typeof result === 'string' && result in configData.LIBRARIES ){
+                        if (typeof result === 'string' && result in configData.ENTITIES ){
                             return (
                                 <div className={classes.SingleSearchResult} 
                                     key={id} 
@@ -124,7 +124,7 @@ export default function SearchResult({results, showHints}) {
                                     <div className={classes.HintIcon}>
                                         <SearchOutlinedIcon fontSize='small'/>
                                     </div>
-                                    {configData.LIBRARIES[result]}
+                                    {configData.ENTITIES[result]}
                                 </div>
                             );
                         } else {

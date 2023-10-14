@@ -44,7 +44,7 @@ export const fetchData = async () => {
 
 export const filterDatabyEntityName = async (entityName) => {
   try {
-    const official_entityName = configData.LIBRARIES[entityName];
+    const official_entityName = configData.ENTITIES[entityName];
     const response1 = await fetch(`${configData.SERVER_URL}/filter/nodes/entity/${official_entityName}`);
     const filteredEntityData = await response1.json();
 
@@ -307,12 +307,14 @@ export const createGraph = (nodesData, linksData, wholeView) => {
         .style("opacity", 0);
     })
     .on("click", function(event, d) {
-      console.log(d.name);
-      var nodeName = d.name;
-      document.getElementById('node-right-panel').classList.add('open');
-      document.getElementById('right-panel').classList.remove('open');
-      const nodeClickEvent = new CustomEvent('nodeClick', { detail: { name: d.name, version: d.version } } );
-      window.dispatchEvent(nodeClickEvent);
+      var lowercaseNodeName = d.name.toLowerCase();
+      console.log("click node", lowercaseNodeName);
+      if (lowercaseNodeName in configData.LIBRARIES) {
+        document.getElementById('node-right-panel').classList.add('open');
+        document.getElementById('right-panel').classList.remove('open');
+        const nodeClickEvent = new CustomEvent('nodeClick', { detail: { name: lowercaseNodeName, version: d.version } } );
+        window.dispatchEvent(nodeClickEvent);
+      }
     });
 
   //d3 zoom

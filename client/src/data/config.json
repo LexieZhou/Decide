@@ -44,7 +44,7 @@
         "runtime": "#66bb6a"
     },
 
-    "LIBRARIES": {
+    "ENTITIES": {
         "wxpython": "wxPython",
         "tensorflow": "TensorFlow",
         "tfds": "TensorFlow Datasets",
@@ -85,5 +85,28 @@
         "mysql": "MySQL",
         "blender": "Blender",
         "emr": "Amazon EMR"    
+    },
+
+    "LIBRARIES": {
+        "airflow": "Airflow",
+        "fftw": "FFTW",
+        "flask": "Flask",
+        "flask-sqlalchemy": "Flask SQLAlchemy",
+        "keras": "Keras",
+        "numpy": "NumPy",
+        "pandas": "pandas",
+        "psycopg": "psycopg",
+        "pytorch": "PyTorch",
+        "scikit-learn": "scikit-learn",
+        "scipy": "SciPy",
+        "sqlalchemy": "SQLAlchemy",
+        "subprocess": "subprocess",
+        "tensorboard": "TensorBoard",
+        "tensorflow": "TensorFlow",
+        "tensorflow-core-platform": "TensorFlow Core Platform",
+        "tensorflow-datasets": "TensorFlow Datasets",
+        "tensorflow-transform": "TensorFlow Transform",
+        "wxpython": "wxPython",
+        "zappa": "Zappa"
     }
 }
