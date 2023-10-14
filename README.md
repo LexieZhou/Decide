@@ -1,4 +1,4 @@
-# Visual_KnowledgeGraph
+# WebDecide
 WebDecide: an interactive web interface that visualizes a weighted knowledge graph containing 2,376 version knowledge extracted from Stack Overflow discussions.
 
 ## Summary
