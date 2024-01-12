@@ -19,3 +19,4 @@ Version incompatibility issues are prevalent when reusing or reproducing deep le
 - npm start
 
 ## Video
+https://youtu.be/d7YUe2ahYWQ
