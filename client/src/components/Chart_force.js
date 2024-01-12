@@ -60,13 +60,12 @@ export const filterDatabyEntityName = async (entityName) => {
 
 export const filterDatabyQuestion = async (question) => {
   try {
-    const regex = /^(Is|Does)\s+(\w+)\s+(\d+(\.\d+)?)\s+(compatible with|work with)\s+(\w+)\s+(\d+(\.\d+)?)/i;
+    const regex = /^(Is|Does)\s+(\w+)\s?(-| |_)v{0,1}\s?((\d+(\.\d+){0,2})|((\d+(\.\d+){0,1})(\.x){0,1}))\s+(compatible with|work with)\s+(\w+)\s?(-| |_)v{0,1}\s?((\d+(\.\d+){0,2})|((\d+(\.\d+){0,1})(\.x){0,1}))\s?\??/i;
     const match = question.match(regex);
     if (match) {
-      const [, , node1Name, node1Version, , , node2Name, node2Version] = match;
-    
-      console.log("Node 1:", node1Name, node1Version);
-      console.log("Node 2:", node2Name, node2Version);
+      const [, ,node1Name, ,node1Version, , , , , , , ,node2Name, ,node2Version] = match;
+      // console.log("Node 1:", node1Name, node1Version);
+      // console.log("Node 2:", node2Name, node2Version);
       const response1 = await fetch(`${configData.SERVER_URL}/filter/nodes/${node1Name}/${node1Version}/${node2Name}/${node2Version}`);
       const filteredPairNodesData = await response1.json();
       const response2 = await fetch(`${configData.SERVER_URL}/filter/links/${node1Name}/${node1Version}/${node2Name}/${node2Version}`);
@@ -104,7 +103,7 @@ export const createGraph = (nodesData, linksData, wholeView) => {
   const GRAPH_WIDTH = configData.GRAPH_WIDTH;
   const GRAPH_HEIGHT = configData.GRAPH_HEIGHT;
 
-  console.log("Run createGraph");
+  // console.log("Run createGraph");
   // detect whether exists svg and tooltip
   const existingSvg = d3.select("#graph-svg");
   const existingTooltip = d3.select("#chart").select(".tooltip");
