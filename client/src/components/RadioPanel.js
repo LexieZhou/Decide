@@ -40,12 +40,12 @@ export default function RadioButtonsGroup() {
       setValue(event.target.value);
   };
 
-  let chartComponent;
-  if (value === 'forceView') {
-      chartComponent = <ChartForce />;
-  } else if (value === 'classifyView') {
-      chartComponent = <ChartClassify />;
-  }
+  // let chartComponent;
+  // if (value === 'forceView') {
+  //     chartComponent = <ChartForce />;
+  // } else if (value === 'classifyView') {
+  //     chartComponent = <ChartClassify />;
+  // }
 
 
   return (
@@ -53,7 +53,6 @@ export default function RadioButtonsGroup() {
         <FormControl component="fieldset" className={classes.root} >
           <RadioGroup aria-label="radioTabs" value={value} onChange={handleChange} row>
               <FormControlLabel value="forceView" control={<Radio size="small" />} label="Force-Directed View" />
-              <FormControlLabel value="classifyView" control={<Radio size="small" />} label="Label-Classified View" />
           </RadioGroup>
           <Button 
             variant="outlined" 
@@ -72,7 +71,8 @@ export default function RadioButtonsGroup() {
           </Button>
         </FormControl>
         <div>
-          {chartComponent}
+          {/* {chartComponent} */}
+          <ChartForce />
         </div>
     </div>
   );
