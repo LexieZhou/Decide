@@ -30,9 +30,9 @@ Remark: If encounter any dependency error, try `npm install --force` instead
 
 ### B. Information Panel
 - Click certain component
-  The information panel will present detailed information about the library sourced from \textit{Libraries.io}.
+  - The information panel will present detailed information about the library sourced from Libraries.io.
 - Click certain link
-  The information panel will show details about two components, their detected (in)compatibility relationship, an evidence score, and supporting posts. Additionally, you can explore posts supporting both the compatible and incompatible relationships. Clicking on the vote link takes you directly to the original posts on the Stack Overflow platform.
+  - The information panel will show details about two components, their detected (in)compatibility relationship, an evidence score, and supporting posts. Additionally, you can explore posts supporting both the compatible and incompatible relationships. Clicking on the vote link takes you directly to the original posts on the Stack Overflow platform.
   
 ### C. Search Bar
 Decide supports three kinds of searches. 
