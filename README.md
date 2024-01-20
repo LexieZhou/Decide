@@ -10,19 +10,20 @@ Version incompatibility issues are prevalent when reusing or reproducing deep le
 - Node.js: Ensure that you have Node.js installed on your system. You can download the latest version from the official Node.js website (https://nodejs.org) and follow the installation instructions for your operating system.
 
 ## Steps to Run the Tool
-- git clone https://github.com/LexieZhou/Decide.git
-- install dependencies
-  - cd server
-  - npm install
-  - cd ../client
-  - npm install
+- Clone or download this github repository:
+  - `git clone https://github.com/LexieZhou/Decide.git`
+- Install dependencies
+  - Navigate into the backend directory: `cd server`
+  - Install the requirements: `npm install`
+  - Navigate into the frontend directory: `cd ../client`
+  - Install the requirements: `npm install`
 - Start the Project
-  - cd server
-  - node server.js
-  - cd ../client
-  - npm start
+  - Navigate into the backend directory: `cd server`
+  - Start the server: `node server.js`
+  - Navigate into the frontend directory: `cd ../client`
+  - Start the project in browser: `npm start`
 
-Remark: If encounter any dependency error, try `npm install --force` instead
+Remark: If encounter any dependency error, try `npm install --force` instead.
 
 ## Usage
 ### A. Compatibility Visualizer
