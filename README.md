@@ -12,9 +12,9 @@ Version incompatibility issues are prevalent when reusing or reproducing deep le
 ## Steps to Run the Tool
 - git clone https://github.com/LexieZhou/Decide.git
 - install dependencies
-  - cd client
+  - cd server
   - npm install
-  - cd ../server
+  - cd ../client
   - npm install
 - Start the Project
   - cd server
@@ -23,6 +23,28 @@ Version incompatibility issues are prevalent when reusing or reproducing deep le
   - npm start
 
 Remark: If encounter any dependency error, try `npm install --force` instead
+
+## Usage
+### A. Compatibility Visualizer
+  Users can zoom in, zoom out, and drag to explore the details. Each node inside this knowledge graph is a versioned deep learning stack component. When hovering over the node, users can see the detailed information about this node in the right corner. The links between nodes represent their (in)compatibility relationships. Solid links indicate compatibility, while dashed links indicate an incompatibility relationship between two components.
+
+### B. Information Panel
+- Click certain component
+  The information panel will present detailed information about the library sourced from \textit{Libraries.io}.
+- Click certain link
+  The information panel will show details about two components, their detected (in)compatibility relationship, an evidence score, and supporting posts. Additionally, you can explore posts supporting both the compatible and incompatible relationships. Clicking on the vote link takes you directly to the original posts on the Stack Overflow platform.
+  
+### C. Search Bar
+Decide supports three kinds of searches. 
+- Quickly check the compatibility between two deep learning components by entering a simple query.
+  - e.g. Does Python 3.6.8 work with Ubuntu 16.04.6?
+- Search for compatibility knowledge about versioned deep learning components.
+  - e.g. Ubuntu 14.04
+- Explore compatibility knowledge for deep learning stack components with no version specified.
+  - e.g. Tensorflow
+
+### D. Statistical Panel
+Decide shows statistical information about the top entities in each deep learning layer in the left panel. Hovering over a bar allows you to filter the knowledge graph to display the corresponding deep learning stack component and its compatibility relationships in the Compatibility Visualizer.
 
 ## Video
 https://youtu.be/d7YUe2ahYWQ
