@@ -47,5 +47,8 @@ Decide supports three kinds of searches.
 ### D. Statistical Panel
 Decide shows statistical information about the top entities in each deep learning layer in the left panel. Hovering over a bar allows you to filter the knowledge graph to display the corresponding deep learning stack component and its compatibility relationships in the Compatibility Visualizer.
 
+## Results
+Evaluation in our technical paper shows that Decide accurately identify 65% of known version issues in 10 popular DL projects with a high precision (92%), while two state-of-the-art approaches PyEGo and Watchman can only detect 29% and 6% of these issues with 33% and 17% precision respectively. Additionally, after independent verification manually, 287 relations from 343 samples were confirmed as correct, resulting in an overall accuracy of 83.7% for knowledge graph quality.
+
 ## Video
 https://youtu.be/d7YUe2ahYWQ
