@@ -1,0 +1,923 @@
+[{
+    "wxpython": {
+        "Dependencies": {
+            "value": "2"
+        },
+        "Dependent packages": {
+            "value": "272"
+        },
+        "Dependent repositories": {
+            "value": "695"
+        },
+        "Total releases": {
+            "value": "21",
+            "href": "/pypi/wxPython/versions"
+        },
+        "Latest release": {
+            "value": "Jun  8, 2023"
+        },
+        "First release": {
+            "value": "Nov  1, 2010"
+        },
+        "Stars": {
+            "value": "2.03K",
+            "href": "https://github.com/wxWidgets/Phoenix/stargazers"
+        },
+        "Forks": {
+            "value": "507",
+            "href": "https://github.com/wxWidgets/Phoenix/network"
+        },
+        "Watchers": {
+            "value": "109",
+            "href": "https://github.com/wxWidgets/Phoenix/watchers"
+        },
+        "Contributors": {
+            "value": "116",
+            "href": "https://github.com/wxWidgets/Phoenix/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "44.8 MB"
+        },
+        "SourceRank": {
+            "value": "20",
+            "href": "/pypi/wxPython/sourcerank"
+        },
+        "keywords": "GUI wx wxWindows wxWidgets cross-platform user-interface awesome gui-framework gui-toolkit linux macosx python windows wxpython",
+        "license": "wxWindows",
+        "install_command": "pip install wxPython==4.2.1"
+    },
+    "tensorflow": {
+        "Dependencies": {
+            "value": "5"
+        },
+        "Dependent packages": {
+            "value": "59"
+        },
+        "Dependent repositories": {
+            "value": "0"
+        },
+        "Total releases": {
+            "value": "44",
+            "href": "/conda/tensorflow/versions"
+        },
+        "Latest release": {
+            "value": "May  2, 2023"
+        },
+        "First release": {
+            "value": "Jan 19, 2018"
+        },
+        "Stars": {
+            "value": "177K",
+            "href": "https://github.com/tensorflow/tensorflow/stargazers"
+        },
+        "Forks": {
+            "value": "88.9K",
+            "href": "https://github.com/tensorflow/tensorflow/network"
+        },
+        "Watchers": {
+            "value": "7,693",
+            "href": "https://github.com/tensorflow/tensorflow/watchers"
+        },
+        "Contributors": {
+            "value": "888",
+            "href": "https://github.com/tensorflow/tensorflow/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "887 MB"
+        },
+        "SourceRank": {
+            "value": "19",
+            "href": "/conda/tensorflow/sourcerank"
+        },
+        "keywords": "deep-learning deep-neural-networks distributed machine-learning ml neural-network python tensorflow",
+        "license": "Apache-2.0",
+        "install_command": "conda install -c anaconda tensorflow"
+    },
+    "tensorflow-datasets": {
+        "Dependencies": {
+            "value": "15"
+        },
+        "Dependent packages": {
+            "value": "159"
+        },
+        "Dependent repositories": {
+            "value": "51"
+        },
+        "Total releases": {
+            "value": "36",
+            "href": "/pypi/tensorflow-datasets/versions"
+        },
+        "Latest release": {
+            "value": "about 1 month ago"
+        },
+        "First release": {
+            "value": "Mar 13, 2017"
+        },
+        "Stars": {
+            "value": "3.99K",
+            "href": "https://github.com/tensorflow/datasets/stargazers"
+        },
+        "Forks": {
+            "value": "1.46K",
+            "href": "https://github.com/tensorflow/datasets/network"
+        },
+        "Watchers": {
+            "value": "111",
+            "href": "https://github.com/tensorflow/datasets/watchers"
+        },
+        "Contributors": {
+            "value": "250",
+            "href": "https://github.com/tensorflow/datasets/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "945 MB"
+        },
+        "SourceRank": {
+            "value": "20",
+            "href": "/pypi/tensorflow-datasets/sourcerank"
+        },
+        "keywords": "tensorflow machine learning datasets data dataset jax machine-learning numpy",
+        "license": "Apache-2.0",
+        "install_command": "pip install tensorflow-datasets==4.9.3"
+    },
+    "tensorboard": {
+        "Dependencies": {
+            "value": "12"
+        },
+        "Dependent packages": {
+            "value": "992"
+        },
+        "Dependent repositories": {
+            "value": "1.81K"
+        },
+        "Total releases": {
+            "value": "51",
+            "href": "/pypi/tensorboard/versions"
+        },
+        "Latest release": {
+            "value": "12 days ago"
+        },
+        "First release": {
+            "value": "Feb 25, 2017"
+        },
+        "Stars": {
+            "value": "6.32K",
+            "href": "https://github.com/tensorflow/tensorboard/stargazers"
+        },
+        "Forks": {
+            "value": "1.6K",
+            "href": "https://github.com/tensorflow/tensorboard/network"
+        },
+        "Watchers": {
+            "value": "191",
+            "href": "https://github.com/tensorflow/tensorboard/watchers"
+        },
+        "Contributors": {
+            "value": "267",
+            "href": "https://github.com/tensorflow/tensorboard/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "116 MB"
+        },
+        "SourceRank": {
+            "value": "22",
+            "href": "/pypi/tensorboard/sourcerank"
+        },
+        "keywords": "tensorflow tensorboard tensor machine learning visualizer",
+        "license": "Apache-2.0",
+        "install_command": "pip install tensorboard==2.14.1"
+    },
+    "pytorch": {
+        "Dependencies": {
+            "value": "0"
+        },
+        "Dependent packages": {
+            "value": "158"
+        },
+        "Dependent repositories": {
+            "value": "0"
+        },
+        "Total releases": {
+            "value": "27",
+            "href": "/conda/pytorch/versions"
+        },
+        "Latest release": {
+            "value": "27 days ago"
+        },
+        "First release": {
+            "value": "Nov 22, 2017"
+        },
+        "Stars": {
+            "value": "70.3K",
+            "href": "https://github.com/pytorch/pytorch/stargazers"
+        },
+        "Forks": {
+            "value": "19.2K",
+            "href": "https://github.com/pytorch/pytorch/network"
+        },
+        "Watchers": {
+            "value": "1,670",
+            "href": "https://github.com/pytorch/pytorch/watchers"
+        },
+        "Contributors": {
+            "value": "569",
+            "href": "https://github.com/pytorch/pytorch/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "1.12 GB"
+        },
+        "SourceRank": {
+            "value": "20",
+            "href": "/conda/pytorch/sourcerank"
+        },
+        "keywords": "autograd deep-learning gpu machine-learning neural-network numpy python tensor",
+        "license": "BSD-3-Clause",
+        "install_command": "conda install -c anaconda pytorch"
+    },
+    "numpy": {
+        "Dependencies": {
+            "value": "0"
+        },
+        "Dependent packages": {
+            "value": "52.5K"
+        },
+        "Dependent repositories": {
+            "value": "84.9K"
+        },
+        "Total releases": {
+            "value": "152",
+            "href": "/pypi/numpy/versions"
+        },
+        "Latest release": {
+            "value": "23 days ago"
+        },
+        "First release": {
+            "value": "Dec  2, 2006"
+        },
+        "Stars": {
+            "value": "24.2K",
+            "href": "https://github.com/numpy/numpy/stargazers"
+        },
+        "Forks": {
+            "value": "8.39K",
+            "href": "https://github.com/numpy/numpy/network"
+        },
+        "Watchers": {
+            "value": "592",
+            "href": "https://github.com/numpy/numpy/watchers"
+        },
+        "Contributors": {
+            "value": "905",
+            "href": "https://github.com/numpy/numpy/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "122 MB"
+        },
+        "SourceRank": {
+            "value": "31",
+            "href": "/pypi/numpy/sourcerank"
+        },
+        "keywords": "numpy python",
+        "license": "Other",
+        "install_command": "pip install numpy==1.26.0"
+    },
+    "scipy": {
+        "Dependencies": {
+            "value": "1"
+        },
+        "Dependent packages": {
+            "value": "20.7K"
+        },
+        "Dependent repositories": {
+            "value": "43.4K"
+        },
+        "Total releases": {
+            "value": "97",
+            "href": "/pypi/scipy/versions"
+        },
+        "Latest release": {
+            "value": "12 days ago"
+        },
+        "First release": {
+            "value": "Jul 27, 2010"
+        },
+        "Stars": {
+            "value": "11.7K",
+            "href": "https://github.com/scipy/scipy/stargazers"
+        },
+        "Forks": {
+            "value": "4.86K",
+            "href": "https://github.com/scipy/scipy/network"
+        },
+        "Watchers": {
+            "value": "345",
+            "href": "https://github.com/scipy/scipy/watchers"
+        },
+        "Contributors": {
+            "value": "789",
+            "href": "https://github.com/scipy/scipy/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "144 MB"
+        },
+        "SourceRank": {
+            "value": "28",
+            "href": "/pypi/scipy/sourcerank"
+        },
+        "keywords": "algorithms closember python scientific-computing scipy",
+        "license": "BSD-3-Clause",
+        "install_command": "pip install scipy==1.11.3"
+    },
+    "scikit-learn": {
+        "Dependencies": {
+            "value": "4"
+        },
+        "Dependent packages": {
+            "value": "10.7K"
+        },
+        "Dependent repositories": {
+            "value": "18.9K"
+        },
+        "Total releases": {
+            "value": "72",
+            "href": "/pypi/scikit-learn/versions"
+        },
+        "Latest release": {
+            "value": "18 days ago"
+        },
+        "First release": {
+            "value": "Sep 22, 2011"
+        },
+        "Stars": {
+            "value": "56K",
+            "href": "https://github.com/scikit-learn/scikit-learn/stargazers"
+        },
+        "Forks": {
+            "value": "24.7K",
+            "href": "https://github.com/scikit-learn/scikit-learn/network"
+        },
+        "Watchers": {
+            "value": "2,167",
+            "href": "https://github.com/scikit-learn/scikit-learn/watchers"
+        },
+        "Contributors": {
+            "value": "935",
+            "href": "https://github.com/scikit-learn/scikit-learn/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "152 MB"
+        },
+        "SourceRank": {
+            "value": "29",
+            "href": "/pypi/scikit-learn/sourcerank"
+        },
+        "keywords": "data-analysis data-science machine-learning python statistics",
+        "license": "BSD-3-Clause",
+        "install_command": "pip install scikit-learn==1.3.1"
+    },
+    "pandas": {
+        "Dependencies": {
+            "value": "3"
+        },
+        "Dependent packages": {
+            "value": "34.3K"
+        },
+        "Dependent repositories": {
+            "value": "38.4K"
+        },
+        "Total releases": {
+            "value": "119",
+            "href": "/pypi/pandas/versions"
+        },
+        "Latest release": {
+            "value": "19 days ago"
+        },
+        "First release": {
+            "value": "Dec 25, 2009"
+        },
+        "Stars": {
+            "value": "39.8K",
+            "href": "https://github.com/pandas-dev/pandas/stargazers"
+        },
+        "Forks": {
+            "value": "16.7K",
+            "href": "https://github.com/pandas-dev/pandas/network"
+        },
+        "Watchers": {
+            "value": "1,126",
+            "href": "https://github.com/pandas-dev/pandas/watchers"
+        },
+        "Contributors": {
+            "value": "1.07K",
+            "href": "https://github.com/pandas-dev/pandas/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "323 MB"
+        },
+        "SourceRank": {
+            "value": "32",
+            "href": "/pypi/pandas/sourcerank"
+        },
+        "keywords": "alignment data-analysis data-science flexible pandas python",
+        "license": "Other",
+        "install_command": "pip install pandas==2.1.1"
+    },
+    "keras": {
+        "Dependencies": {
+            "value": "0"
+        },
+        "Dependent packages": {
+            "value": "639"
+        },
+        "Dependent repositories": {
+            "value": "0"
+        },
+        "Total releases": {
+            "value": "82",
+            "href": "/pypi/keras/versions"
+        },
+        "Latest release": {
+            "value": "28 days ago"
+        },
+        "First release": {
+            "value": "Dec  1, 2015"
+        },
+        "Stars": {
+            "value": "59.1K",
+            "href": "https://github.com/keras-team/keras/stargazers"
+        },
+        "Forks": {
+            "value": "19.4K",
+            "href": "https://github.com/keras-team/keras/network"
+        },
+        "Watchers": {
+            "value": "1,919",
+            "href": "https://github.com/keras-team/keras/watchers"
+        },
+        "Contributors": {
+            "value": "860",
+            "href": "https://github.com/keras-team/keras/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "35.3 MB"
+        },
+        "SourceRank": {
+            "value": "22",
+            "href": "/pypi/keras/sourcerank"
+        },
+        "keywords": "keras tensorflow machine learning deep data-science deep-learning machine-learning neural-networks python",
+        "license": "Apache-2.0",
+        "install_command": "pip install keras==2.14.0"
+    },
+    "flask": {
+        "Dependencies": {
+            "value": "5"
+        },
+        "Dependent packages": {
+            "value": "6.79K"
+        },
+        "Dependent repositories": {
+            "value": "116K"
+        },
+        "Total releases": {
+            "value": "57",
+            "href": "/pypi/Flask/versions"
+        },
+        "Latest release": {
+            "value": "9 days ago"
+        },
+        "First release": {
+            "value": "Apr 16, 2010"
+        },
+        "Stars": {
+            "value": "64.5K",
+            "href": "https://github.com/pallets/flask/stargazers"
+        },
+        "Forks": {
+            "value": "15.9K",
+            "href": "https://github.com/pallets/flask/network"
+        },
+        "Watchers": {
+            "value": "2,152",
+            "href": "https://github.com/pallets/flask/watchers"
+        },
+        "Contributors": {
+            "value": "625",
+            "href": "https://github.com/pallets/flask/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "9.83 MB"
+        },
+        "SourceRank": {
+            "value": "30",
+            "href": "/pypi/Flask/sourcerank"
+        },
+        "keywords": "flask jinja pallets python web-framework werkzeug wsgi",
+        "license": "BSD-3-Clause",
+        "install_command": "pip install Flask==3.0.0"
+    },
+    "zappa": {
+        "Dependencies": {
+            "value": "17"
+        },
+        "Dependent packages": {
+            "value": "11"
+        },
+        "Dependent repositories": {
+            "value": "389"
+        },
+        "Total releases": {
+            "value": "133",
+            "href": "/pypi/zappa/versions"
+        },
+        "Latest release": {
+            "value": "24 days ago"
+        },
+        "First release": {
+            "value": "Jan 25, 2016"
+        },
+        "Stars": {
+            "value": "2.66K",
+            "href": "https://github.com/zappa/Zappa/stargazers"
+        },
+        "Forks": {
+            "value": "353",
+            "href": "https://github.com/zappa/Zappa/network"
+        },
+        "Watchers": {
+            "value": "38",
+            "href": "https://github.com/zappa/Zappa/watchers"
+        },
+        "Contributors": {
+            "value": "239",
+            "href": "https://github.com/zappa/Zappa/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "5.37 MB"
+        },
+        "SourceRank": {
+            "value": "17",
+            "href": "/pypi/zappa/sourcerank"
+        },
+        "keywords": "alb api-gateway aws aws-lambda bottle django flask hacktoberfest lambda pyramid python serverless serverless-framework zappa",
+        "license": "MIT",
+        "install_command": "pip install zappa==0.58.0"
+    },
+    "subprocess": {
+        "Dependencies": {
+            "value": "0"
+        },
+        "Dependent packages": {
+            "value": "156"
+        },
+        "Dependent repositories": {
+            "value": "67"
+        },
+        "Total releases": {
+            "value": "31",
+            "href": "/cargo/subprocess/versions"
+        },
+        "Latest release": {
+            "value": "May 15, 2022"
+        },
+        "First release": {
+            "value": "Jan 14, 2017"
+        },
+        "Stars": {
+            "value": "381",
+            "href": "https://github.com/hniksic/rust-subprocess/stargazers"
+        },
+        "Forks": {
+            "value": "41",
+            "href": "https://github.com/hniksic/rust-subprocess/network"
+        },
+        "Watchers": {
+            "value": "6",
+            "href": "https://github.com/hniksic/rust-subprocess/watchers"
+        },
+        "Contributors": {
+            "value": "15",
+            "href": "https://github.com/hniksic/rust-subprocess/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "383 KB"
+        },
+        "SourceRank": {
+            "value": "17",
+            "href": "/cargo/subprocess/sourcerank"
+        },
+        "keywords": "command process pipe execute redirect",
+        "license": "",
+        "install_command": ""
+    },
+    "sqlalchemy": {
+        "Dependencies": {
+            "value": "0"
+        },
+        "Dependent packages": {
+            "value": "5.66K"
+        },
+        "Dependent repositories": {
+            "value": "41.9K"
+        },
+        "Total releases": {
+            "value": "291",
+            "href": "/pypi/SQLAlchemy/versions"
+        },
+        "Latest release": {
+            "value": "21 days ago"
+        },
+        "First release": {
+            "value": "Feb 14, 2006"
+        },
+        "Stars": {
+            "value": "7.44K",
+            "href": "https://github.com/sqlalchemy/sqlalchemy/stargazers"
+        },
+        "Forks": {
+            "value": "1.18K",
+            "href": "https://github.com/sqlalchemy/sqlalchemy/network"
+        },
+        "Watchers": {
+            "value": "92",
+            "href": "https://github.com/sqlalchemy/sqlalchemy/watchers"
+        },
+        "Contributors": {
+            "value": "490",
+            "href": "https://github.com/sqlalchemy/sqlalchemy/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "99.6 MB"
+        },
+        "SourceRank": {
+            "value": "28",
+            "href": "/pypi/SQLAlchemy/sourcerank"
+        },
+        "keywords": "python sql sqlalchemy",
+        "license": "MIT",
+        "install_command": "pip install SQLAlchemy==2.0.21"
+    },
+    "psycopg": {
+        "Dependencies": {
+            "value": "1"
+        },
+        "Dependent packages": {
+            "value": "144"
+        },
+        "Dependent repositories": {
+            "value": "38"
+        },
+        "Total releases": {
+            "value": "34",
+            "href": "/pypi/psycopg/versions"
+        },
+        "Latest release": {
+            "value": "12 days ago"
+        },
+        "First release": {
+            "value": "Jan 11, 2006"
+        },
+        "Stars": {
+            "value": "1.2K",
+            "href": "https://github.com/psycopg/psycopg/stargazers"
+        },
+        "Forks": {
+            "value": "126",
+            "href": "https://github.com/psycopg/psycopg/network"
+        },
+        "Watchers": {
+            "value": "29",
+            "href": "https://github.com/psycopg/psycopg/watchers"
+        },
+        "Contributors": {
+            "value": "43",
+            "href": "https://github.com/psycopg/psycopg/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "4.99 MB"
+        },
+        "SourceRank": {
+            "value": "19",
+            "href": "/pypi/psycopg/sourcerank"
+        },
+        "keywords": "database development driver postgresql python",
+        "license": "LGPL-3.0",
+        "install_command": "pip install psycopg==3.1.12"
+    },
+    "flask-sqlalchemy": {
+        "Dependencies": {
+            "value": "2"
+        },
+        "Dependent packages": {
+            "value": "642"
+        },
+        "Dependent repositories": {
+            "value": "26K"
+        },
+        "Total releases": {
+            "value": "35",
+            "href": "/pypi/Flask-SQLAlchemy/versions"
+        },
+        "Latest release": {
+            "value": "28 days ago"
+        },
+        "First release": {
+            "value": "Jun  2, 2010"
+        },
+        "Stars": {
+            "value": "4.06K",
+            "href": "https://github.com/pallets-eco/flask-sqlalchemy/stargazers"
+        },
+        "Forks": {
+            "value": "917",
+            "href": "https://github.com/pallets-eco/flask-sqlalchemy/network"
+        },
+        "Watchers": {
+            "value": "117",
+            "href": "https://github.com/pallets-eco/flask-sqlalchemy/watchers"
+        },
+        "Contributors": {
+            "value": "109",
+            "href": "https://github.com/pallets-eco/flask-sqlalchemy/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "1.55 MB"
+        },
+        "SourceRank": {
+            "value": "24",
+            "href": "/pypi/Flask-SQLAlchemy/sourcerank"
+        },
+        "keywords": "flask flask-sqlalchemy python sqlalchemy",
+        "license": "BSD-3-Clause",
+        "install_command": "pip install Flask-SQLAlchemy==3.1.1"
+    },
+    "tensorflow-core-platform": {
+        "Dependencies": {
+            "value": "2"
+        },
+        "Dependent packages": {
+            "value": "0"
+        },
+        "Dependent repositories": {
+            "value": "0"
+        },
+        "Total releases": {
+            "value": "7",
+            "href": "/maven/org.tensorflow:tensorflow-core-platform/versions"
+        },
+        "Latest release": {
+            "value": "Feb 20, 2023"
+        },
+        "First release": {
+            "value": "Oct  7, 2020"
+        },
+        "Stars": {
+            "value": "643",
+            "href": "https://github.com/tensorflow/java/stargazers"
+        },
+        "Forks": {
+            "value": "160",
+            "href": "https://github.com/tensorflow/java/network"
+        },
+        "Watchers": {
+            "value": "33",
+            "href": "https://github.com/tensorflow/java/watchers"
+        },
+        "Contributors": {
+            "value": "51",
+            "href": "https://github.com/tensorflow/java/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "16.2 MB"
+        },
+        "SourceRank": {
+            "value": "14",
+            "href": "/maven/org.tensorflow:tensorflow-core-platform/sourcerank"
+        },
+        "keywords": "",
+        "license": "Apache-2.0",
+        "install_command": ""
+    },
+    "tensorflow-transform": {
+        "Dependencies": {
+            "value": "9"
+        },
+        "Dependent packages": {
+            "value": "14"
+        },
+        "Dependent repositories": {
+            "value": "42"
+        },
+        "Total releases": {
+            "value": "56",
+            "href": "/pypi/tensorflow-transform/versions"
+        },
+        "Latest release": {
+            "value": "about 2 months ago"
+        },
+        "First release": {
+            "value": "Feb 17, 2017"
+        },
+        "SourceRank": {
+            "value": "9",
+            "href": "/pypi/tensorflow-transform/sourcerank"
+        },
+        "keywords": "tensorflow transform tfx",
+        "license": "Apache-2.0",
+        "install_command": "pip install tensorflow-transform==1.14.0"
+    },
+    "airflow": {
+        "Dependencies": {
+            "value": "54"
+        },
+        "Dependent packages": {
+            "value": "66"
+        },
+        "Dependent repositories": {
+            "value": "0"
+        },
+        "Total releases": {
+            "value": "39",
+            "href": "/conda/airflow/versions"
+        },
+        "Latest release": {
+            "value": "Dec 16, 2022"
+        },
+        "First release": {
+            "value": "May 15, 2018"
+        },
+        "Stars": {
+            "value": "31.5K",
+            "href": "https://github.com/apache/airflow/stargazers"
+        },
+        "Forks": {
+            "value": "12.7K",
+            "href": "https://github.com/apache/airflow/network"
+        },
+        "Watchers": {
+            "value": "759",
+            "href": "https://github.com/apache/airflow/watchers"
+        },
+        "Contributors": {
+            "value": "849",
+            "href": "https://github.com/apache/airflow/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "207 MB"
+        },
+        "SourceRank": {
+            "value": "16",
+            "href": "/conda/airflow/sourcerank"
+        },
+        "keywords": "airflow apache apache-airflow hacktoberfest python scheduler workflow",
+        "license": "Apache-2.0",
+        "install_command": "conda install -c anaconda airflow"
+    },
+    "fftw": {
+        "Dependencies": {
+            "value": "0"
+        },
+        "Dependent packages": {
+            "value": "133"
+        },
+        "Dependent repositories": {
+            "value": "0"
+        },
+        "Total releases": {
+            "value": "7",
+            "href": "/conda/fftw/versions"
+        },
+        "Latest release": {
+            "value": "Sep 17, 2021"
+        },
+        "First release": {
+            "value": "Jun 11, 2018"
+        },
+        "Stars": {
+            "value": "2.32K",
+            "href": "https://github.com/FFTW/fftw3/stargazers"
+        },
+        "Forks": {
+            "value": "591",
+            "href": "https://github.com/FFTW/fftw3/network"
+        },
+        "Watchers": {
+            "value": "158",
+            "href": "https://github.com/FFTW/fftw3/watchers"
+        },
+        "Contributors": {
+            "value": "6",
+            "href": "https://github.com/FFTW/fftw3/graphs/contributors"
+        },
+        "Repository size": {
+            "value": "11.1 MB"
+        },
+        "SourceRank": {
+            "value": "16",
+            "href": "/conda/fftw/sourcerank"
+        },
+        "keywords": "",
+        "license": "GPL-2.0",
+        "install_command": "conda install -c conda-forge fftw"
+    }
+}]
