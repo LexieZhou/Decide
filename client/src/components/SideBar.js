@@ -52,7 +52,7 @@ export default function SideBar() {
         }}
       >
         <Toolbar />
-        <Typography className={classes.title}>Top 5 link-number nodes</Typography>
+        <Typography className={classes.title}>Common DL Components</Typography>
         <div className={classes.drawerContainer}>
           {labels.map( (label) => (
               <Barchart label={label} key={label}/>

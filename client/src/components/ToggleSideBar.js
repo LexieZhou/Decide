@@ -137,7 +137,7 @@ const ToggleSideBar = () => {
           <IconButton id="close-panel" color="primary" aria-label="add to shopping cart">
               <CloseIcon />
           </IconButton>
-          <Typography className={classes.titleTxt}>Compatible Information</Typography>
+          <Typography className={classes.titleTxt}>Compatibility Information</Typography>
         </div>
         {linkData && 
           <div className={classes.panelContent}>
@@ -154,7 +154,7 @@ const ToggleSideBar = () => {
               </div>
               <div className={classes.Column}>
                 <Typography className={classes.nodeTxt}>Relationship: {linkData.properties.verdict === "yes" ? "Compatible" : "Incompatible"}</Typography>
-                <Typography className={classes.nodeTxt}>Evidence Score: {score}</Typography>
+                <Typography className={classes.nodeTxt}>Confidence: {score}</Typography>
               </div>
             </div>
             <Divider />

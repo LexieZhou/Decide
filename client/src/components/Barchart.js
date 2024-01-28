@@ -129,7 +129,7 @@ export default function Barchart({label}) {
                         .style("opacity", 0);
                     
                     // get whole view
-                    fetchData();
+                    // fetchData();
                 });
 
         }

@@ -109,7 +109,7 @@ const NodeToggleSideBar = () => {
           <IconButton id="node-close-panel" color="primary" aria-label="add to shopping cart">
               <CloseIcon />
           </IconButton>
-          <Typography className={classes.titleTxt}>Node Stats</Typography>
+          <Typography className={classes.titleTxt}>Component Stats</Typography>
         </div>
         <div className = {classes.info}>
           <Card className={classes.card}>
