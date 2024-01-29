@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { createTheme, ThemeProvider} from "@material-ui/core";
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
-import { filterData, filterDatabyEntityName, filterDatabyQuestion } from './Chart_force';
+import { filterData, filterDatabyEntityName, filterDatabyQuestion, gpt_integrate_qa } from './Chart_force';
 import configData from '../data/config.json';
 
 const useStyles = makeStyles((theme) => ({
@@ -103,7 +103,7 @@ export default function SearchResult({results, showHints}) {
                             <div className={classes.SingleSearchResult} 
                                 key={id} 
                                 onClick={(e) => 
-                                    filterDatabyQuestion(result)
+                                    configData.OPENAI_API_KEY === "" ? filterDatabyQuestion(result) : gpt_integrate_qa(result)
                                 }
                                 >
                                 <div className={classes.HintIcon}>

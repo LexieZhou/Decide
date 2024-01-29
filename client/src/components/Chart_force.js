@@ -4,6 +4,8 @@ import configData from '../data/config.json';
 import './Chart.css';
 import ToggleSideBar from './ToggleSideBar';
 import NodeToggleSideBar from './NodeToggleSideBar';
+import OpenAI from 'openai';
+import axios from 'axios';
 
 // filter data by targetId
 export const filterData = async (targetId) => {
@@ -52,6 +54,46 @@ export const filterDatabyEntityName = async (entityName) => {
     const filteredlinksData = await response2.json();
 
     createGraph(filteredEntityData, filteredlinksData, false);
+  } catch (error) {
+    console.error('Error:', error);
+    return null;
+  }
+};
+
+export const gpt_integrate_qa = async (question) => {
+  try {
+    // Make a request to the GPT-4 API
+    const openai = new OpenAI({
+      apiKey: configData.OPENAI_API_KEY,
+      dangerouslyAllowBrowser: true,
+    });
+    const response = await openai.chat.completions.create({
+      model: 'gpt-3.5-turbo-0613',
+      messages: [
+        { role: 'system', content: 'You are a helpful assistant. Now the user will input a question query string, you should help to identify the two mentioned deep learning components within the quetion string. For example, the user may ask "Does python 3.6 work with ubuntu 16.04?", you should output "python 3.6 ubuntu 16.04". Remeber you must use this format to output "component1 version1 component2 version2"' },
+        { role: 'user', content: question },
+      ],
+    });
+    console.log(response.choices[0].message.content);
+    const filteredPair = response.choices[0].message.content.split(' ');
+    if (filteredPair.length !== 4) {
+      alert("Question format doesn't match. Try searching for 'Is A compatible with B' or 'Does A work with B'.")
+    } else {
+      const node1Name = filteredPair[0];
+      const node1Version = filteredPair[1];
+      const node2Name = filteredPair[2];
+      const node2Version = filteredPair[3];
+
+      const response1 = await fetch(`${configData.SERVER_URL}/filter/nodes/${node1Name}/${node1Version}/${node2Name}/${node2Version}`);
+      const filteredPairNodesData = await response1.json();
+      const response2 = await fetch(`${configData.SERVER_URL}/filter/links/${node1Name}/${node1Version}/${node2Name}/${node2Version}`);
+      const filteredPairLinksData = await response2.json();
+      if (!evidenceCheck(filteredPairNodesData)) {
+        alert("Do not have enough evidence from Stack Overflow to answer this question. Try other questions.");
+      } else {
+        createGraph(filteredPairNodesData, filteredPairLinksData, false);
+      }
+    }
   } catch (error) {
     console.error('Error:', error);
     return null;
