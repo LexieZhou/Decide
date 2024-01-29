@@ -13,17 +13,19 @@ Version incompatibility issues are prevalent when reusing or reproducing deep le
 - Clone or download this github repository:
   - `git clone https://github.com/LexieZhou/Decide.git`
 - Install dependencies
-  - Navigate into the backend directory: `cd server`
+  - Navigate to the backend directory: `cd server`
   - Install the requirements: `npm install`
-  - Navigate into the frontend directory: `cd ../client`
+  - Navigate to the frontend directory: `cd ../client`
   - Install the requirements: `npm install`
 - Start the Project
-  - Navigate into the backend directory: `cd server`
+  - Navigate to the backend directory: `cd server`
   - Start the server: `node server.js`
-  - Navigate into the frontend directory: `cd ../client`
+  - Navigate to the frontend directory: `cd ../client`
   - Start the project in browser: `npm start`
 
-Remark: If encounter any dependency error, try `npm install --force` instead.
+Remark1: If encounter any dependency error, try `npm install --force` instead.
+
+Remark2: If you want to enable function calling ability of GPT-4, you could navigate to the `client/data` directory, find `config.json` file, and input your API key.
 
 ## Usage
 ### A. Compatibility Visualizer
@@ -36,7 +38,7 @@ Remark: If encounter any dependency error, try `npm install --force` instead.
   - The information panel will show details about two components, their detected (in)compatibility relationship, an evidence score, and supporting posts. Additionally, you can explore posts supporting both the compatible and incompatible relationships. Clicking on the vote link takes you directly to the original posts on the Stack Overflow platform.
   
 ### C. Search Bar
-Decide supports three kinds of searches. 
+Decide supports three kinds of searches, which is integrated with the function calling ability of GPT-4 and also regex pattern matching.
 - Quickly check the compatibility between two deep learning components by entering a simple query.
   - e.g. Does Python 3.6.8 work with Ubuntu 16.04.6?
 - Search for compatibility knowledge about versioned deep learning components.
