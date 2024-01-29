@@ -4,7 +4,8 @@ An interactive web tool that visualizes a weighted knowledge graph containing 2,
 ## Summary
 Version incompatibility issues are prevalent when reusing or reproducing deep learning (DL) models and applications. While official documents such as PyPI are neither comprehensive nor up-to-date, Stack Overflow (SO) discussions possess a wealth of version knowledge that has not been explored by previous approaches. To bridge this gap, we present WebDecide, a web-based visualization of a weighted knowledge graph that contains 2,376 version knowledge extracted from SO discussions. As an interactive tool, WebDecide allows the users to easily check whether two libraries are compatible or not, search for a third-party DL component with a specific version, explore a DL component without any version constraint, and shows relevant SO posts as references.
 
-![Overview](https://github.com/LexieZhou/Decide/assets/78584281/5b86d924-48b5-4da7-bfb3-14541e159ea3)
+![Overview](https://github.com/LexieZhou/Decide/assets/78584281/e0ba1c09-f5ed-4853-a8e8-9da7c670149a)
+
 
 ## System Requirements
 - Node.js: Ensure that you have Node.js installed on your system. You can download the latest version from the official Node.js website (https://nodejs.org) and follow the installation instructions for your operating system.
@@ -25,7 +26,7 @@ Version incompatibility issues are prevalent when reusing or reproducing deep le
 
 Remark1: If encounter any dependency error, try `npm install --force` instead.
 
-Remark2: If you want to enable function calling ability of GPT-4, you could navigate to the `client/data` directory, find `config.json` file, and input your API key.
+Remark2: If you want to enable function calling ability of GPT-4 in the search feature, you could navigate to the `client/data` directory, find `config.json` file, and input your API key.
 
 ## Usage
 ### A. Compatibility Visualizer
